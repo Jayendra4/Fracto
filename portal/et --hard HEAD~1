@@ -1,0 +1,33 @@
+[33me6ef979[m[33m ([m[1;36mHEAD -> [m[1;32mkrishna[m[33m)[m Merge branch 'rishi' into krishna
+[33md6eacda[m[33m ([m[1;31morigin/krishna[m[33m)[m fix: header  responsiveness-4.0
+[33m91dab46[m[33m ([m[1;31morigin/rishi[m[33m, [m[1;32mrishi[m[33m)[m fix: mobile validation
+[33m7cae214[m fix: singup flow
+[33md473391[m fix: responsiveness-3.0
+[33mea57dc4[m[33m ([m[1;31morigin/staging[m[33m, [m[1;32mkirti[m[33m)[m feat: added logout logic and merged code from other branches
+[33mc69e1e5[m fix: merged code
+[33mddba20c[m Merge branch 'krishna' of https://github.com/codesfortomorrow/house-of-frac-portal into kirti
+[33m306b2a6[m fix: fixed header
+[33mb14cf4b[m fix: responsiveness-2.0
+[33m5645d90[m add new stepper in kyc header
+[33meb96021[m Fix: fixed swiper issue
+[33m72d1257[m Merge branch 'krishna' of https://github.com/codesfortomorrow/house-of-frac-portal into kirti
+[33m5673071[m fix: merged code
+[33mad82b7f[m fix: ui and footer
+[33mb93843d[m feat: worked on stepper form
+[33mb3c3f6d[m add new stepper in rwa header
+[33maddd1c9[m feat: fix kyb stepper  in header
+[33me706c16[m fix: responsiveness
+[33maaeb5bb[m feat: add stepper in header
+[33m75a116e[m feat: working on stepper form
+[33m49ea3b7[m fix: merger conflict
+[33m04e1d76[m feat: smartcard, footer fix, section width modify
+[33md3d1967[m feat: merge with kirti branch
+[33mc977a4f[m feat: worked on dynamic header
+[33mcf6aefc[m fix ui of map section
+[33m24cd835[m add new updated section
+[33m6fc652e[m fix: footer added
+[33m7cb6e3a[m feat: merged branches
+[33m3251c7e[m add Blogs Section
+[33m996bc34[m fix: megrge
+[33mfe5145b[m feat: blog section
+[33m13b6b0d[m merge with krishna

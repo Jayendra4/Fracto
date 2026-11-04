@@ -1,0 +1,105 @@
+services:
+  postgres:
+    image: postgres:18-alpine
+    container_name: hof-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-secret}
+      POSTGRES_DB: ${POSTGRES_DB:-hof}
+    ports:
+      - "5432:5432"
+    volumes:
+      - hof_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-postgres} -d ${POSTGRES_DB:-hof}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:alpine
+    container_name: hof-redis
+    restart: unless-stopped
+    command: redis-server --requirepass ${REDIS_PASSWORD:-secret}
+    ports:
+      - "6379:6379"
+    volumes:
+      - hof_redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "-a", "${REDIS_PASSWORD:-secret}", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+      target: hof
+    container_name: hof-server
+    restart: unless-stopped
+    ports:
+      - "9001:9001"
+    environment:
+      - NODE_ENV=production
+      - PORT=9001
+      - DATABASE_URL=postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-secret}@postgres:5432/${POSTGRES_DB:-hof}
+      - REDIS_URI=redis://default:${REDIS_PASSWORD:-secret}@redis:6379
+      - JWT_SECRET=${JWT_SECRET:-super_secret_jwt_key_hof_2026}
+      - PLATFORM_NAME=House of Frac
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    volumes:
+      - hof_server_storage:/hof/storage
+
+  portal:
+    build:
+      context: ./portal
+      dockerfile: Dockerfile
+      args:
+        - VITE_API_URL=http://localhost:9001
+        - VITE_API_BASE_URL=http://localhost:9001
+        - VITE_STORAGE_URL=http://localhost:9001/storage
+    container_name: hof-portal
+    restart: unless-stopped
+    ports:
+      - "3000:80"
+    depends_on:
+      - server
+
+  admin:
+    build:
+      context: ./admin
+      dockerfile: Dockerfile
+      args:
+        - VITE_API_BASE_URL=http://localhost:9001
+        - VITE_STORAGE_URL=http://localhost:9001/storage
+    container_name: hof-admin
+    restart: unless-stopped
+    ports:
+      - "3001:80"
+    depends_on:
+      - server
+
+  trustee:
+    build:
+      context: ./trustee
+      dockerfile: Dockerfile
+      args:
+        - VITE_API_BASE_URL=http://localhost:9001
+        - VITE_STORAGE_URL=http://localhost:9001/storage
+    container_name: hof-trustee
+    restart: unless-stopped
+    ports:
+      - "3002:80"
+    depends_on:
+      - server
+
+volumes:
+  hof_postgres_data:
+  hof_redis_data:
+  hof_server_storage:

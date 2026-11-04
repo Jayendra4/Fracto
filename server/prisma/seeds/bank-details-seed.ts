@@ -1,0 +1,17 @@
+export const bankLists = [
+  { name: 'State Bank of India', code: 'SBIN' },
+  { name: 'HDFC Bank', code: 'HDFC' },
+  { name: 'ICICI Bank', code: 'ICIC' },
+  { name: 'Axis Bank', code: 'UTIB' },
+  { name: 'Punjab National Bank', code: 'PUNB' },
+  { name: 'Bank of Baroda', code: 'BARB' },
+  { name: 'Kotak Mahindra Bank', code: 'KKBK' },
+  { name: 'IndusInd Bank', code: 'INDB' },
+  { name: 'IDFC First Bank', code: 'IDFB' },
+  { name: 'Canara Bank', code: 'CNRB' },
+  { name: 'Union Bank of India', code: 'UBIN' },
+  { name: 'Indian Bank', code: 'IDIB' },
+  { name: 'Yes Bank', code: 'YESB' },
+  { name: 'Federal Bank', code: 'FDRL' },
+  { name: 'AU Small Finance Bank', code: 'AUBL' },
+];

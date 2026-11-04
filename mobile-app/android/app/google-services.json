@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "762864996498",
+    "project_id": "hof-portal",
+    "storage_bucket": "hof-portal.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:762864996498:android:aebcadb6f49d54c4f0564b",
+        "android_client_info": {
+          "package_name": "com.hof"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcS5H0dYAAHkkGYmtwNWKiDkgltOhrwWw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

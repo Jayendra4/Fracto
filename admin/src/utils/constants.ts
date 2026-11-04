@@ -1,0 +1,2 @@
+export const RWA_STORAGE_KEY = 'MASTER_RWA_FORM';
+export const FCM_STORAGE_KEY = 'FCM_TOKEN_SENT';

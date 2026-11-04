@@ -1,0 +1,35 @@
+p Hello Team,
+
+p A new contact request has been submitted through the Contact Us form.
+
+p
+strong Name:
+| #{ name }
+
+p
+strong Email:
+| #{ email }
+
+if mobile
+p
+strong Mobile:
+| #{ mobile }
+
+p
+strong Inquiry Type:
+| #{ type }
+
+if description
+p
+strong Message:
+br
+| #{ description }
+
+br
+
+p Please review the request and get back to the user as soon as possible.
+
+br
+
+p Regards,
+p | #{ name }

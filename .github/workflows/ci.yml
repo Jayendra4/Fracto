@@ -1,0 +1,113 @@
+name: House of Frac CI/CD Quality Gate
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  validate-server:
+    name: Backend API Check
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./server
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+          cache-dependency-path: server/package-lock.json
+
+      - name: Install Server Dependencies
+        run: npm ci
+
+      - name: Generate Prisma Client
+        run: npx prisma generate
+
+      - name: Build Server
+        run: npm run build
+
+  validate-portal:
+    name: Portal Marketplace Check
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./portal
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+          cache-dependency-path: portal/package-lock.json
+
+      - name: Install Portal Dependencies
+        run: npm ci --legacy-peer-deps
+
+      - name: Build Portal SPA
+        run: npm run build
+        env:
+          VITE_API_URL: http://localhost:9001
+          VITE_API_BASE_URL: http://localhost:9001
+          VITE_STORAGE_URL: http://localhost:9001/storage
+
+  validate-admin:
+    name: Admin Dashboard Check
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./admin
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+          cache-dependency-path: admin/package-lock.json
+
+      - name: Install Admin Dependencies
+        run: npm ci --legacy-peer-deps
+
+      - name: Build Admin SPA
+        run: npm run build
+        env:
+          VITE_API_BASE_URL: http://localhost:9001
+          VITE_STORAGE_URL: http://localhost:9001/storage
+
+  validate-trustee:
+    name: Trustee Portal Check
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./trustee
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+          cache-dependency-path: trustee/package-lock.json
+
+      - name: Install Trustee Dependencies
+        run: npm ci --legacy-peer-deps
+
+      - name: Build Trustee SPA
+        run: npm run build
+        env:
+          VITE_API_BASE_URL: http://localhost:9001
+          VITE_STORAGE_URL: http://localhost:9001/storage

@@ -1,0 +1,34 @@
+doctype html
+html
+  body
+    h2 New Vendor Suggestion Submitted
+
+    p
+      strong Vendor Name:
+      | #{ vendorName }
+
+    p
+      strong Category:
+      | #{ category }
+
+    if description
+      p
+        strong Description:
+        | #{ description }
+
+    if website
+      p
+        strong Website:
+        | #{ website }
+
+    if email
+      p
+        strong Vendor Email:
+        | #{ email }
+
+    p
+      strong Suggestion ID:
+      | #{ suggestionId }
+
+    hr
+    p Please review this suggestion in the Admin panel.

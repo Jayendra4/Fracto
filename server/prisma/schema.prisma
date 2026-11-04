@@ -1,0 +1,2099 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+enum AdminStatus {
+  Active @map("active")
+
+  @@map("admin_status")
+}
+
+enum AdminType {
+  SuperAdmin @map("super_admin")
+  SubAdmin   @map("sub_admin")
+
+  @@map("admin_type")
+}
+
+model Admin {
+  id               Int         @id @default(autoincrement())
+  firstname        String
+  lastname         String
+  email            String      @unique
+  profileImage     String?     @map("profile_image")
+  status           AdminStatus @default(Active)
+  type             AdminType   @default(SubAdmin)
+  roleId           Int?        @map("role_id")
+  role             Role?       @relation(fields: [roleId], references: [id])
+  createdByAdminId Int?        @map("created_by_admin_id")
+  createdByAdmin   Admin?      @relation("AdminCreatedBy", fields: [createdByAdminId], references: [id])
+  createdAdmins    Admin[]     @relation("AdminCreatedBy")
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  meta         AdminMeta?
+  accounts     Account[]
+  rolesCreated Role[]     @relation("RoleCreatedBy")
+  rolesUpdated Role[]     @relation("RoleUpdatedBy")
+  auditLogs    AuditLog[]
+
+  @@map("admin")
+}
+
+model AdminMeta {
+  passwordSalt String? @map("password_salt")
+  passwordHash String? @map("password_hash")
+  admin        Admin   @relation(fields: [adminId], references: [id])
+  adminId      Int     @unique() @map("admin_id")
+
+  @@map("admin_meta")
+}
+
+enum AccountStatus {
+  Active    @map("active")
+  Blocked   @map("blocked")
+  Suspended @map("suspended")
+
+  @@map("account_status")
+}
+
+// CorporateInvestor complete KYC (individual) before buying fractions.
+// Company(Business) -> company will perform KYB then KYC for director who bring company then fill RWA to list Asset.
+// SPV(Entity ) -> Business user -> create account -> Complete KYC -> Fill RWA.
+// Broker(Mediator of Asset and Investor) ->Business user -> create account -> Complete KYC -> Fill RWA.
+// Trustee -> Business user -> create account -> Complete KYC -> Fill RWA.
+// Asset Owner -> Business user -> create account -> Complete KYC -> Fill RWA.
+// Developer(Builder) -> Business user -> create account -> Complete KYC -> Fill RWA.
+enum AccountType {
+  Company           @map("company") // create the property (KYC , KYB) 
+  Developer         @map("developer")
+  Business          @map("business")
+  Spv               @map("spv")
+  Broker            @map("broker")
+  CorporateInvestor @map("corporate_investor")
+  Trustee           @map("trustee")
+  AssetOwner        @map("asset_owner") //create the property
+  Director          @map("director")
+
+  @@map("account_type")
+}
+
+model Account {
+  id                 Int           @id @default(autoincrement())
+  firstname          String
+  lastname           String
+  email              String        @unique
+  dialCode           String?       @map("dial_code")
+  mobile             String?       @unique
+  profileImage       String?       @map("profile_image")
+  isVerified         Boolean       @default(false) @map("is_verified")
+  countryId          Int?          @map("country_id")
+  createdById        Int?          @map("created_by_id")
+  isDeleted          Boolean       @default(false) @map("is_deleted")
+  type               AccountType
+  status             AccountStatus @default(Active)
+  createdAt          DateTime      @default(now()) @map("created_at")
+  updatedAt          DateTime      @updatedAt @map("updated_at")
+  isDocumentUploaded Boolean       @default(false) @map("is_docuemnt_uploaded")
+  currentAddressId   Int?          @map("current_address_id")
+  permanentAddressId Int?          @map("permanent_address_id")
+
+  meta                          AccountMeta?
+  kyc                           Kyc?
+  referralCampaign              ReferralCampaign[]
+  companyKyc                    CompanyKyc?
+  userInviteContext             UserInviteContext?
+  messages                      Message[]
+  chatrooms                     ChatRoom[]
+  blocker                       BlockedUser[]                   @relation("Blocker")
+  blocked                       BlockedUser[]                   @relation("Blocked")
+  chatroomUsers                 ChatRoomUser[]
+  settings                      AccountSetting[]
+  entityDocument                EntityDocument[]
+  currentAddress                Address?                        @relation("AccountCurrentAddress", fields: [currentAddressId], references: [id])
+  permanentAddress              Address?                        @relation("AccountPermanentAddress", fields: [permanentAddressId], references: [id])
+  country                       Country?                        @relation(fields: [countryId], references: [id])
+  createdBy                     Admin?                          @relation(fields: [createdById], references: [id])
+  companies                     Company[]
+  assets                        Asset[]
+  purchases                     AssetPurchase[]
+  wallets                       Wallet[]
+  savedAssets                   SavedAsset[]
+  notificationViews             NotificationViews[]
+  paymentRequests               PaymentRequest[]
+  referralUsage                 ReferralUsage[]
+  assetOwnerInvite              AssetOwnerInvite[]
+  commissionPayoutRequest       CommissionPayoutRequest[]
+  brokerCommissions             ReferralCommission[]            @relation("BrokerCommission")
+  investorCommissions           ReferralCommission[]            @relation("ReferredUserCommission")
+  brokerCommissionContracts     AssetBrokerCommissionContract[] @relation("BrokerCommissionContracts")
+  assetOwnerCommissionContracts AssetBrokerCommissionContract[] @relation("AssetOwnerCommissionContracts")
+  category                      Category[]
+  groupMember                   GroupMember[]
+  sharedAssets                  SharedAsset[]                   @relation("SharedAssets")
+  assetInterests                AssetInterest[]
+  marketplaceListings           MarketplaceListing[]
+  marketplaceTrades             MarketplaceTrade[]
+  buyerTrades                   MarketplaceTrade[]              @relation("BuyerTrades")
+  sellerTrades                  MarketplaceTrade[]              @relation("SellerTrades")
+  holdings                      Holding[]
+  invoiceDetails                InvoiceDetails[]
+  votes                         Vote[]
+  clubMembershipRequests        ClubMembershipRequest[]
+  spvMemberships                SpvMember[]
+  role                          Role?                           @relation(fields: [roleId], references: [id])
+  roleId                        Int?                            @map("role_id")
+  fractionsConsents             FractionsConsent[]
+
+  @@map("account")
+}
+
+model AccountMeta {
+  googleId       String?   @unique @map("google_id")
+  passwordSalt   String?   @map("password_salt")
+  passwordHash   String?   @map("password_hash")
+  panNumber      String?   @map("pan_number")
+  passportNumber String?   @map("passport_number")
+  emiratiId      String?   @map("emirati_id")
+  occupation     String?   @map("occupation")
+  monthlyIncome  String?   @map("monthly_income")
+  licenseNumber  String?   @map("license_number")
+  licenseExpiry  DateTime? @map("license_expiry")
+  dateOfBirth    DateTime? @map("date_of_birth")
+
+  account   Account @relation(fields: [accountId], references: [id])
+  accountId Int     @unique() @map("account_id")
+
+  @@map("account_meta")
+}
+
+model Country {
+  id       Int    @id @default(autoincrement())
+  name     String
+  dialCode String @map("dial_code")
+  isoCode  String @map("iso_code")
+  flag     String
+
+  accounts Account[]
+
+  @@map("country")
+}
+
+enum OtpTransport {
+  Email  @map("email")
+  Mobile @map("mobile")
+
+  @@map("otp_transport")
+}
+
+model Otp {
+  code             String
+  attempt          Int          @default(1) @db.SmallInt
+  lastSentAt       DateTime     @default(now()) @map("last_sent_at")
+  retries          Int          @default(0) @db.SmallInt
+  transport        OtpTransport
+  target           String
+  lastCodeVerified Boolean      @default(false) @map("last_code_verified")
+  blocked          Boolean      @default(false)
+
+  @@unique([transport, target])
+  @@map("otp")
+}
+
+enum SettingType {
+  Binary       @map("binary")
+  MultiSelect  @map("multi_select")
+  SingleSelect @map("single_select")
+
+  @@map("setting_type")
+}
+
+enum SettingContext {
+  Account @map("account")
+  System  @map("System")
+
+  @@map("setting_context")
+}
+
+model Setting {
+  id               Int            @id @default(autoincrement())
+  mappedTo         String         @map("mapped_to")
+  text             String         @default("")
+  description      String         @default("")
+  type             SettingType
+  context          SettingContext
+  default          Json
+  isDefinedOptions Boolean        @map("is_defined_options")
+  subSettings      Setting[]      @relation("SubSettings")
+  dependsOn        Setting?       @relation("SubSettings", fields: [parentId], references: [id])
+  parentId         Int?           @map("parent_id")
+
+  options         SettingOption[]
+  accountSettings AccountSetting[]
+  systemSettings  SystemSetting[]
+
+  @@unique([context, mappedTo])
+  @@map("setting")
+}
+
+model SettingOption {
+  id    Int    @id @default(autoincrement())
+  text  String @default("")
+  value String
+
+  setting   Setting @relation(fields: [settingId], references: [id])
+  settingId Int     @map("setting_id")
+
+  @@unique([settingId, value])
+  @@map("setting_option")
+}
+
+model AccountSetting {
+  selection Json
+
+  account   Account @relation(fields: [accountId], references: [id])
+  accountId Int     @map("account_id")
+  setting   Setting @relation(fields: [settingId], references: [id])
+  settingId Int     @map("setting_id")
+
+  @@id([accountId, settingId])
+  @@map("account_setting")
+}
+
+model SystemSetting {
+  selection Json
+
+  setting   Setting @relation(fields: [settingId], references: [id])
+  settingId Int     @map("setting_id")
+
+  @@id([settingId])
+  @@map("system_setting")
+}
+
+enum KycStatus {
+  Draft     @map("draft")
+  Submitted @map("submitted")
+  Pending   @map("pending")
+  Approved  @map("approved")
+  Rejected  @map("rejected")
+
+  @@map("kyc_status")
+}
+
+enum KycVerifier {
+  Trustee @map("trustee")
+  Admin   @map("admin")
+
+  @@map("kyc_verifier")
+}
+
+model Kyc {
+  id              Int         @id @default(autoincrement())
+  accountId       Int         @unique @map("account_id")
+  status          KycStatus   @default(Draft)
+  verifier        KycVerifier
+  submittedAt     DateTime?   @map("submitted_at")
+  reviewedAt      DateTime?   @map("reviewed_at")
+  reviewedById    Int?        @map("reviewed_by_id")
+  rejectionReason String?     @map("rejection_reason")
+  createdAt       DateTime    @default(now()) @map("created_at")
+  updatedAt       DateTime    @updatedAt @map("updated_at")
+  account         Account     @relation(fields: [accountId], references: [id])
+
+  @@map("kyc")
+}
+
+model Document {
+  id                   Int                       @id @default(autoincrement())
+  developerName        String                    @unique @map("developer_name")
+  name                 String
+  documents            EntityDocument[]
+  documentRequirements AccountRequiredDocument[]
+
+  @@map("document")
+}
+
+model AccountRequiredDocument {
+  id             Int         @id @default(autoincrement())
+  accountType    AccountType @map("account_type")
+  documentTypeId Int         @map("document_type_id")
+  documentType   Document    @relation(fields: [documentTypeId], references: [id])
+  mandatory      Boolean     @default(true)
+  order          Int         @default(1)
+  instructions   String?     @map("instructions")
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@unique([accountType, documentTypeId])
+  @@map("document_requirement")
+}
+
+model EntityDocument {
+  id                 Int      @id @default(autoincrement())
+  documentTypeId     Int      @map("document_type_id")
+  documentType       Document @relation(fields: [documentTypeId], references: [id])
+  companyId          Int?     @map("company_id")
+  directorId         Int?     @map("director_id")
+  accountId          Int?     @map("account_id")
+  url                String?
+  documentIdentifier String?  @map("document_identifier")
+  isVerified         Boolean  @default(false) @map("is_verified")
+  remark             String?
+
+  uploadedAt DateTime  @default(now()) @map("uploaded_at")
+  verifiedAt DateTime? @map("verified_at")
+
+  company  Company?  @relation("CompanyDocuments", fields: [companyId], references: [id])
+  director Director? @relation("DirectorDocuments", fields: [directorId], references: [id])
+  account  Account?  @relation(fields: [accountId], references: [id])
+
+  @@unique([documentTypeId, accountId, companyId, directorId])
+  @@map("entity_document")
+}
+
+model Address {
+  id           Int     @id @default(autoincrement())
+  addressLine1 String  @map("address_line_1")
+  addressLine2 String? @map("address_line_2")
+  city         String
+  state        String
+  pincode      String
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  accountsCurrentAddress      Account[]  @relation("AccountCurrentAddress")
+  accountsPermanentAddress    Account[]  @relation("AccountPermanentAddress")
+  companiesRegisteredAddress  Company[]  @relation("CompanyRegisteredAddress")
+  companiesOperationalAddress Company[]  @relation("CompanyOperationalAddress")
+  directorsCurrentAddress     Director[] @relation("DirectorCurrentAddress")
+  directorsPermanentAddress   Director[] @relation("DirectorPermanentAddress")
+
+  @@map("address")
+}
+
+enum EntityType {
+  PvtLtd      @map("pvt_ltd")
+  Llp         @map("llp")
+  Llc         @map("llc")
+  FzLlc       @map("fz_llc")
+  Spv         @map("spv")
+  Partnership @map("partnership")
+  Trust       @map("trust")
+
+  @@map("entity_type")
+}
+
+model Company {
+  id                   Int        @id @default(autoincrement())
+  legalEntityName      String     @map("legal_entity_name")
+  tradeName            String?    @map("trade_name")
+  entityType           EntityType @map("entity_type")
+  cinOrTradeLicenseNo  String     @map("cin_or_trade_license_no")
+  dateOfIncorporation  DateTime   @map("date_of_incorporation")
+  companyEmail         String     @map("company_email")
+  companyPhone         String     @map("company_phone")
+  websiteUrl           String?    @map("website_url")
+  accountId            Int        @map("account_id")
+  registeredAddressId  Int?       @map("registered_address_id")
+  operationalAddressId Int?       @map("operational_address_id")
+  isVerified           Boolean    @default(false) @map("is_verified")
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  registeredAddress  Address?         @relation("CompanyRegisteredAddress", fields: [registeredAddressId], references: [id])
+  operationalAddress Address?         @relation("CompanyOperationalAddress", fields: [operationalAddressId], references: [id])
+  account            Account          @relation(fields: [accountId], references: [id])
+  meta               CompanyMeta?
+  directors          Director[]
+  documents          EntityDocument[] @relation("CompanyDocuments")
+
+  @@map("company")
+}
+
+enum SourceOfFunds {
+  InternalAccruals @map("internal_accruals")
+  Investors        @map("investors")
+  Vc               @map("vc")
+  Borrowings       @map("borrowings")
+  Others           @map("others")
+
+  @@map("source_of_funds")
+}
+
+model CompanyMeta {
+  id                               Int            @id @default(autoincrement())
+  companyId                        Int            @unique @map("company_id")
+  industryType                     String?        @map("industry_type")
+  natureOfBusiness                 String?        @map("nature_of_business")
+  businessDescription              String?        @map("business_description")
+  expectedMonthlyTransactionVolume Float?         @map("expected_monthly_transaction_volume")
+  expectedSourceOfFunds            SourceOfFunds? @map("expected_source_of_funds")
+  countriesOfOperation             String[]       @default([]) @map("countries_of_operation")
+  isCompanyPubliclyListed          Boolean        @default(false) @map("is_company_publicly_listed")
+  panNumber                        String?        @map("pan_number")
+  gstNumber                        String?        @map("gst_number")
+  tanNumber                        String?        @map("tan_number")
+  tradeLicenseExpiryDate           DateTime?      @map("trade_license_expiry_date")
+  placeOfBusinessProofType         String?        @map("place_of_business_proof_type")
+
+  panVerified Boolean @default(false) @map("pan_verified")
+  gstVerified Boolean @default(false) @map("gst_verified")
+
+  company Company @relation(fields: [companyId], references: [id])
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("company_meta")
+}
+
+enum RoleInCompany {
+  Director            @map("director")
+  Promoter            @map("promoter")
+  Ubo                 @map("ubo")
+  Trustee             @map("trustee")
+  AuthorisedSignatory @map("authorised_signatory")
+
+  @@map("role_in_company")
+}
+
+model Director {
+  id                 Int           @id @default(autoincrement())
+  company            Company       @relation(fields: [companyId], references: [id])
+  companyId          Int           @map("company_id")
+  firstName          String        @map("first_name")
+  lastName           String        @map("last_name")
+  roleInCompany      RoleInCompany @map("role_in_company")
+  dateOfBirth        DateTime      @map("date_of_birth")
+  nationality        String
+  currentAddressId   Int?          @map("current_address_id")
+  permanentAddressId Int?          @map("permanent_address_id")
+  email              String
+  mobileNumber       String        @map("mobile_number")
+  isVerified         Boolean       @default(false) @map("is_verified")
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  documents        EntityDocument[] @relation("DirectorDocuments")
+  permanentAddress Address?         @relation("DirectorPermanentAddress", fields: [permanentAddressId], references: [id])
+  currentAddress   Address?         @relation("DirectorCurrentAddress", fields: [currentAddressId], references: [id])
+  directorMeta     DirectorMeta?
+
+  @@map("director")
+}
+
+model DirectorMeta {
+  id               Int      @id @default(autoincrement())
+  panNumber        String?  @map("pan_number")
+  emiratesIdNumber String?  @map("emirates_id_number")
+  passportNumber   String?  @map("passport_number")
+  director         Director @relation(fields: [directorId], references: [id])
+  directorId       Int      @unique() @map("director_id")
+
+  @@map("director_meta")
+}
+
+model CompanyKyc {
+  id             Int       @id @default(autoincrement())
+  accountId      Int       @unique @map("account_id")
+  account        Account   @relation(fields: [accountId], references: [id])
+  // KYB Company
+  kybStatus      KycStatus @default(Draft) @map("kyb_status")
+  kybSubmittedAt DateTime? @map("kyb_submitted_at")
+  kybReviewedAt  DateTime? @map("kyb_reviewed_at")
+  kybReviewedBy  Int?      @map("kyb_reviewed_by")
+
+  // KYC Director
+  kycStatus      KycStatus @default(Draft) @map("kyc_status")
+  kycSubmittedAt DateTime? @map("kyc_submitted_at")
+  kycReviewedAt  DateTime? @map("kyc_reviewed_at")
+  kycReviewedBy  Int?      @map("kyc_reviewed_by")
+
+  // Overall
+  overallStatus KycStatus @default(Draft) @map("overall_status")
+  remarks       String?
+  createdAt     DateTime  @default(now()) @map("created_at")
+  updatedAt     DateTime  @updatedAt @map("updated_at")
+
+  @@map("company_kyc")
+}
+
+enum RWAStatus {
+  Draft                @map("draft")
+  LegalReviewed        @map("legal_reviewed")
+  ValuationReviewed    @map("valuation_reviewed")
+  DueDiligence         @map("due_diligence")
+  Submitted            @map("submitted")
+  UnderReview          @map("under_review")
+  Approved             @map("approved")
+  Rejected             @map("rejected")
+  LegalRejected        @map("legal_rejected")
+  ValuationRejected    @map("valuation_rejected")
+  DueDiligenceRejected @map("due_diligence_rejected")
+
+  @@map("rwa_status")
+}
+
+enum AdminFractionalizationStatus {
+  Pending   @map("pending")
+  Completed @map("completed")
+
+  @@map("admin_fractionalization_status")
+}
+
+model RWARequest {
+  id      Int   @id @default(autoincrement())
+  // Asset
+  assetId Int   @unique @map("asset_id")
+  asset   Asset @relation(fields: [assetId], references: [id])
+
+  // trastee flow
+  status                      RWAStatus  @default(Draft) @map("status")
+  statusForLegal              RWAStatus? @map("status_for_legal")
+  statusForValuation          RWAStatus? @map("status_for_valuation")
+  statusForDueDiligence       RWAStatus? @map("status_for_dueDiligence")
+  trusteeId                   Int?       @map("trustee_id")
+  trusteeComment              String?    @map("trustee_comment")
+  rejectionReason             String?    @map("rejection_reason")
+  legalRejectionReason        String?    @map("legal_rejection_reason")
+  valuationRejectionReason    String?    @map("valuation_rejection_reason")
+  dueDiligenceRejectionReason String?    @map("due_diligence_rejection_reason")
+  approvedAt                  DateTime?  @map("approved_at")
+  rejectedAt                  DateTime?  @map("rejected_at")
+
+  //admin fractionalization
+  fractionalizationStatus AdminFractionalizationStatus @default(Pending) @map("fractionalization_status")
+  fractionalizedById      Int?                         @map("fractionalized_by_id")
+  fractionalizedAt        DateTime?                    @map("fractionalized_at")
+
+  // final listing approval by admin (post trustee approval)
+  listingAmount Decimal? @map("listing_amount")
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("rwa_request")
+}
+
+enum AssetType {
+  RealEstate @map("real_estate")
+  Solar      @map("solar")
+  Machinery  @map("machinery")
+  EVFleet    @map("ev_fleet")
+  Warehouse  @map("warehouse")
+  Store      @map("store")
+  Gold       @map("gold")
+  Business   @map("business")
+  IP         @map("ip")
+  Others     @map("others")
+
+  @@map("asset_type")
+}
+
+enum OwnershipModel {
+  DeveloperOwned @map("developer_owned")
+  SPVOwned       @map("spv_owned")
+  PlatformOwned  @map("platform_owned")
+  SingleOwner    @map("single_owner")
+  Leasehold      @map("leasehold")
+  Freehold       @map("freehold")
+  Privatelimited @map("private_limited")
+  Partnership    @map("partnership")
+  Limited        @map("limited")
+  Individual     @map("individual")
+  Trust          @map("trust")
+  LLP            @map("llp")
+  Others         @map("others")
+
+  @@map("ownership_model")
+}
+
+enum AssetStatus {
+  Draft       @map("draft")
+  Reviewed    @map("reviewed")
+  Rejected    @map("rejected")
+  Available   @map("Available")
+  Funded      @map("Funded")
+  Exited      @map("Exited")
+  RequestLive @map("request_live")
+
+  @@map("asset_status")
+}
+
+model AssetOwner {
+  id      Int     @id @default(autoincrement())
+  assetId Int     @unique @map("asset_id")
+  name    String?
+  email   String?
+  mobile  String?
+
+  asset Asset @relation(fields: [assetId], references: [id])
+
+  @@map("asset_owner")
+}
+
+model Asset {
+  id                  Int                     @id @default(autoincrement())
+  accountId           Int?                    @map("account_id")
+  assetType           AssetType               @map("asset_type")
+  assetSubType        String?                 @map("asset_sub_type")
+  assetTitle          String                  @map("asset_title")
+  currentOwnerName    String                  @map("current_owner_name")
+  mapUrl              String?                 @map("map_url")
+  assetAppreciation   Decimal                 @default(0) @map("asset_appreciation")
+  totalFractions      Int                     @default(0) @map("total_fraction")
+  soldFractions       Int                     @default(0) @map("sold_fraction")
+  remainingFractions  Int                     @default(0) @map("remaining_fraction")
+  yieldPercentage     Int                     @default(0) @map("yield_percentage")
+  isSoldOut           Boolean                 @default(false) @map("is_sold_out")
+  isMarketplace       Boolean                 @default(false) @map("is_marketplace")
+  status              AssetStatus             @default(Draft) @map("status")
+  isVisible           Boolean                 @default(false) @map("is_visible")
+  updateAsset         Boolean                 @default(false) @map("update_asset")
+  isBrokerReferred    Boolean?                @map("is_broker_referred")
+  ownerStatus         ReferralApprovalStatus? @map("owner_status")
+  isVerified          Boolean                 @default(false) @map("is_verified")
+  ownershipModel      OwnershipModel          @map("ownership_model")
+  ownershipModelOther String?                 @map("ownership_model_other")
+  tempGroupIds        Int[]                   @default([]) @map("temp_group_ids")
+  lastNotifiedAt      DateTime?               @map("last_notified_at")
+  rejectionReason     String?                 @map("rejection_reason")
+  approvedAt          DateTime?               @map("approved_at")
+  rejectedAt          DateTime?               @map("rejected_at")
+  steps               String?                 @map("steps")
+  createdAt           DateTime                @default(now()) @map("created_at")
+  updatedAt           DateTime                @updatedAt @map("updated_at")
+
+  meta                          AssetMeta[]
+  price                         AssetPrice?
+  rwaRequest                    RWARequest?
+  assetOwnerInvite              AssetOwnerInvite?
+  documents                     AssetDocument[]
+  propertyInterest              PropertyInterest[]
+  account                       Account?                        @relation(fields: [accountId], references: [id])
+  assetPurchases                AssetPurchase[]
+  savedAssets                   SavedAsset[]
+  referralCommission            ReferralCommission[]
+  assetBrokerCommissionContract AssetBrokerCommissionContract[]
+  sharedAsset                   SharedAsset?
+  assetOwner                    AssetOwner?
+  chatRooms                     ChatRoom[]
+  marketplaceListings           MarketplaceListing[]
+  marketplaceTrades             MarketplaceTrade[]
+  marketplacePotentialMatches   MarketplacePotentialMatch[]
+  assetMarketStat               AssetMarketStat?
+  holdings                      Holding[]
+  invoiceDetails                InvoiceDetails[]
+  secondaryClub                 SecondaryClubs?
+  fractionsConsents             FractionsConsent[]
+
+  @@map("asset")
+}
+
+model AssetPrice {
+  id      Int @id @default(autoincrement())
+  assetId Int @unique @map("asset_id")
+
+  initialPricePerFraction Decimal @default(0) @map("initial_price")
+  currentPricePerFraction Decimal @default(0) @map("current_price")
+
+  asset Asset @relation(fields: [assetId], references: [id])
+
+  @@map("asset_price")
+}
+
+enum MetaType {
+  String  @map("string")
+  Number  @map("number")
+  Boolean @map("boolean")
+  Date    @map("date")
+
+  @@map("meta_type")
+}
+
+model AssetMeta {
+  id         Int       @id @default(autoincrement())
+  asset      Asset     @relation(fields: [assetId], references: [id])
+  assetId    Int       @map("asset_id")
+  metaKey    String    @map("meta_key")
+  metaValue  String?   @map("meta_value")
+  metaType   MetaType? @map("meta_type")
+  isVerified Boolean   @default(false) @map("is_verified")
+  remark     String?
+
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@index([assetId, metaKey])
+  @@map("asset_meta")
+}
+
+model AssetPurchase {
+  id           Int     @id @default(autoincrement())
+  assetId      Int     @map("asset_id")
+  accountId    Int     @map("account_id")
+  fractions    Int     @map("fractions")
+  pricePerUnit Decimal @map("price_per_unit")
+  totalAmount  Decimal @map("total_amount")
+
+  createdAt DateTime @default(now()) @map("created_at")
+
+  asset   Asset   @relation(fields: [assetId], references: [id])
+  account Account @relation(fields: [accountId], references: [id])
+
+  @@index([accountId])
+  @@index([accountId, createdAt])
+  @@index([accountId, assetId])
+  @@map("asset_purchase")
+}
+
+model AssetDocument {
+  id      Int   @id @default(autoincrement())
+  asset   Asset @relation(fields: [assetId], references: [id])
+  assetId Int   @map("asset_id")
+
+  documentType String   @map("document_type")
+  documentName String?  @map("document_name")
+  documentUrl  String   @map("document_url")
+  uploadedAt   DateTime @default(now()) @map("uploaded_at")
+  isVerified   Boolean  @default(false) @map("is_verified")
+  remark       String?
+
+  @@map("asset_document")
+}
+
+model SavedAsset {
+  id Int @id @default(autoincrement())
+
+  accountId Int @map("account_id")
+  assetId   Int @map("asset_id")
+
+  isFavourite Boolean @default(true) @map("is_favourite")
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  account Account @relation(fields: [accountId], references: [id])
+  asset   Asset   @relation(fields: [assetId], references: [id])
+
+  @@unique([accountId, assetId])
+  @@map("saved_asset")
+}
+
+enum PaymentRequestType {
+  Deposit       @map("deposit")
+  Withdraw      @map("withdraw")
+  DirectPayment @map("direct_payment")
+
+  @@map("payment_request_type")
+}
+
+enum PaymentMethodType {
+  Bank @map("bank")
+  Upi  @map("upi")
+
+  @@map("payment_method_type")
+}
+
+enum RequestStatus {
+  Pending    @map("pending")
+  Approved   @map("approved")
+  Rejected   @map("rejected")
+  Completed  @map("completed")
+  Processing @map("processing")
+  Failed     @map("failed")
+
+  @@map("request_status")
+}
+
+enum PaymentGateway {
+  Razorpay @map("razorpay")
+
+  @@map("payment_gateway")
+}
+
+model PaymentOwner {
+  id        Int     @id @default(autoincrement())
+  ownerType String  @map("owner_type")
+  ownerId   Int     @map("owner_id") // Admin.id or Account.id (User)
+  contactId String? @map("contant_id")
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  bankAccounts BankAccount[] @relation("PaymentOwnerBankAccounts")
+  upiAccounts  UpiAccount[]  @relation("PaymentOwnerUpiAccounts")
+
+  @@map("payment_owner")
+}
+
+model Bank {
+  id        Int      @id @default(autoincrement())
+  name      String   @unique
+  code      String   @unique
+  isActive  Boolean  @default(true) @map("is_active")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("bank")
+}
+
+model BankAccount {
+  id                Int      @id @default(autoincrement())
+  paymentOwnerId    Int      @map("payment_owner_id")
+  bankName          String   @map("bank_name")
+  accountNumber     String   @map("account_number")
+  accountHolderName String   @map("account_holder_name")
+  isActive          Boolean  @default(false) @map("is_active")
+  isDeleted         Boolean  @default(false) @map("is_deleted")
+  ifscCode          String   @map("ifsc_code")
+  fundAccountId     String?  @map("fund_account_id")
+  createdAt         DateTime @default(now()) @map("created_at")
+  updatedAt         DateTime @updatedAt @map("updated_at")
+
+  paymentOwner    PaymentOwner     @relation("PaymentOwnerBankAccounts", fields: [paymentOwnerId], references: [id])
+  paymentRequests PaymentRequest[]
+
+  @@map("bank_account")
+}
+
+model UpiAccount {
+  id             Int      @id @default(autoincrement())
+  paymentOwnerId Int      @map("payment_owner_id")
+  upiId          String   @map("upi_id")
+  qrCode         String?  @map("qr_code")
+  fundAccountId  String?  @map("fund_account_id")
+  isActive       Boolean  @default(false) @map("is_active")
+  isDeleted      Boolean  @default(false) @map("is_deleted")
+  createdAt      DateTime @default(now()) @map("created_at")
+  updatedAt      DateTime @updatedAt @map("updated_at")
+
+  paymentOwner    PaymentOwner     @relation("PaymentOwnerUpiAccounts", fields: [paymentOwnerId], references: [id])
+  paymentRequests PaymentRequest[]
+
+  @@map("upi_account")
+}
+
+model PaymentRequest {
+  id          Int                @id @default(autoincrement())
+  AccountId   Int                @map("account_id")
+  requestType PaymentRequestType @map("request_type")
+  methodType  PaymentMethodType  @map("method_type")
+  gateway     PaymentGateway     @default(Razorpay)
+
+  name   String?
+  email  String?
+  mobile String?
+  amount Decimal
+
+  bankAccountId Int?    @map("bank_account_id")
+  upiAccountId  Int?    @map("upi_account_id")
+  fundAccountId String? @map("fund_account_id")
+
+  gatewayOrderId   String? @unique @map("gateway_order_id")
+  gatewayPaymentId String? @map("gateway_payment_id")
+  gatewayPayoutId  String? @map("gateway_payout_id")
+  utrNumber        String? @map("utr_number")
+  screenshot       String? @map("screenshot")
+
+  status     RequestStatus @default(Pending) @map("status")
+  remark     String?       @map("remark")
+  verifiedAt DateTime?     @map("verified_at")
+  failedAt   DateTime?     @map("failed_at")
+  paidAt     DateTime?     @map("paid_at")
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  account     Account      @relation(fields: [AccountId], references: [id])
+  bankAccount BankAccount? @relation(fields: [bankAccountId], references: [id])
+  upiAccount  UpiAccount?  @relation(fields: [upiAccountId], references: [id])
+
+  @@map("payment_request")
+}
+
+model PaymentWebhookEvent {
+  id        BigInt         @id @default(autoincrement())
+  gateway   PaymentGateway
+  eventId   String         @unique @map("event_id")
+  eventType String         @map("event_type")
+  payload   Json
+  processed Boolean        @default(false)
+  createdAt DateTime       @default(now()) @map("created_at")
+
+  @@map("payment_webhook_event")
+}
+
+enum WalletType {
+  Main       @map("main")
+  Commission @map("commission")
+
+  @@map("wallet_type")
+}
+
+model Wallet {
+  id           BigInt              @id @default(autoincrement())
+  type         WalletType
+  amount       Decimal             @default(0) @db.Decimal(20, 2)
+  version      BigInt              @default(0)
+  createdAt    DateTime            @default(now()) @map("created_at")
+  updatedAt    DateTime            @updatedAt @map("updated_at")
+  account      Account             @relation(fields: [accountId], references: [id])
+  accountId    Int                 @map("user_id")
+  transactions WalletTransaction[]
+
+  @@unique([accountId, type])
+  @@map("wallet")
+}
+
+enum WalletTransactionType {
+  Debit  @map("debit")
+  Credit @map("credit")
+
+  @@map("wallet_transaction_type")
+}
+
+enum WalletTransactionStatus {
+  Pending   @map("pending")
+  Confirmed @map("confirmed")
+  Failed    @map("failed")
+
+  @@map("wallet_transaction_status")
+}
+
+enum WalletTransactionContext {
+  Deposit                  @map("deposit")
+  Withdrawal               @map("withdrawal")
+  WithdrawalRefund         @map("withdrawal_refund")
+  ReferralCommissionCredit @map("referral_commission_credit")
+  CommissionPayout         @map("commission_payout")
+  SystemDeposit            @map("system_deposit")
+  SystemWithdrawal         @map("system_withdrawal")
+  FractionsPurchase        @map("fraction_purchase")
+  BidLock                  @map("bid_lock")
+  BidRefund                @map("bid_refund")
+  MarketSell               @map("market_sell")
+  DirectBuy                @map("direct_buy")
+  DirectSell               @map("direct_sell")
+  FractionsSale            @map("fractions_sale")
+
+  @@map("wallet_transaction_context")
+}
+
+model WalletTransaction {
+  id               BigInt                   @id @default(autoincrement())
+  amount           Decimal                  @db.Decimal(20, 2)
+  availableBalance Decimal                  @map("available_balance") @db.Decimal(20, 2)
+  type             WalletTransactionType
+  entityId         BigInt?                  @map("entity_id")
+  context          WalletTransactionContext
+  meta             Json?
+  nonce            BigInt
+  status           WalletTransactionStatus  @default(Confirmed)
+  timestamp        DateTime
+  wallet           Wallet                   @relation(fields: [walletId], references: [id])
+  walletId         BigInt                   @map("wallet_id")
+
+  @@unique([walletId, nonce])
+  @@index([entityId, context])
+  @@map("wallet_transaction")
+}
+
+enum NotificationType {
+  System        @map("system")
+  Transactional @map("transactional")
+  Informational @map("informational")
+  Marketing     @map("marketing")
+
+  @@map("notification_type")
+}
+
+enum TargetType {
+  Single   @map("single")
+  Multiple @map("multiple")
+  All      @map("all")
+
+  @@map("target_type")
+}
+
+model Notification {
+  id               Int                 @id @default(autoincrement())
+  notificationCode String?             @map("notification_code")
+  title            String
+  body             String
+  data             Json?
+  path             String?             @map("path")
+  type             NotificationType    @default(Informational)
+  targetType       TargetType          @default(All) @map("target_type")
+  isSent           Boolean             @default(false) @map("is_sent")
+  sendAt           DateTime?           @map("send_at")
+  createdById      Int?                @map("created_by_id")
+  createdAt        DateTime            @default(now()) @map("created_at")
+  updatedAt        DateTime            @updatedAt @map("updated_at")
+  recipients       NotificationViews[]
+
+  @@index([sendAt])
+  @@map("notifications")
+}
+
+model NotificationViews {
+  id             Int          @id @default(autoincrement())
+  account        Account      @relation(fields: [userId], references: [id])
+  userId         Int          @map("user_id")
+  notification   Notification @relation(fields: [notificationId], references: [id])
+  notificationId Int          @map("notification_id")
+  viewed         Boolean      @default(false)
+  readAt         DateTime?    @map("read_at")
+  createdAt      DateTime     @default(now()) @map("created_at")
+  updatedAt      DateTime     @updatedAt @map("updated_at")
+
+  @@unique([userId, notificationId])
+  @@map("notification_views")
+}
+
+model UserDeviceToken {
+  id       Int     @id @default(autoincrement())
+  userId   Int     @map("user_id")
+  token    String
+  isActive Boolean @default(true) @map("is_active")
+
+  @@unique([token])
+  @@map("user_device_token")
+}
+
+enum ReferralUsesType {
+  InvestorSignup    @map("investor_signup")
+  AssetOwnerSignup  @map("asset_owner_signup")
+  AssetPromotion    @map("asset_promotion")
+  AssetRegistration @map("asset_registration")
+
+  @@map("referral_uses_type")
+}
+
+enum ReferralType {
+  Plain                  @map("plain")
+  Reference              @map("reference")
+  AssetOwnerReferralCode @map("asset-owner_referral_code")
+
+  @@map("referral_type")
+}
+
+model ReferralCampaign {
+  id                Int                  @id @default(autoincrement())
+  code              String               @unique
+  ownerId           Int                  @map("owner_id") // broker today, admin / partner tomorrow
+  referralType      ReferralType         @default(Plain) @map("referral_type")
+  expiresAt         DateTime?            @map("expires_at")
+  isActive          Boolean              @default(true) @map("is_active")
+  createdAt         DateTime             @default(now()) @map("created_at")
+  updatedAt         DateTime             @updatedAt @map("updated_at")
+  owner             Account              @relation(fields: [ownerId], references: [id])
+  usages            ReferralUsage[]
+  commissions       ReferralCommission[]
+  assetOwnerInvite  AssetOwnerInvite[]
+  UserInviteContext UserInviteContext[]
+
+  @@index([ownerId])
+  @@map("referral_campaign")
+}
+
+enum UserEntrySource {
+  Investor   @map("investor")
+  AssetOwner @map("assetOwner")
+  Company    @map("company")
+
+  @@map("user_entry_source")
+}
+
+model UserInviteContext {
+  id                 Int               @id @default(autoincrement())
+  accountId          Int               @unique @map("user_id")
+  entrySource        UserEntrySource   @map("entry_source")
+  referralCode       String?           @map("referral_code")
+  referralCampaignId Int?              @map("referral_campaign_id")
+  accountType        AccountType?      @map("account_type")
+  createdAt          DateTime          @default(now()) @map("created_at")
+  updatedAt          DateTime          @updatedAt @map("updated_at")
+  user               Account           @relation(fields: [accountId], references: [id])
+  campaign           ReferralCampaign? @relation(fields: [referralCampaignId], references: [id])
+
+  @@index([referralCampaignId])
+  @@map("user_invite_context")
+}
+
+model ReferralUsage {
+  id               Int              @id @default(autoincrement())
+  campaignId       Int              @map("campaign_id")
+  referredUserId   Int              @map("referred_user_id")
+  referralUsesType ReferralUsesType @map("referral_uses_type")
+  targetId         Int?             @map("target_id") // assetId when AssetPromotion, null for signup cases
+  usageCount       Int              @default(0) @map("usage_count")
+  rewardLimit      Int?             @map("reward_limit")
+  isCompleted      Boolean          @default(false) @map("is_completed")
+  firstUsedAt      DateTime         @default(now()) @map("first_used_at")
+  updatedAt        DateTime         @updatedAt @map("updated_at")
+  campaign         ReferralCampaign @relation(fields: [campaignId], references: [id])
+  user             Account          @relation(fields: [referredUserId], references: [id])
+
+  @@unique([campaignId, referredUserId, referralUsesType])
+  @@map("referral_usage")
+}
+
+enum ReferralApprovalStatus {
+  Pending  @map("pending")
+  Approved @map("approved")
+  Rejected @map("rejected")
+
+  @@map("referral_approval_status")
+}
+
+model AssetOwnerInvite {
+  id                    Int                    @id @default(autoincrement())
+  campaignId            Int                    @map("campaign_id")
+  brokerId              Int                    @map("broker_id")
+  brokerEmail           String                 @map("broker_email")
+  assetOwnerEmail       String?                @map("asset_owner_email")
+  assetOwnerId          Int?                   @map("asset_owner_id")
+  assetOwnerDetails     Json?                  @map("asset_owner_details")
+  assetId               Int?                   @unique @map("asset_id")
+  referralUsesType      ReferralUsesType       @default(AssetOwnerSignup) @map("referral_uses_type")
+  proposedCommissionPct Decimal                @map("proposed_commission_pct")
+  finalCommissionPct    Decimal?               @map("final_commission_pct")
+  assetOwnerStatus      ReferralApprovalStatus @default(Pending) @map("asset_owner_status")
+  adminStatus           ReferralApprovalStatus @default(Pending) @map("admin_status")
+  isAssetOnBording      Boolean                @default(false) @map("is_asset_on_bording")
+  remarks               String?
+  approvedAt            DateTime?              @map("approved_at")
+  propertyDetails       Json?                  @map("property_details")
+  brokerNote            String?                @map("broker_note")
+  createdAt             DateTime               @default(now()) @map("created_at")
+  updatedAt             DateTime               @updatedAt @map("updated_at")
+  campaign              ReferralCampaign       @relation(fields: [campaignId], references: [id])
+  assetOwner            Account?               @relation(fields: [assetOwnerId], references: [id])
+  asset                 Asset?                 @relation(fields: [assetId], references: [id])
+  assetDetails          Json?                  @map("asset_details")
+
+  @@index([brokerId])
+  @@index([campaignId])
+  @@map("asset_owner_invite")
+}
+
+model ReferralCommission {
+  id               Int                @id @default(autoincrement())
+  campaignId       Int                @map("campaign_id")
+  ownerId          Int                @map("owner_id") // broker account id
+  referredUserId   Int?               @map("referred_user_id") // investor account id
+  reviewedById     Int?               @map("reviewed_by_id")
+  transactionId    Int?               @map("transaction_id")
+  assetId          Int?               @map("asset_id")
+  baseAmount       Decimal            @default(0) @map("base_amount") @db.Decimal(20, 2)
+  commissionPct    Decimal            @default(0) @map("commission_pct") @db.Decimal(5, 2)
+  commissionAmount Decimal            @default(0) @map("commission_amount") @db.Decimal(20, 2)
+  referralUsesType ReferralUsesType?  @map("referral_uses_type")
+  status           CommissionStatus   @default(Pending)
+  createdAt        DateTime           @default(now()) @map("created_at")
+  updatedAt        DateTime           @updatedAt @map("updated_at")
+  campaign         ReferralCampaign   @relation(fields: [campaignId], references: [id])
+  broker           Account            @relation("BrokerCommission", fields: [ownerId], references: [id])
+  referredUser     Account?           @relation("ReferredUserCommission", fields: [referredUserId], references: [id])
+  asset            Asset?             @relation(fields: [assetId], references: [id])
+  ledgerEntries    CommissionLedger[]
+
+  @@index([ownerId])
+  @@map("referral_commission")
+}
+
+enum PayoutStatus {
+  Pending  @map("Pending")
+  Approved @map("approved")
+  Rejected @map("rejected")
+  Paid     @map("paid")
+  Failed   @map("failed")
+
+  @@map("payout_status")
+}
+
+model CommissionPayoutRequest {
+  id           Int          @id @default(autoincrement())
+  brokerId     Int          @map("broker_id")
+  amount       Decimal      @db.Decimal(20, 2)
+  status       PayoutStatus @default(Pending)
+  reviewedById Int?         @map("reviewed_by_id")
+  remarks      String?
+  createdAt    DateTime     @default(now()) @map("created_at")
+  updatedAt    DateTime     @updatedAt @map("updated_at")
+  broker       Account      @relation(fields: [brokerId], references: [id])
+
+  @@index([brokerId])
+  @@map("commission_payout_request")
+}
+
+model CommissionLedger {
+  id           Int                 @id @default(autoincrement())
+  commissionId Int?                @map("commission_id")
+  fromStatus   CommissionStatus?   @map("from_status")
+  toStatus     CommissionStatus    @map("to_status")
+  amount       Decimal             @db.Decimal(20, 2)
+  reason       String?
+  metadata     Json?
+  createdAt    DateTime            @default(now()) @map("created_at")
+  updatedAt    DateTime            @updatedAt @map("updated_at")
+  commission   ReferralCommission? @relation(fields: [commissionId], references: [id])
+
+  @@index([commissionId])
+  @@index([createdAt])
+  @@map("commission_ledger")
+}
+
+model AssetBrokerCommissionContract {
+  id                    Int                    @id @default(autoincrement())
+  brokerId              Int                    @map("broker_id")
+  assetOwnerId          Int                    @map("asset_owner_id")
+  assetId               Int                    @map("asset_id")
+  proposedCommissionPct Decimal                @map("proposed_commission_pct") @db.Decimal(5, 2)
+  finalCommissionPct    Decimal?               @map("final_commission_pct") @db.Decimal(5, 2)
+  status                ReferralApprovalStatus @default(Pending)
+  adminStatus           ReferralApprovalStatus @default(Pending) @map("admin_status")
+  brokerNote            String?                @map("broker_note")
+  assetOwnerNote        String?                @map("asset_owner_note")
+  approvedAt            DateTime?              @map("approved_at")
+  createdAt             DateTime               @default(now()) @map("created_at")
+  updatedAt             DateTime               @updatedAt @map("updated_at")
+
+  broker     Account @relation("BrokerCommissionContracts", fields: [brokerId], references: [id])
+  assetOwner Account @relation("AssetOwnerCommissionContracts", fields: [assetOwnerId], references: [id])
+  asset      Asset   @relation(fields: [assetId], references: [id])
+
+  @@index([brokerId])
+  @@index([assetOwnerId])
+  @@map("asset_broker_commission_contract")
+}
+
+enum CommissionStatus {
+  Pending   @map("pending")
+  Confirmed @map("confirmed")
+  Paid      @map("paid")
+  Failed    @map("failed")
+  Hold      @map("hold")
+
+  @@map("commission_status")
+}
+
+model CouponRedemption {
+  id              Int      @id @default(autoincrement())
+  couponId        Int      @map("coupon_id")
+  userId          Int      @map("user_id")
+  orderId         Int      @map("order_id")
+  discountApplied Decimal  @map("discount_applied") @db.Decimal(10, 2)
+  usedAt          DateTime @default(now()) @map("used_at")
+  createdAt       DateTime @default(now()) @map("created_at")
+  updatedAt       DateTime @updatedAt @map("updated_at")
+  coupon          Coupon   @relation(fields: [couponId], references: [id])
+
+  @@unique([couponId, userId])
+  @@index([userId])
+  @@map("coupon_redemption")
+}
+
+model CouponAssetMap {
+  id        Int      @id @default(autoincrement())
+  couponId  Int      @map("coupon_id")
+  assetId   Int      @map("asset_id")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+  coupon    Coupon   @relation(fields: [couponId], references: [id])
+
+  @@unique([couponId, assetId])
+  @@map("coupon-asset_map")
+}
+
+enum DiscountType {
+  Percentage    @map("Percentage")
+  Fixed         @map("fixed")
+  FractionBonus @map("fraction_bonus")
+
+  @@map("discount_type")
+}
+
+enum CouponStatus {
+  Scheduled @map("scheduled")
+  Exceed    @map("exceed")
+  Active    @map("active")
+  InActive  @map("in_active")
+  Expired   @map("expired")
+
+  @@map("coupon_status")
+}
+
+model Coupon {
+  id                Int                @id @default(autoincrement())
+  code              String             @unique
+  description       String?
+  discountType      DiscountType       @map("discount_type")
+  couponStatus      CouponStatus?      @map("coupon_status")
+  discountValue     Decimal?           @map("discount_value") @db.Decimal(10, 2)
+  bonusFractions    Int?               @map("bonus_fractions")
+  maxDiscountAmount Decimal?           @map("max_discount_amount") @db.Decimal(10, 2)
+  minPurchaseAmount Decimal?           @map("min_purchase_amount") @db.Decimal(10, 2)
+  totalUsageLimit   Int?               @map("total_usage_limit")
+  perUserLimit      Int                @default(1) @map("per_user_limit")
+  validFrom         DateTime           @map("valid_from")
+  validTill         DateTime           @map("valid_till")
+  isActive          Boolean            @default(true) @map("is_active")
+  isDeleted         Boolean            @default(false) @map("is_deleted")
+  createdByAdminId  Int                @map("created_by_admin_id")
+  createdAt         DateTime           @default(now()) @map("created_at")
+  updatedAt         DateTime           @updatedAt @map("updated_at")
+  redemptions       CouponRedemption[]
+  assets            CouponAssetMap[]
+
+  @@index([code])
+  @@index([isActive])
+  @@index([minPurchaseAmount])
+  @@index([validFrom, validTill])
+  @@map("coupon")
+}
+
+enum VendorCategory {
+  Legal      @map("legal")
+  Valuation  @map("valuation")
+  Audit      @map("audit")
+  Trustee    @map("trustee")
+  Compliance @map("compliance")
+
+  @@map("vendor_category")
+}
+
+model Vendor {
+  id          Int            @id @default(autoincrement())
+  name        String
+  category    VendorCategory
+  description String?
+  website     String?
+  email       String?
+  mobile      String?
+  documents   Json?
+  isActive    Boolean        @default(true) @map("is_active")
+  createdById Int            @map("created_by_id")
+  createdAt   DateTime       @default(now()) @map("created_at")
+  updatedAt   DateTime       @updatedAt @map("updated_at")
+
+  @@map("vendor")
+}
+
+enum SuggestionStatus {
+  Pending  @map("pending")
+  Approved @map("approved")
+  Rejected @map("rejected")
+
+  @@map("suggestion_status")
+}
+
+model VendorSuggestion {
+  id           Int              @id @default(autoincrement())
+  assetOwnerId Int              @map("asset_owner_id")
+  vendorName   String           @map("vendor_name")
+  category     VendorCategory
+  description  String?
+  website      String?
+  email        String?
+  mobile       String?
+  status       SuggestionStatus
+  createdAt    DateTime         @default(now()) @map("created_at")
+  updatedAt    DateTime         @updatedAt @map("updated_at")
+  reviewedAt   DateTime?        @map("reviewed_at")
+  reviewedById Int?             @map("reviewed_by_id")
+
+  @@index([status])
+  @@map("vendor_suggestion")
+}
+
+model ActivityLog {
+  id   String @id @default(uuid())
+  type String
+
+  actorType String @map("actor_type")
+  actorId   Int?   @map("actor_id")
+
+  entityType String @map("entity_type")
+  entityId   Int    @map("entity_id")
+
+  label String?
+
+  targetId Int? @map("target_id")
+
+  metadata  Json?
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@index([entityType, entityId])
+  @@index([actorType, actorId])
+  @@index([type])
+  @@map("activity_log")
+}
+
+enum ChatroomType {
+  Direct @map("direct")
+  Group  @map("group")
+
+  @@map("chat_room_type")
+}
+
+model ChatRoom {
+  id            Int            @id @default(autoincrement())
+  name          String?
+  type          ChatroomType
+  createdById   Int            @map("created_by_id")
+  lastMessageId Int?           @map("last_message_id")
+  assetId       Int?           @map("asset_id")
+  isActive      Boolean        @default(true) @map("is_active")
+  createdAt     DateTime       @default(now()) @map("created_at")
+  updatedAt     DateTime       @updatedAt @map("updated_at")
+  createdBy     Account        @relation(fields: [createdById], references: [id])
+  lastMessage   Message?       @relation("LastMessage", fields: [lastMessageId], references: [id])
+  asset         Asset?         @relation(fields: [assetId], references: [id])
+  members       ChatRoomUser[]
+  messages      Message[]
+
+  @@index([type])
+  @@map("chat_room")
+}
+
+enum MessageType {
+  Text  @map("text")
+  Image @map("image")
+  File  @map("file")
+
+  @@map("message_type")
+}
+
+enum MessageStatus {
+  Sent      @map("sent")
+  Delivered @map("delivered")
+  Read      @map("read")
+
+  @@map("message_status")
+}
+
+model Message {
+  id         Int           @id @default(autoincrement())
+  chatRoomId Int           @map("chat_room_id")
+  senderId   Int           @map("sender_id")
+  content    String?       @map("content")
+  mediaUrl   String?       @map("media_url")
+  type       MessageType
+  status     MessageStatus @default(Sent)
+  deletedAt  DateTime?     @map("deleted_at")
+  createdAt  DateTime      @default(now()) @map("created_at")
+  updatedAt  DateTime      @updatedAt @map("updated_at")
+  chatRoom   ChatRoom      @relation(fields: [chatRoomId], references: [id], onDelete: Cascade)
+  sender     Account       @relation(fields: [senderId], references: [id], onDelete: Cascade)
+  chatRooms  ChatRoom[]    @relation("LastMessage")
+
+  @@index([chatRoomId, createdAt])
+  @@map("message")
+}
+
+model ChatRoomUser {
+  id          Int       @id @default(autoincrement())
+  chatRoomId  Int       @map("chat_room_id")
+  accountId   Int       @map("user_id")
+  lastReadAt  DateTime? @map("last_read_at")
+  unreadCount Int       @default(0) @map("un_read_count")
+  clearedAt   DateTime? @map("clear_at")
+  isMuted     Boolean   @default(false) @map("is_muuted")
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+  chatRoom    ChatRoom  @relation(fields: [chatRoomId], references: [id], onDelete: Cascade)
+  account     Account   @relation(fields: [accountId], references: [id], onDelete: Cascade)
+
+  @@unique([chatRoomId, accountId])
+  @@index([accountId])
+  @@map("chat_room_user")
+}
+
+model BlockedUser {
+  id        Int      @id @default(autoincrement())
+  blockerId Int      @map("blocker_id")
+  blockedId Int      @map("blocked_id")
+  createdAt DateTime @default(now()) @map("created_at")
+
+  blocker Account @relation("Blocker", fields: [blockerId], references: [id])
+  blocked Account @relation("Blocked", fields: [blockedId], references: [id])
+
+  @@unique([blockerId, blockedId])
+  @@map("blocked_user")
+}
+
+model Icons {
+  id   Int     @id @default(autoincrement())
+  name String?
+  url  String
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("icon")
+}
+
+model PropertyInterest {
+  id          Int    @id @default(autoincrement())
+  title       String
+  description String
+  icon        String
+  iconId      Int?   @map("icon_id")
+  asset       Asset? @relation(fields: [assetId], references: [id])
+  assetId     Int?   @map("asset_id")
+
+  @@map("property_interest")
+}
+
+enum CategoryStatus {
+  Active   @map("active")
+  Inactive @map("inactive")
+
+  @@map("category_status")
+}
+
+enum CategoryRequestStatus {
+  Pending  @map("pending")
+  Approved @map("approved")
+  Rejected @map("rejected")
+
+  @@map("category_request_status")
+}
+
+model Category {
+  id                Int                   @id @default(autoincrement())
+  name              String
+  categoryStatus    CategoryStatus        @default(Active) @map("category_status")
+  categoryReqStatus CategoryRequestStatus @default(Pending) @map("category_req_status")
+  createdAt         DateTime              @default(now()) @map("created_at")
+  updatedAt         DateTime              @updatedAt @map("updated_at")
+  group             Group[]
+  account           Account?              @relation(fields: [accountId], references: [id])
+  accountId         Int?                  @map("account_id")
+
+  @@map("category")
+}
+
+enum GroupStatus {
+  Active   @map("active")
+  Inactive @map("inactive")
+
+  @@map("group_status")
+}
+
+model Group {
+  id                Int                @id @default(autoincrement())
+  title             String
+  description       String
+  image             String?
+  isHighlighted     Boolean            @default(false) @map("is_highlighted")
+  groupStatus       GroupStatus        @default(Active) @map("group_status")
+  createdAt         DateTime           @default(now()) @map("created_at")
+  updatedAt         DateTime           @updatedAt @map("updated_at")
+  groupMember       GroupMember[]
+  category          Category?          @relation(fields: [categoryId], references: [id])
+  categoryId        Int?               @map("category_id")
+  sharedAssetGroups SharedAssetGroup[]
+
+  @@map("group")
+}
+
+model GroupMember {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+  group     Group?   @relation(fields: [groupId], references: [id])
+  groupId   Int?     @map("group_id")
+  account   Account? @relation(fields: [accountId], references: [id])
+  accountId Int?     @map("account_id")
+
+  @@unique([accountId, groupId])
+  @@map("group_member")
+}
+
+enum SharedAssetStatus {
+  Pending  @map("pending")
+  Approved @map("approved")
+  Rejected @map("rejected")
+
+  @@map("shared_asset_status")
+}
+
+model SharedAsset {
+  id                  Int               @id @default(autoincrement())
+  assetId             Int               @unique @map("asset_id")
+  sharedById          Int               @map("shared_by_id")
+  tokenAmount         Decimal?          @map("token_amount")
+  status              SharedAssetStatus @default(Pending)
+  approvedBy          Int?              @map("approved_by")
+  submittedToGroupIds Int[]             @default([]) @map("submitted_to_group_ids")
+  approvedAt          DateTime?         @map("approved_at")
+  rejectNote          String?           @map("reject_note")
+  createdAt           DateTime          @default(now()) @map("created_at")
+  updatedAt           DateTime          @updatedAt @map("updated_at")
+
+  asset    Asset   @relation(fields: [assetId], references: [id])
+  sharedBy Account @relation("SharedAssets", fields: [sharedById], references: [id])
+
+  groupShares SharedAssetGroup[]
+  interests   AssetInterest[]
+
+  @@map("shared_asset")
+}
+
+model SharedAssetGroup {
+  id            Int      @id @default(autoincrement())
+  sharedAssetId Int      @map("shared_asset_id")
+  groupId       Int      @map("group_id")
+  sharedBy      String?  @map("shared_by")
+  createdAt     DateTime @default(now()) @map("created_at")
+
+  sharedAsset SharedAsset @relation(fields: [sharedAssetId], references: [id])
+  group       Group       @relation(fields: [groupId], references: [id])
+
+  @@unique([sharedAssetId, groupId])
+  @@map("shared_asset_group")
+}
+
+enum InterestPaymentStatus {
+  Pending @map("pending")
+  Paid    @map("paid")
+  Failed  @map("failed")
+
+  @@map("interest_payment_status")
+}
+
+model AssetInterest {
+  id                Int                    @id @default(autoincrement())
+  sharedAssetId     Int                    @map("shared_asset_id")
+  accountId         Int                    @map("account_id")
+  groupId           Int?                   @map("group_id")
+  tokenAmount       Decimal                @map("token_amount") // amount paid
+  paymentStatus     InterestPaymentStatus? @map("payment_status")
+  isPayment         Boolean                @default(false) @map("is_payment")
+  razorpayOrderId   String?                @map("razorpay_order_id")
+  razorpayPaymentId String?                @map("razorpay_payment_id")
+  paidAt            DateTime?              @map("paid_at")
+
+  payerName         String?   @map("payer_name")
+  payerMobile       String?   @map("payer_mobile")
+  payerEmail        String?   @map("payer_email")
+  amountPaid        Decimal?  @map("amount_paid")
+  utrNumber         String?   @map("utr_number")
+  paymentScreenshot String?   @map("payment_screenshot")
+  rejectionReason   String?   @map("rejection_reason")
+  reviewedById      Int?      @map("reviewed_by_id")
+  reviewedAt        DateTime? @map("reviewed_at")
+  secondaryClubId   Int?      @map("secondary_club_id")
+  paymentRequestId  Int?      @map("payment_request_id")
+  consent           Boolean   @default(false)
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  sharedAsset SharedAsset @relation(fields: [sharedAssetId], references: [id])
+  account     Account     @relation(fields: [accountId], references: [id])
+
+  @@unique([sharedAssetId, accountId])
+  @@map("asset_interest")
+}
+
+enum ListingType {
+  Ask @map("ask")
+  Bid @map("bid")
+
+  @@map("listing_type")
+}
+
+enum ListingStatus {
+  Active    @map("active")
+  Partial   @map("partial")
+  Cancelled @map("cancelled")
+  Fulfilled @map("fulfilled")
+  Expired   @map("expired")
+
+  @@map("listing_status")
+}
+
+enum TradeType {
+  AskFulfilled @map("ask_fulfilled")
+  BidFulfilled @map("bid_fulfilled")
+  MarketSell   @map("market_sell")
+
+  @@map("trade_type")
+}
+
+model MarketplaceListing {
+  id             Int           @id @default(autoincrement())
+  assetId        Int           @map("asset_id")
+  accountId      Int           @map("account_id")
+  type           ListingType   @map("type")
+  pricePerUnit   Decimal       @map("price_per_unit")
+  totalUnits     Int           @map("total_units")
+  remainingUnits Int           @map("remaining_units")
+  status         ListingStatus @default(Active)
+  expiresAt      DateTime?     @map("expires_at")
+  createdAt      DateTime      @default(now()) @map("created_at")
+  updatedAt      DateTime      @updatedAt @map("updated_at")
+
+  asset   Asset              @relation(fields: [assetId], references: [id])
+  account Account            @relation(fields: [accountId], references: [id])
+  trades  MarketplaceTrade[]
+
+  potentialMatchesAsAsk MarketplacePotentialMatch[] @relation("AskPotentialMatch")
+  potentialMatchesAsBid MarketplacePotentialMatch[] @relation("BidPotentialMatch")
+
+  @@index([assetId, type, status])
+  @@index([accountId])
+  @@map("marketplace_listing")
+}
+
+model MarketplaceTrade {
+  id           Int       @id @default(autoincrement())
+  assetId      Int       @map("asset_id")
+  listingId    Int?      @map("listing_id")
+  buyerId      Int?      @map("buyer_id")
+  sellerId     Int       @map("seller_id")
+  tradeType    TradeType @map("trade_type")
+  pricePerUnit Decimal   @map("price_per_unit")
+  units        Int
+  totalAmount  Decimal   @map("total_amount")
+  buyerRole    String?   @map("buyer_role")
+  fee          Decimal   @default(0)
+  netAmount    Decimal   @map("net_amount") // totalAmount - fee
+  tradedAt     DateTime  @default(now()) @map("traded_at")
+
+  settlementStatus TradeSettlementStatus @default(Pending) @map("settlement_status")
+  trusteeId        Int?                  @map("trustee_id")
+  settledAt        DateTime?             @map("settled_at")
+
+  asset     Asset               @relation(fields: [assetId], references: [id])
+  listing   MarketplaceListing? @relation(fields: [listingId], references: [id])
+  buyer     Account?            @relation("BuyerTrades", fields: [buyerId], references: [id])
+  seller    Account             @relation("SellerTrades", fields: [sellerId], references: [id])
+  account   Account?            @relation(fields: [accountId], references: [id])
+  accountId Int?                @map("account_id")
+
+  @@index([assetId, tradedAt])
+  @@index([buyerId])
+  @@index([sellerId])
+  @@index([settlementStatus])
+  @@map("marketplace_trade")
+}
+
+enum TradeSettlementStatus {
+  Pending  @map("pending")
+  Approved @map("approved")
+
+  @@map("trade_settlement_status")
+}
+
+// A compatible Ask+Bid pair found by the match engine, held for Trustee
+// review before it is allowed to proceed to trade execution/order creation.
+// PendingTrusteeApproval -> Approved -> Matched (consumed by ExecuteTradeListener)
+// PendingTrusteeApproval -> Rejected (terminal, never matched)
+enum MatchApprovalStatus {
+  PendingTrusteeApproval @map("pending_trustee_approval")
+  Approved               @map("approved")
+  Rejected               @map("rejected")
+  Matched                @map("matched")
+
+  @@map("match_approval_status")
+}
+
+model MarketplacePotentialMatch {
+  id              Int                 @id @default(autoincrement())
+  assetId         Int                 @map("asset_id")
+  askListingId    Int                 @map("ask_listing_id")
+  bidListingId    Int                 @map("bid_listing_id")
+  matchedQuantity Int                 @map("matched_quantity")
+  tradePrice      Decimal             @map("trade_price")
+  status          MatchApprovalStatus @default(PendingTrusteeApproval)
+
+  trusteeId  Int?      @map("trustee_id")
+  approvedAt DateTime? @map("approved_at")
+
+  rejectedBy      Int?      @map("rejected_by")
+  rejectedAt      DateTime? @map("rejected_at")
+  rejectionReason String?   @map("rejection_reason")
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  asset      Asset              @relation(fields: [assetId], references: [id])
+  askListing MarketplaceListing @relation("AskPotentialMatch", fields: [askListingId], references: [id])
+  bidListing MarketplaceListing @relation("BidPotentialMatch", fields: [bidListingId], references: [id])
+
+  @@index([assetId, status])
+  @@index([askListingId, status])
+  @@index([bidListingId, status])
+  @@map("marketplace_potential_match")
+}
+
+model AssetMarketStat {
+  id            Int     @id @default(autoincrement())
+  assetId       Int     @unique @map("asset_id")
+  currentPrice  Decimal @map("current_price")
+  volume24h     Decimal @map("volume_24h")
+  units24h      Int     @map("units_24h")
+  openPrice24h  Decimal @map("open_price_24h")
+  highPrice24h  Decimal @map("high_price_24h")
+  lowPrice24h   Decimal @map("low_price_24h")
+  closePrice24h Decimal @map("close_price_24h")
+
+  priceChange24h Decimal   @map("price_change_24h")
+  lastResetAt    DateTime? @map("last_reset_at")
+  updatedAt      DateTime  @updatedAt @map("updated_at")
+
+  asset Asset @relation(fields: [assetId], references: [id])
+
+  @@map("asset_market_stat")
+}
+
+model Holding {
+  id                Int      @id @default(autoincrement())
+  accountId         Int      @map("account_id")
+  assetId           Int      @map("asset_id")
+  availableQuantity Decimal  @default(0) @map("available_quantity")
+  lockedQuantity    Decimal  @default(0) @map("locked_quantity")
+  averageBuyPrice   Decimal  @default(0) @map("average_buy_price")
+  createdAt         DateTime @default(now()) @map("created_at")
+  updatedAt         DateTime @updatedAt @map("updated_at")
+
+  account Account @relation(fields: [accountId], references: [id])
+  asset   Asset   @relation(fields: [assetId], references: [id])
+
+  @@unique([accountId, assetId])
+  @@index([accountId])
+  @@index([assetId])
+  @@map("holdings")
+}
+
+model InvoiceDetails {
+  id                Int       @id @default(autoincrement())
+  accountId         Int?      @map("account_id")
+  assetId           Int?      @map("asset_id")
+  firstName         String    @map("first_name")
+  lastName          String    @map("last_name")
+  email             String    @map("email")
+  mobile            String    @map("mobile")
+  tokenAmount       Int       @map("token_amount")
+  orderId           String    @map("order_id")
+  rozarpayPaymentId String    @map("rozarpay_payment_id")
+  assetTitle        String    @map("asset_title")
+  invoiceUrl        String    @map("invoice_url")
+  paidAt            DateTime? @map("paid_at")
+  createdAt         DateTime  @default(now()) @map("created_at")
+  updatedAt         DateTime  @updatedAt @map("updated_at")
+
+  account Account? @relation(fields: [accountId], references: [id])
+  asset   Asset?   @relation(fields: [assetId], references: [id])
+
+  @@map("invoice_details")
+}
+
+model SecondaryClubs {
+  id          Int       @id @default(autoincrement())
+  title       String?
+  description String?
+  status      String?
+  startDate   DateTime? @map("start_date")
+  endDate     DateTime? @map("end_date")
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+
+  assetId Int?   @unique @map("asset_id")
+  asset   Asset? @relation(fields: [assetId], references: [id])
+
+  votes                  Vote[]
+  clubMembershipRequests ClubMembershipRequest[]
+  spv                    Spv?
+
+  @@map("secondar_clubs")
+}
+
+enum VoteChoice {
+  Yes     @map("yes")
+  No      @map("no")
+  Abstain @map("abstain")
+
+  @@map("vote_choice")
+}
+
+model Vote {
+  id              Int        @id @default(autoincrement())
+  secondaryClubId Int        @map("secondary_club_id")
+  assetId         Int        @map("asset_id")
+  accountId       Int        @map("account_id")
+  choice          VoteChoice
+  createdAt       DateTime   @default(now()) @map("created_at")
+  updatedAt       DateTime   @updatedAt @map("updated_at")
+
+  secondaryClub SecondaryClubs @relation(fields: [secondaryClubId], references: [id])
+  account       Account        @relation(fields: [accountId], references: [id])
+
+  @@unique([secondaryClubId, accountId])
+  @@map("vote")
+}
+
+enum MembershipStatus {
+  NdaPending           @map("nda_pending")
+  PendingAdminApproval @map("pending_admin_approval")
+  Approved             @map("approved")
+  Rejected             @map("rejected")
+
+  @@map("membership_status")
+}
+
+model ClubMembershipRequest {
+  id              Int              @id @default(autoincrement())
+  ndaAccepted     Boolean          @default(false) @map("nda_accepted")
+  status          MembershipStatus
+  approvedBy      Int?             @map("approved_by")
+  approvedAt      DateTime?        @map("approved_at")
+  rejectionReason String?          @map("rejection_reason")
+  createdAt       DateTime         @default(now()) @map("created_at")
+
+  accountId       Int            @map("account_id")
+  secondaryClubId Int            @map("secondary_club_id")
+  account         Account        @relation(fields: [accountId], references: [id])
+  secondaryClub   SecondaryClubs @relation(fields: [secondaryClubId], references: [id])
+
+  @@unique([secondaryClubId, accountId])
+  @@map("club_membership_request")
+}
+
+enum SpvStatus {
+  Active   @map("active")
+  Disabled @map("disabled")
+
+  @@map("spv_status")
+}
+
+model Spv {
+  id              Int       @id @default(autoincrement())
+  name            String
+  secondaryClubId Int       @unique @map("secondary_club_id")
+  createdById     Int?      @map("created_by_id")
+  status          SpvStatus @default(Active)
+  createdAt       DateTime  @default(now()) @map("created_at")
+  updatedAt       DateTime  @updatedAt @map("updated_at")
+
+  secondaryClub SecondaryClubs @relation(fields: [secondaryClubId], references: [id])
+  members       SpvMember[]
+
+  @@map("spv")
+}
+
+model SpvMember {
+  id        Int      @id @default(autoincrement())
+  spvId     Int      @map("spv_id")
+  accountId Int      @map("account_id")
+  createdAt DateTime @default(now()) @map("created_at")
+
+  spv     Spv     @relation(fields: [spvId], references: [id])
+  account Account @relation(fields: [accountId], references: [id])
+
+  @@unique([spvId, accountId])
+  @@map("spv_member")
+}
+
+enum RoleType {
+  System @map("system")
+  Custom @map("custom")
+
+  @@map("role_type")
+}
+
+enum RoleStatus {
+  Active   @map("active")
+  InActive @map("inactive")
+
+  @@map("role_status")
+}
+
+model Role {
+  id               Int              @id @default(autoincrement())
+  name             String           @unique
+  description      String?
+  type             RoleType         @default(Custom)
+  status           RoleStatus       @default(Active)
+  isProtected      Boolean          @default(false) @map("is_protected")
+  createdByAdminId Int?             @map("created_by_admin_id")
+  createdByAdmin   Admin?           @relation("RoleCreatedBy", fields: [createdByAdminId], references: [id])
+  updatedByAdminId Int?             @map("updated_by_admin_id")
+  updatedByAdmin   Admin?           @relation("RoleUpdatedBy", fields: [updatedByAdminId], references: [id])
+  createdAt        DateTime         @default(now()) @map("created_at")
+  updatedAt        DateTime         @updatedAt @map("updated_at")
+  permissions      RolePermission[]
+  admins           Admin[]
+  accounts         Account[]
+
+  @@map("role")
+}
+
+model Permission {
+  id          Int              @id @default(autoincrement())
+  key         String           @unique
+  module      String
+  action      String
+  description String?
+  roles       RolePermission[]
+
+  @@map("permission")
+}
+
+model RolePermission {
+  roleId       Int        @map("role_id")
+  role         Role       @relation(fields: [roleId], references: [id], onDelete: Cascade)
+  permissionId Int        @map("permission_id")
+  permission   Permission @relation(fields: [permissionId], references: [id], onDelete: Cascade)
+
+  @@id([roleId, permissionId])
+  @@map("role_permission")
+}
+
+model AuditLog {
+  id           Int      @id @default(autoincrement())
+  actorAdminId Int      @map("actor_admin_id")
+  actorAdmin   Admin    @relation(fields: [actorAdminId], references: [id])
+  action       String
+  targetType   String   @map("target_type")
+  targetId     Int      @map("target_id")
+  metadata     Json?
+  ipAddress    String?  @map("ip_address")
+  createdAt    DateTime @default(now()) @map("created_at")
+
+  @@map("audit_log")
+}
+
+model FractionsConsent {
+  id              Int     @id @default(autoincrement())
+  buyerConsent    Boolean @default(false) @map("buyer_consent")
+  rejectionReason String? @map("rejetion_reason")
+
+  accountId Int @map("account_id")
+  assetId   Int @map("asset_id")
+
+  account Account @relation(fields: [accountId], references: [id])
+  asset   Asset   @relation(fields: [assetId], references: [id])
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@unique([accountId, assetId])
+  @@map("fractions_consent")
+}

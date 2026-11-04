@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.json",
+  "include": ["src/**/*", "types/**/*"],
+  "exclude": ["node_modules", "test", "dist", "**/*spec.ts"]
+}
+
+// as u know we are working with asset type of house of frac projet so now we need to implement the new feature
+// we need to implement the broker flow
+// so broker come and perform the signup and fill the kyc and trustee approve and reject kyc this i have done
+// 1. now broker invite the investor using referrals and if investor singup and purchase fraction so broker got commission on first 5 purchase
+// 2. broker invite the asset owner using referral if asset owner signup on plateform ans upload the asset so also brokewr got the comission and one things while referral both are decided the comission percemtaage also
+// 3. broker can also promote the already listing asset using reference id and if any one purchase the fraction so broker will get the commission
+
+// i need to implement this so please give me the flow and efficient schema and efficient flow

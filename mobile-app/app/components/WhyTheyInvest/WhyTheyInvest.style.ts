@@ -1,0 +1,101 @@
+import { StyleSheet } from "react-native";
+import { Colors } from "../../util/theme";
+
+export const createStyles = (colors: Colors) => StyleSheet.create({
+    labelWrapper: {
+        flexDirection: 'row',
+        alignItems: 'flex-start',
+        columnGap: 6,
+    },
+    sectionTitle: {
+        fontSize: 16,
+        fontFamily: "WorkSans-Medium",
+        marginBottom: 10,
+        color: colors.text.default,
+    },
+    required: {
+        color: colors.danger.default,
+    },
+    help: {
+        marginTop: 3,
+    },
+    container: {
+        borderWidth: 1,
+        borderStyle: 'dashed',
+        borderColor: colors.border.default,
+        borderRadius: 12,
+        paddingVertical: 16,
+        paddingHorizontal: 16,
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        minHeight: 113,
+    },
+    counter: {
+        fontSize: 12,
+        opacity: 0.8,
+        marginBottom: 8,
+        color: colors.text.default,
+        fontFamily: 'WorkSans-Medium',
+    },
+    cardsWrapper: {
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        gap: 10,
+    },
+    card: {
+        padding: 12,
+        borderRadius: 10,
+        backgroundColor: '#1c1c1e',
+    },
+    cardTitle: {
+        fontSize: 14,
+        marginTop: 6,
+        color: colors.text.default,
+        fontFamily: 'WorkSans-Medium',
+    },
+    cardDesc: {
+        fontSize: 12,
+        opacity: 0.8,
+        color: colors.text.default,
+        fontFamily: 'WorkSans-Medium',
+        marginTop: 6,
+    },
+    addCard: {
+        paddingVertical: 8,
+        paddingHorizontal: 16,
+        marginTop: 10,
+        borderRadius: 10,
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: colors.background.slightly,
+    },
+    addReason: {
+        fontSize: 14,
+        color: colors.text.default,
+        fontFamily: 'WorkSans-Medium',
+    },
+    removeButton: {
+        position: 'absolute',
+        top: -6,
+        right: -6,
+        width: 20,
+        height: 20,
+        borderRadius: 40,
+        backgroundColor: colors.background.danger,
+        justifyContent: 'center',
+        alignItems: 'center',
+        elevation: 3,
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.2,
+        shadowRadius: 3,
+    },
+    error: {
+        fontSize: 13,
+        marginTop: 6,
+        color: colors.danger.default,
+        fontFamily: 'WorkSans-Medium',
+    },
+    icon: { width: 28, height: 28 },
+})

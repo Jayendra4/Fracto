@@ -1,0 +1,18 @@
+export const initailState = {
+  assetType: '',
+  assetSubType: '',
+  assetTitle: '',
+  shortDescription: '',
+  ownershipModel: '',
+  ownershipModelOther: '',
+  country: '',
+  state: '',
+  city: '',
+  pincode: '',
+  mapUrl: '',
+  marketValue: '',
+  landArea: '',
+  name: '',
+  email: '',
+  mobile: '',
+};

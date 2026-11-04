@@ -1,0 +1,22 @@
+{
+  "name": "House of Frac",
+  "short_name": "HoF",
+  "description": "Turns real estate into accessible, tradable, income-generating opportunities — available to anyone with a tap!",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#33679b",
+  "background_color": "#ffffff",
+  "icons": [
+   {
+      "src": "/logos/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+   },
+   {
+      "src": "/logos/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+   }
+  ]
+}

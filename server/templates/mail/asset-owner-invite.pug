@@ -1,0 +1,73 @@
+doctype html
+html
+  body
+    h2 Asset Owner Invitation – House of Frac
+
+    p
+      | You have been invited by a verified broker to list your property on
+      strong House of Frac
+      | , a regulated fractional real estate platform.
+
+    h3 Broker Details
+    p
+      strong Email:
+      | #{ brokerEmail }
+
+    h3 Proposed Commission
+    p
+      | Broker Commission:
+      strong #{ commissionPct }%
+
+    if brokerNote
+      h3 Broker Note
+      p #{ brokerNote }
+
+    h3 Property Details
+
+    // ---- BASIC INFO ----
+    h4 Basic Information
+    ul
+      each val, key in propertyDetails.basicInfo
+        li
+          strong #{ key }:
+          | #{ val }
+
+    // ---- META DATA ----
+    if propertyDetails.meta && propertyDetails.meta.length
+      h4 Property Meta
+      ul
+        each item in propertyDetails.meta
+          li
+            strong #{ item.metaKey }:
+            | #{ item.metaValue }
+
+    // ---- DOCUMENTS ----
+    if propertyDetails.documents && propertyDetails.documents.length
+      h4 Documents
+      ul
+        each doc in propertyDetails.documents
+          li
+            strong #{ doc.documentType }:
+            | #{ doc.filename }
+
+// ---- REFERRAL + SIGNUP ----
+if signupLink
+  if referralCode
+    h3 Referral Code
+    p
+      | Use the referral code below during signup:
+    p
+      strong #{ referralCode }
+
+  br
+  a(href=signupLink, target='_blank')
+    | Click here to review and sign up
+
+    br
+    br
+    p
+      | If you have questions, you may reply directly to this email.
+
+    hr
+    p(style='font-size: 12px; color: #666')
+      | This invitation does not create any legal obligation.

@@ -1,0 +1,64 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    title Payment Invoice
+
+  body(style='font-family: Arial, sans-serif; line-height: 1.6; color: #333')
+    p Dear #{ name },
+
+    p Thank you for your payment.
+
+    p
+      | We have successfully received your payment for the Property Verification Report of
+      strong #{ assetTitle }.
+
+    p Your invoice has been attached to this email for your reference.
+
+    h3 Payment Details
+
+    p
+      strong Property Name:
+      | #{ assetTitle }
+
+    p
+      strong Service:
+      |
+      | Property Verification Report Charge
+
+    p
+      strong Order ID:
+      | #{ orderId }
+
+    p
+      strong Payment ID:
+      | #{ razorpayPaymentId }
+
+    p
+      strong Amount Paid:
+      |
+      | ₹#{ amount }
+
+    p
+      strong Payment Status:
+      |
+      | Successful
+
+    br
+
+    a(
+      href=invoiceUrl,
+      target='_blank',
+      style='display: inline-block; padding: 12px 24px; background-color: #6366f1; color: white; text-decoration: none; border-radius: 6px; font-weight: bold'
+    ) Download Invoice
+
+    br
+    br
+
+    p
+      | If you have any questions or need further assistance, please feel free to contact our support team.
+
+    br
+
+    p Regards,
+    p Team House of Frac
