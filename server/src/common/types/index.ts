@@ -14,14 +14,17 @@ export enum Environment {
 }
 
 export class EnvironmentVariables {
+  @IsOptional()
   @IsEnum(NodeType)
-  NODE_TYPE: NodeType;
+  NODE_TYPE?: NodeType;
 
+  @IsOptional()
   @IsEnum(Environment)
-  NODE_ENV: Environment;
+  NODE_ENV?: Environment;
 
+  @IsOptional()
   @IsEnum(Environment)
-  APP_ENV: Environment;
+  APP_ENV?: Environment;
 
   @IsInt()
   PORT: number;
