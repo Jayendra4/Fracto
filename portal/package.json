@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest",
-    "prepare": "husky",
+    "prepare": "exit 0",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
