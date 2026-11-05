@@ -19,9 +19,15 @@ build/
 
 # Environment files
 .env
-.env.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 **/.env
-**/.env.*
+**/.env.local
+!portal/.env.production
+!admin/.env.production
+!trustee/.env.production
 
 # Logs
 npm-debug.log*
