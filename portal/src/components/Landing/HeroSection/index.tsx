@@ -32,7 +32,7 @@ export default function HeroSection(): JSX.Element {
       <div className="col-span-2 flex flex-col gap-4 m-auto pl-4 lg:pl-12 xl:pl-12 2xl:pl-20 pt-6 w-full font-work items-start">
         <p className="text-[16px] sm:text-[18px] lg:text-[20px] md:mb-6 md:my-6 font-normal text-black">
           Welcome to{' '}
-          <span className="font-semibold uppercase">House of Frac</span>
+          <span className="font-semibold uppercase">Fracto</span>
         </p>
 
         <h1
@@ -61,7 +61,7 @@ export default function HeroSection(): JSX.Element {
       <div className="relative h-full xl:w-full lg:pb-0 xl:pb-0 md:mb-0 col-span-2 lg:mt-15 xl:mt-14 2xl:mt-13 justify-end">
         <img
           src="/images/home/house-bg.webp"
-          alt="House Of Frac"
+          alt="Fracto"
           className="h-full w-full lg:w-[120%] lg:origin-bottom-right lg:scale-[1.15] xl:scale-[1.25] mt-5.5 sm:mt-0 transition-all duration-100"
         />
       </div>

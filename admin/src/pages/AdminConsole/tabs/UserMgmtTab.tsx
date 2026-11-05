@@ -23,7 +23,7 @@ export function UserMgmtTab({ accountsLoading, realAccounts, openUserDetail }: U
     { id: 101, name: 'Mudit V. Dudhoria', email: 'mudit@fractest.in', mobile: '9876543210', type: 'Investor', status: 'KYC Approved', assignedRm: 'Riya Sharma', key: 'investor' },
     { id: 102, name: 'Young Attitude Group', email: 'info@youngattitude.in', mobile: '8765432109', type: 'Prospective Co-owner', status: 'Approved', assignedRm: 'Riya Sharma', key: 'assetowner' },
     { id: 103, name: 'Raj Kumar Associates', email: 'rajkumar@broker.in', mobile: '7654321098', type: 'Partner', status: 'Renewal Under Review', assignedRm: 'Riya Sharma', key: 'broker' },
-    { id: 104, name: 'HOF-LEAD-0039', email: 'lead39@fractest.in', mobile: '6543210987', type: 'Investor (Onboarding)', status: 'Stalled (6 days)', assignedRm: 'Riya Sharma', key: 'lead' },
+    { id: 104, name: 'FRACTO-LEAD-0039', email: 'lead39@fractest.in', mobile: '6543210987', type: 'Investor (Onboarding)', status: 'Stalled (6 days)', assignedRm: 'Riya Sharma', key: 'lead' },
     { id: 105, name: 'Trustee & Governance Officer', email: 'trustee@frac.in', mobile: '—', type: 'Trustee', status: 'Active', assignedRm: '—', key: 'trustee' },
     { id: 106, name: 'Legal / Valuation Reviewer', email: 'reviewer@legal.in', mobile: '—', type: 'Legal/Valuation/DD', status: 'Active', assignedRm: '—', key: 'legal' },
     { id: 107, name: 'Riya Sharma', email: 'riya.sharma@frac.in', mobile: '—', type: 'RM', status: 'Active', assignedRm: '—', key: 'rm' }

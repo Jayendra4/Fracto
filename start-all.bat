@@ -1,7 +1,7 @@
 @echo off
-title House of Frac Ecosystem Launcher
+title Fracto Ecosystem Launcher
 echo ========================================================
-echo        STARTING HOUSE OF FRAC ECOSYSTEM
+echo        STARTING FRACTO ECOSYSTEM
 echo ========================================================
 echo.
 

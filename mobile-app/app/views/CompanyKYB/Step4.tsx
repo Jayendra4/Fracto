@@ -243,7 +243,7 @@ const Step4: React.FC<Step4Props> = ({ companyId, initialValues, onNext, onBack 
                                 </Text>
                             </View>
                             <TextInputClassic
-                                label="Authorizing Company to register on House of Frac"
+                                label="Authorizing Company to register on Fracto"
                                 type={TextInputType.Radio}
                                 options={[
                                     { label: "Yes", value: "Yes" },

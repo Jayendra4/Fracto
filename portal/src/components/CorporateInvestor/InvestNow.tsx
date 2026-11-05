@@ -33,7 +33,7 @@ function InvestNow() {
             </h2>
 
             <p className="font-24 text-white/70 max-w-2xl leading-relaxed mb-12">
-              Own premium assets—Structural Co ownership—on House of Frac. Join the future of institutional real estate investment.
+              Own premium assets—Structural Co ownership—on Fracto. Join the future of institutional real estate investment.
             </p>
 
             {/* <motion.button

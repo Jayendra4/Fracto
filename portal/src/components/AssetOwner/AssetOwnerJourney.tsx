@@ -31,7 +31,7 @@ const steps: Step[] = [
     step: '01',
     title: 'Account Creation',
     description:
-      'Asset owners begin by registering on the House of Frac platform with their basic business or personal information. The platform uses secure multi-factor authentication to protect all accounts from the moment of creation. Once registered, asset owners can access the platform, review available resources, and initiate their asset onboarding journey.',
+      'Asset owners begin by registering on the Fracto platform with their basic business or personal information. The platform uses secure multi-factor authentication to protect all accounts from the moment of creation. Once registered, asset owners can access the platform, review available resources, and initiate their asset onboarding journey.',
     icon: FaUserPlus,
     side: 'left',
   },
@@ -47,7 +47,7 @@ const steps: Step[] = [
     step: '03',
     title: 'Asset Submission',
     description:
-      'Once verified, asset owners can submit their assets for review. This involves providing comprehensive property details, legal ownership documentation, independent valuation reports, financial projections, and any other relevant information that Investors would need to make an informed decision. The submission process is guided by the House of Frac team to ensure completeness and quality of documentation.',
+      'Once verified, asset owners can submit their assets for review. This involves providing comprehensive property details, legal ownership documentation, independent valuation reports, financial projections, and any other relevant information that Investors would need to make an informed decision. The submission process is guided by the Fracto team to ensure completeness and quality of documentation.',
     icon: FaFileAlt,
     side: 'left',
   },
@@ -55,7 +55,7 @@ const steps: Step[] = [
     step: '04',
     title: 'Trustee Review',
     description:
-      'Every asset submitted to the House of Frac undergoes a rigorous review by an independent trustee before it is approved for listing. The trustee independently evaluates the assets legal standing, documentation quality, commercial viability, and overall eligibility for structured Investors participation. This independent review is a cornerstone of the House of Frac framework, ensuring that only credible, well-documented assets are presented to Investors.',
+      'Every asset submitted to the Fracto undergoes a rigorous review by an independent trustee before it is approved for listing. The trustee independently evaluates the assets legal standing, documentation quality, commercial viability, and overall eligibility for structured Investors participation. This independent review is a cornerstone of the Fracto framework, ensuring that only credible, well-documented assets are presented to Investors.',
     icon: FaGavel,
     side: 'right',
   },
@@ -71,7 +71,7 @@ const steps: Step[] = [
     step: '06',
     title: 'Launch & Participation',
     description:
-      'With the asset live on the platform, Investors can discover, review, and express their interest in participating. House of Frac manages the Investors communication, documentation flow, and participation confirmation process, enabling asset owners to access capital efficiently while maintaining a professional Investors-facing experience.',
+      'With the asset live on the platform, Investors can discover, review, and express their interest in participating. Fracto manages the Investors communication, documentation flow, and participation confirmation process, enabling asset owners to access capital efficiently while maintaining a professional Investors-facing experience.',
     icon: FaCheckCircle,
     side: 'right',
   },
@@ -98,7 +98,7 @@ export default function AssetOwnerJourney() {
             variants={fadeUp}
             className="mt-6 text-base md:text-lg text-[var(--fg)]/70 max-w-3xl mx-auto leading-relaxed font-semibold opacity-80"
           >
-            House of Frac has designed a seamless, institutionally governed path
+            Fracto has designed a seamless, institutionally governed path
             from initial registration to live asset participation. Every stage
             of the journey is supported by our trustee framework, ensuring that
             both asset owners and Investors operate within a legally sound and

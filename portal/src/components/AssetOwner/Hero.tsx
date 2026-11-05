@@ -88,7 +88,7 @@ export default function AssetHero() {
             >
               Asset Owners at <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#3A76C0] to-[#60A5FA]">
-                House of Frac
+                Fracto
               </span>
             </motion.h1>
 
@@ -106,12 +106,12 @@ export default function AssetHero() {
               variants={fadeUp}
               className="mt-6 max-w-2xl text-base md:text-lg text-[var(--fg)]/70 leading-relaxed font-normal"
             >
-              House of Frac provides a structured, professionally governed
+              Fracto provides a structured, professionally governed
               platform for asset owners who wish to unlock the latent value
               within their real-world assets. Whether you are an individual
               property owner, a developer with a live or upcoming project, a
               commercial property holder, or an institution managing a portfolio
-              of income-generating assets, House of Frac offers a clear,
+              of income-generating assets, Fracto offers a clear,
               compliant, and Investor-ready pathway to access capital without
               requiring a full outright sale.
             </motion.p>

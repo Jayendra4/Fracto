@@ -67,7 +67,7 @@ function BenefitsFractional() {
             <h2 className="font-48 font-bold tracking-tight">
               Benefits of{' '}
               <span className="text-[#3A76C0]">Structural Investment</span>{' '}
-              <br className="hidden lg:block" /> with House of Frac
+              <br className="hidden lg:block" /> with Fracto
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] mx-auto mt-6 rounded-full" />
             <p className="mt-8 font-20 text-[var(--fg)]/70 max-w-2xl mx-auto">

@@ -278,7 +278,7 @@ export default function InvestorOverviewTab({
             </tbody>
           </table>
           <div className="mt-4 p-3 bg-gray-50 dark:bg-white/5 rounded-lg border border-dashed border-[#E3E7EE] dark:border-white/10 font-12 text-gray-400 leading-relaxed">
-            Indicative current value only. House of Frac does not guarantee,
+            Indicative current value only. Fracto does not guarantee,
             assure, or promise any fixed return, rental yield, capital
             appreciation, exit value, or repayment of capital.
           </div>

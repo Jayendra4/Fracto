@@ -363,7 +363,7 @@ export class BrokerService {
   }): Promise<void> {
     await this.mailService.send({
       to: data.assetOwnerEmail,
-      subject: 'Invitation to List Your Property on House of Frac',
+      subject: 'Invitation to List Your Property on Fracto',
       mailBodyOrTemplate: {
         name: 'asset-owner-invite',
         data: {

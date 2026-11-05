@@ -97,7 +97,7 @@ export function AdminConsolePage({ activeTab: propActiveTab }: AdminConsolePageP
   const [newSpvFractions, setNewSpvFractions] = useState('50,000');
   const [spvs, setSpvs] = useState<SPV[]>([
     {
-      id: 'HOF-SPV-014',
+      id: 'FRACTO-SPV-014',
       name: 'Marina Bay SPV Ltd',
       asset: 'Marina Bay Residency, Goa',
       fractions: '100,000',
@@ -105,7 +105,7 @@ export function AdminConsolePage({ activeTab: propActiveTab }: AdminConsolePageP
       step: 4,
     },
     {
-      id: 'HOF-SPV-021',
+      id: 'FRACTO-SPV-021',
       name: 'Lakeview Udaipur SPV',
       asset: 'Lakeview Commercial, Udaipur',
       fractions: '75,000',
@@ -113,7 +113,7 @@ export function AdminConsolePage({ activeTab: propActiveTab }: AdminConsolePageP
       step: 3,
     },
     {
-      id: 'HOF-SPV-027',
+      id: 'FRACTO-SPV-027',
       name: 'Heritage Udaipur SPV',
       asset: 'Heritage Court, Udaipur',
       fractions: '50,000',
@@ -295,7 +295,7 @@ export function AdminConsolePage({ activeTab: propActiveTab }: AdminConsolePageP
   const handleCreateSPV = (e: React.FormEvent) => {
     e.preventDefault();
     if (!newSpvName.trim()) return;
-    const newId = `HOF-SPV-0${Math.floor(Math.random() * 90) + 10}`;
+    const newId = `FRACTO-SPV-0${Math.floor(Math.random() * 90) + 10}`;
     setSpvs([
       ...spvs,
       {

@@ -147,7 +147,7 @@ export function UserDetailTab({ selectedUserDetail, handleUserStatusUpdate }: Us
                 <tbody className="divide-y divide-slate-800/50">
                   <tr className="hover:bg-slate-800/20 transition-colors">
                     <td className="px-4 py-3 font-semibold text-white">Sora Heights, Jaipur</td>
-                    <td className="px-4 py-3 text-slate-350">HOF-SPV-014</td>
+                    <td className="px-4 py-3 text-slate-350">FRACTO-SPV-014</td>
                     <td className="px-4 py-3 text-slate-350">1,500</td>
                     <td className="px-4 py-3 text-slate-200">₹15.0L</td>
                     <td className="px-4 py-3 space-x-1">
@@ -165,7 +165,7 @@ export function UserDetailTab({ selectedUserDetail, handleUserStatusUpdate }: Us
                   </tr>
                   <tr className="hover:bg-slate-800/20 transition-colors">
                     <td className="px-4 py-3 font-semibold text-white">Crescent Business Park</td>
-                    <td className="px-4 py-3 text-slate-350">HOF-SPV-021</td>
+                    <td className="px-4 py-3 text-slate-350">FRACTO-SPV-021</td>
                     <td className="px-4 py-3 text-slate-350">1,250</td>
                     <td className="px-4 py-3 text-slate-200">₹12.5L</td>
                     <td className="px-4 py-3 space-x-1">

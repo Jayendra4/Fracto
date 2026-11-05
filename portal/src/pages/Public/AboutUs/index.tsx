@@ -60,7 +60,7 @@ export default function AboutUs(): JSX.Element {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
             >
-              House of Frac is making quality real estate accessible through
+              Fracto is making quality real estate accessible through
               structural ownership, enabling transparent, structured, and
               long-term participation in premium property investments.
             </motion.p>
@@ -80,7 +80,7 @@ export default function AboutUs(): JSX.Element {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
             >
-              House of Frac was founded to make real estate accessible through
+              Fracto was founded to make real estate accessible through
               verified assets, transparent documentation, strong legal
               frameworks, and a secure digital-first co-ownership experience.
             </motion.p>
@@ -96,7 +96,7 @@ export default function AboutUs(): JSX.Element {
             >
               <img
                 src="/images/about/hero.png"
-                alt="House of Frac Dashboard"
+                alt="Fracto Dashboard"
                 className="w-full max-w-[500px] lg:max-w-[650px] drop-shadow-2xl scale-110 xl:scale-125 origin-center"
               />
             </motion.div>
@@ -284,7 +284,7 @@ export default function AboutUs(): JSX.Element {
               Our Core Principles
             </h2>
             <p className="font-18 text-[var(--fg)]/60 max-w-3xl mx-auto leading-relaxed">
-              House of Frac operates as a collaborative engine rooted in
+              Fracto operates as a collaborative engine rooted in
               trust-first architecture, compliance-led design, and
               technology-driven transparency.
             </p>
@@ -374,7 +374,7 @@ export default function AboutUs(): JSX.Element {
             transition={{ duration: 0.8, delay: 0.3 }}
           >
             The internet has changed how people discover, evaluate, and
-            participate in financial opportunities. House of Frac is built on
+            participate in financial opportunities. Fracto is built on
             the belief that real estate and asset-backed ownership will become
             increasingly digital, transparent, and participation-led. This
             direction is aligned with the broader idea in the uploaded reference

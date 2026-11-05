@@ -54,7 +54,7 @@ export const TERMS_SECTIONS: Section[] = [
     id: 'nature',
     title: '3. Nature of the Platform',
     list: [
-      'House of Frac operates solely as a technology platform.',
+      'Fracto operates solely as a technology platform.',
       'We are not a Channel Partner, dealer, investment advisor, or financial institution.',
       'The Platform does not provide guarantees regarding returns, income, capital preservation, or asset appreciation.',
     ],
@@ -72,7 +72,7 @@ export const TERMS_SECTIONS: Section[] = [
     id: 'noncustodial',
     title: '5. Non-Custodial Disclaimer',
     list: [
-      'House of Frac does not custody or control user funds, private keys, or wallets.',
+      'Fracto does not custody or control user funds, private keys, or wallets.',
       'You are solely responsible for securing your wallet credentials and access keys.',
       'Loss of private keys may result in permanent loss of access, which cannot be recovered by the Platform.',
     ],
@@ -99,7 +99,7 @@ export const TERMS_SECTIONS: Section[] = [
     id: 'compliance',
     title: '9. Compliance & Verification',
     content:
-      'House of Frac may require users to complete identity verification, KYC, or other compliance checks.',
+      'Fracto may require users to complete identity verification, KYC, or other compliance checks.',
   },
   {
     id: 'prohibited',
@@ -114,13 +114,13 @@ export const TERMS_SECTIONS: Section[] = [
     id: 'liability',
     title: '11. Limitation of Liability',
     content:
-      'Use of the Platform is entirely at your own risk. House of Frac shall not be liable for indirect or consequential losses.',
+      'Use of the Platform is entirely at your own risk. Fracto shall not be liable for indirect or consequential losses.',
   },
   {
     id: 'ip',
     title: '12. Intellectual Property',
     content:
-      'All platform content, trademarks, logos, and intellectual property are owned by or licensed to House of Frac.',
+      'All platform content, trademarks, logos, and intellectual property are owned by or licensed to Fracto.',
   },
   {
     id: 'termination',
@@ -241,7 +241,7 @@ export default function Terms() {
               </span>
             </div>
             <p className="text-[var(--fg)]/60 max-w-3xl text-center sm:text-left">
-              These Terms govern your access to and use of the House of Frac
+              These Terms govern your access to and use of the Fracto
               platform. Please read them carefully.
             </p>
           </div>

@@ -208,7 +208,7 @@ export function DashboardTab({
             </div>
 
             <div className="flex items-center justify-between p-3 rounded-lg bg-slate-950/30 border border-slate-850 hover:border-slate-700 transition-colors">
-              <span className="text-sm text-slate-300">HOF-LEAD-0039 stalled in KYC</span>
+              <span className="text-sm text-slate-300">FRACTO-LEAD-0039 stalled in KYC</span>
               <Button
                 variant="outline"
                 size="sm"
@@ -247,7 +247,7 @@ export function DashboardTab({
               <div className="h-2 w-2 rounded-full bg-primary mt-1.5 shrink-0" />
               <div className="flex-1 min-w-0">
                 <p className="text-sm font-semibold text-white">Approved investor access</p>
-                <p className="text-xs text-slate-450 mt-0.5">HOF-INV-0098, Heritage Court</p>
+                <p className="text-xs text-slate-450 mt-0.5">FRACTO-INV-0098, Heritage Court</p>
                 <span className="text-[10px] text-slate-500 flex items-center gap-1 mt-1">
                   <Clock className="h-3 w-3" /> 15 Jun 2026
                 </span>

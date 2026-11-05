@@ -99,7 +99,7 @@ export default function OnboardingScreen() {
             <View>
                 <View style={styles.logoWrapper}>
                     <Logo width={45} height={45} />
-                    <Text style={styles.logoText}>House Of Frac</Text>
+                    <Text style={styles.logoText}>Fracto</Text>
                 </View>
 
                 <ScrollView

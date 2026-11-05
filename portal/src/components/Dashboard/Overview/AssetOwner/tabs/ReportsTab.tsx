@@ -26,7 +26,7 @@ export default function ReportsTab(): JSX.Element {
     },
     {
       id: 4,
-      name: 'HOF-SPV-014 Trust Deed (Executed)',
+      name: 'FRACTO-SPV-014 Trust Deed (Executed)',
       type: 'Legal Document',
       date: '12 Mar 2026',
       size: '3.6 MB',

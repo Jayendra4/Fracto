@@ -3,7 +3,7 @@ import Cookies from 'js-cookie';
 
 class SocketService {
     private socket: Socket | null = null;
-    private readonly baseUrl = import.meta.env.VITE_API_URL || 'https://api-houseoffrac.igamingadda.com';
+    private readonly baseUrl = import.meta.env.VITE_API_URL || 'https://fracto-api-lugr.onrender.com';
 
     private storedAccountId: number | null = null;
     private storedToken: string | null = null;

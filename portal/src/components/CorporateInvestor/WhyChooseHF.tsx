@@ -29,14 +29,14 @@ function WhyChooseHF() {
               className="font-48 font-bold tracking-tight"
             >
               Why Investor Choose{' '}
-              <span className="text-[#3A76C0]">House Of Frac</span>
+              <span className="text-[#3A76C0]">Fracto</span>
             </motion.h2>
             <div className="w-24 h-1 bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] mx-auto mt-6 rounded-full" />
             <motion.p
               variants={fadeUp}
               className="mt-8 font-22 text-[var(--fg)]/70 leading-relaxed"
             >
-              House of Frac is designed for Investor who want exposure to real
+              Fracto is designed for Investor who want exposure to real
               estate without the complexity of direct ownership, property
               management, legal paperwork, or large-ticket capital deployment.
             </motion.p>
@@ -53,7 +53,7 @@ function WhyChooseHF() {
               <div className="p-8 lg:p-12 rounded-[2.5rem] bg-[var(--card)] border border-[var(--fg)]/10 shadow-2xl relative overflow-hidden group">
                 <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-[#3A76C0] to-[#60A5FA]" />
                 <p className="font-26 font-medium leading-relaxed tracking-tight">
-                  {/* House of Frac combines{' '}
+                  {/* Fracto combines{' '}
                   <span className="text-[#3A76C0]">
                     asset-backed investments
                   </span>
@@ -107,7 +107,7 @@ function WhyChooseHF() {
                 <div className="relative overflow-hidden rounded-[2.5rem] shadow-2xl w-full max-w-[620px] border-8 border-[var(--card)]">
                   <img
                     src="/images/corporateInvestor/choose.jpg"
-                    alt="Why Choose House of Frac"
+                    alt="Why Choose Fracto"
                     className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-[2s]"
                   />
                 </div>

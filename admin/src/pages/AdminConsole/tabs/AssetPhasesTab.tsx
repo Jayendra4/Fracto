@@ -108,7 +108,7 @@ export function AssetPhasesTab({ realAssets = [] }: AssetPhasesTabProps) {
                   Marina Bay Residency
                 </h4>
                 <p className="text-xs text-slate-450 mt-1">
-                  Dubai · HOF-SPV-027 · 68% subscribed · Closes 30 Jun 2026
+                  Dubai · FRACTO-SPV-027 · 68% subscribed · Closes 30 Jun 2026
                 </p>
               </div>
             </div>
@@ -137,7 +137,7 @@ export function AssetPhasesTab({ realAssets = [] }: AssetPhasesTabProps) {
                   Sora Heights
                 </h4>
                 <p className="text-xs text-slate-450 mt-1">
-                  Jaipur · HOF-SPV-014 · Managed · 11 shareholders
+                  Jaipur · FRACTO-SPV-014 · Managed · 11 shareholders
                 </p>
               </div>
             </div>
@@ -154,7 +154,7 @@ export function AssetPhasesTab({ realAssets = [] }: AssetPhasesTabProps) {
                   Crescent Business Park
                 </h4>
                 <p className="text-xs text-slate-450 mt-1">
-                  Gurugram · HOF-SPV-021 · Managed · 9 shareholders
+                  Gurugram · FRACTO-SPV-021 · Managed · 9 shareholders
                 </p>
               </div>
             </div>

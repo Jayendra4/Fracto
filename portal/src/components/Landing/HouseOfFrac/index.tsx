@@ -21,7 +21,7 @@ export default function HouseOfFrac(): JSX.Element {
           <div className="flex items-center justify-center mb-15 ">
             <img
               src="/images/home/hof-font.svg"
-              alt="hof-text"
+              alt="fracto-text"
               className="w-[100%]  md:w-[80%] md:h-[100%] lg:w-[70%]"
             />
           </div>

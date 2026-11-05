@@ -23,9 +23,9 @@ export default function TermsAndCondition() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: 'easeOut', delay: 0.1 }}
           >
-            Welcome to House of Frac. These Terms & Conditions govern your
+            Welcome to Fracto. These Terms & Conditions govern your
             access to and use of our website, platform, mobile application, and
-            any related services offered by House of Frac. Please read these
+            any related services offered by Fracto. Please read these
             Terms carefully before using the Platform. By accessing or using the
             Platform in any manner, you acknowledge that you have read,
             understood, and agree to be bound by these Terms.
@@ -95,7 +95,7 @@ export default function TermsAndCondition() {
 
             <div className="mt-16 pt-8 border-t border-[var(--fg)]/10 text-center">
               <p className="font-16 text-[var(--fg)]/50 italic">
-                Last Updated: May 2026. House of Frac reserves the right to
+                Last Updated: May 2026. Fracto reserves the right to
                 update these terms at any time.
               </p>
             </div>

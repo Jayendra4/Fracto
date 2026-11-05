@@ -64,7 +64,7 @@ const TrustSecurity = () => {
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            At House of Frac, Investor protection is not a feature — it is the
+            At Fracto, Investor protection is not a feature — it is the
             foundation. Every aspect of the platform, from onboarding to asset
             listing to distributions, is designed around structured processes,
             verified documentation, and regulatory awareness.

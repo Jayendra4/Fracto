@@ -38,7 +38,7 @@ const NotificationListener = () => {
 
   // Foreground message listener — always active
   useEffect(() => {
-    const unsubscribe = onMessage(messaging, (payload) => {
+    const unsubscribe = onMessage(messaging, (payload: any) => {
       console.log('FCM Foreground Message:', payload);
 
       const title = payload.notification?.title ?? payload.data?.title ?? 'Notification';

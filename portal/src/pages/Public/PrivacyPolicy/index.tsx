@@ -5,7 +5,7 @@ const privacySections = [
   {
     title: '1. Information We Collect',
     content:
-      'We collect the following categories of personal and non-personal information: Identity & Contact Information: Full name, date of birth, email address, mobile number, residential address. KYC & Identity Documents: PAN card, Aadhaar number, passport, voter ID, driving licence, or other government-issued identity documents as required for verification. Financial Information: Bank account details, income details, investment preferences, source of funds declarations. Entity Details (for companies, LLPs, trusts, or firms): Certificate of incorporation, MOA/AOA, partnership deeds, trust deeds, board resolutions, beneficial ownership details, and authorised signatory information. Platform Usage Data: Log-in records, pages visited, time spent on the platform, device type, browser type, IP address, and interaction data. Communication Records: Emails, messages, support tickets, and any correspondence exchanged with the House of Frac team. Transaction & Participation Records: Details of opportunities reviewed, expressions of interest, executed documents, and payment records.',
+      'We collect the following categories of personal and non-personal information: Identity & Contact Information: Full name, date of birth, email address, mobile number, residential address. KYC & Identity Documents: PAN card, Aadhaar number, passport, voter ID, driving licence, or other government-issued identity documents as required for verification. Financial Information: Bank account details, income details, investment preferences, source of funds declarations. Entity Details (for companies, LLPs, trusts, or firms): Certificate of incorporation, MOA/AOA, partnership deeds, trust deeds, board resolutions, beneficial ownership details, and authorised signatory information. Platform Usage Data: Log-in records, pages visited, time spent on the platform, device type, browser type, IP address, and interaction data. Communication Records: Emails, messages, support tickets, and any correspondence exchanged with the Fracto team. Transaction & Participation Records: Details of opportunities reviewed, expressions of interest, executed documents, and payment records.',
   },
   {
     title: '2. How We Use Your Information',
@@ -35,7 +35,7 @@ const privacySections = [
   {
     title: '7. Your Rights',
     content:
-      'Subject to applicable Indian law, you have the following rights with respect to your personal data: Right to Access: Request a copy of the personal data we hold about you. Right to Correction: Request correction of inaccurate or incomplete data. Right to Withdrawal of Consent: Withdraw consent for processing where consent is the basis, without affecting processing prior to withdrawal. Right to Deletion: Request deletion of your personal data where no legal or regulatory obligation requires us to retain it. Right to Restrict Processing: Request that we limit the processing of your data in specific circumstances. To exercise any of these rights, please write to: privacy@houseoffrac.com. We will respond within 30 days.',
+      'Subject to applicable Indian law, you have the following rights with respect to your personal data: Right to Access: Request a copy of the personal data we hold about you. Right to Correction: Request correction of inaccurate or incomplete data. Right to Withdrawal of Consent: Withdraw consent for processing where consent is the basis, without affecting processing prior to withdrawal. Right to Deletion: Request deletion of your personal data where no legal or regulatory obligation requires us to retain it. Right to Restrict Processing: Request that we limit the processing of your data in specific circumstances. To exercise any of these rights, please write to: privacy@fracto.com. We will respond within 30 days.',
   },
   {
     title: "8. Children's Privacy",
@@ -45,7 +45,7 @@ const privacySections = [
   {
     title: '9. Third-Party Links',
     content:
-      'The Platform may contain links to external websites or third-party services. House of Frac is not responsible for the privacy practices, security measures, or content of any third-party website. We encourage you to review the privacy policies of any external site you visit.',
+      'The Platform may contain links to external websites or third-party services. Fracto is not responsible for the privacy practices, security measures, or content of any third-party website. We encourage you to review the privacy policies of any external site you visit.',
   },
   {
     title: '10. Updates to this Policy',
@@ -55,7 +55,7 @@ const privacySections = [
   {
     title: '11. Contact -- Privacy Matters',
     content:
-      'For any privacy-related queries, requests, or concerns, please contact our Data Protection contact at: privacy@houseoffrac.com. You may also write to us at the registered office address of House of Frac.',
+      'For any privacy-related queries, requests, or concerns, please contact our Data Protection contact at: privacy@fracto.com. You may also write to us at the registered office address of Fracto.',
   },
 ];
 
@@ -68,32 +68,32 @@ const conductSections = [
   {
     title: '2. Prohibited Activities',
     content:
-      "The following activities are strictly prohibited on the House of Frac Platform: Providing false, misleading, incomplete, or fraudulent information during registration, KYC, or in connection with any Opportunity. Impersonating another person, entity, or representative. Uploading forged, altered, or fraudulent documents. Making misleading or unsubstantiated claims about any Opportunity, asset, return, or the Platform. Representing yourself as an employee, officer, or authorised representative of House of Frac without written authorisation. Copying, scraping, reproducing, or commercially exploiting any Platform content, data, or technology. Interfering with or disrupting the Platform's technical infrastructure, systems, or services. Attempting to gain unauthorised access to any part of the Platform, another user's account, or internal systems. Engaging in money laundering, fraudulent transactions, or any activity prohibited under PMLA, 2002. Using the Platform to solicit, promote, or facilitate unlawful schemes, pyramid structures, or unregistered investment schemes. Harassing, threatening, or abusing any other user, asset owner, platform staff, or partner.",
+      "The following activities are strictly prohibited on the Fracto Platform: Providing false, misleading, incomplete, or fraudulent information during registration, KYC, or in connection with any Opportunity. Impersonating another person, entity, or representative. Uploading forged, altered, or fraudulent documents. Making misleading or unsubstantiated claims about any Opportunity, asset, return, or the Platform. Representing yourself as an employee, officer, or authorised representative of Fracto without written authorisation. Copying, scraping, reproducing, or commercially exploiting any Platform content, data, or technology. Interfering with or disrupting the Platform's technical infrastructure, systems, or services. Attempting to gain unauthorised access to any part of the Platform, another user's account, or internal systems. Engaging in money laundering, fraudulent transactions, or any activity prohibited under PMLA, 2002. Using the Platform to solicit, promote, or facilitate unlawful schemes, pyramid structures, or unregistered investment schemes. Harassing, threatening, or abusing any other user, asset owner, platform staff, or partner.",
   },
   {
     title: '3. Asset Owner Conduct',
     content:
-      'Asset owners and developers listing assets on the Platform additionally agree to: Provide accurate, verified, and up-to-date asset information, documents, financials, valuations, and disclosures. Not make exaggerated, unverified, or misleading claims about projected returns, occupancy, valuations, or asset quality. Promptly disclose any material changes to the asset -- including legal disputes, title encumbrances, regulatory notices, occupancy changes, or financial distress. Honour the commercial terms, distribution commitments, and reporting obligations defined in the Transaction Documents. Not approach Investors outside the Platform with conflicting terms or side arrangements in connection with an asset listed on House of Frac.',
+      'Asset owners and developers listing assets on the Platform additionally agree to: Provide accurate, verified, and up-to-date asset information, documents, financials, valuations, and disclosures. Not make exaggerated, unverified, or misleading claims about projected returns, occupancy, valuations, or asset quality. Promptly disclose any material changes to the asset -- including legal disputes, title encumbrances, regulatory notices, occupancy changes, or financial distress. Honour the commercial terms, distribution commitments, and reporting obligations defined in the Transaction Documents. Not approach Investors outside the Platform with conflicting terms or side arrangements in connection with an asset listed on Fracto.',
   },
   {
     title: '4. Channel Partner Conduct',
     content:
-      "Channel partners, brokers, advisors, and introducers additionally agree to: Not make guaranteed return claims, capital protection assurances, or misleading representations about any Platform Opportunity to Investors. Not approach Investors with unapproved materials, undisclosed commissions, or representations inconsistent with the Platform's approved communications. Disclose any conflict of interest to both the Investor and House of Frac before facilitating any introduction. Not use the House of Frac name, brand, or materials without prior written approval. Comply with all applicable SEBI, RBI, and financial services regulations relevant to their role.",
+      "Channel partners, brokers, advisors, and introducers additionally agree to: Not make guaranteed return claims, capital protection assurances, or misleading representations about any Platform Opportunity to Investors. Not approach Investors with unapproved materials, undisclosed commissions, or representations inconsistent with the Platform's approved communications. Disclose any conflict of interest to both the Investor and Fracto before facilitating any introduction. Not use the Fracto name, brand, or materials without prior written approval. Comply with all applicable SEBI, RBI, and financial services regulations relevant to their role.",
   },
   {
     title: '5. Consequences of Violation',
     content:
-      "Violations of this User Conduct Policy may result in one or more of the following actions, at House of Frac's sole discretion: Immediate suspension or permanent termination of the user's account. Removal of any asset listing from the Platform. Termination of any channel partner agreement. Reporting of fraudulent or criminal activity to relevant regulatory or law enforcement authorities. Civil or legal action for damages, including recovery of losses suffered by the Platform or other users. House of Frac reserves the right to take these actions without prior notice where urgency or the severity of the violation warrants it.",
+      "Violations of this User Conduct Policy may result in one or more of the following actions, at Fracto's sole discretion: Immediate suspension or permanent termination of the user's account. Removal of any asset listing from the Platform. Termination of any channel partner agreement. Reporting of fraudulent or criminal activity to relevant regulatory or law enforcement authorities. Civil or legal action for damages, including recovery of losses suffered by the Platform or other users. Fracto reserves the right to take these actions without prior notice where urgency or the severity of the violation warrants it.",
   },
   {
     title: '6. Reporting Violations',
     content:
-      'If you observe conduct by another user, asset owner, or partner that you believe violates this Policy, we encourage you to report it promptly. Reports can be submitted to: conduct@houseoffrac.com. All reports will be reviewed in confidence. Retaliatory action against a user who makes a good-faith report is itself a violation of this Policy.',
+      'If you observe conduct by another user, asset owner, or partner that you believe violates this Policy, we encourage you to report it promptly. Reports can be submitted to: conduct@fracto.com. All reports will be reviewed in confidence. Retaliatory action against a user who makes a good-faith report is itself a violation of this Policy.',
   },
   {
     title: '7. Amendments',
     content:
-      'House of Frac reserves the right to update this User Conduct Policy at any time. Continued use of the Platform following any update constitutes acceptance of the revised Policy. Material changes will be notified to registered users by email or through the Platform.',
+      'Fracto reserves the right to update this User Conduct Policy at any time. Continued use of the Platform following any update constitutes acceptance of the revised Policy. Material changes will be notified to registered users by email or through the Platform.',
   },
 ];
 
@@ -109,8 +109,8 @@ export default function PrivacyPolicy(): JSX.Element {
 
   const intro =
     activeTab === 'privacy'
-      ? 'House of Frac is committed to protecting your privacy and handling your personal data with care, transparency, and respect. This Privacy Policy explains what information we collect, why we collect it, how we use and protect it, and your rights in relation to it. By accessing or using the Platform, you consent to the practices described in this Policy.'
-      : 'House of Frac is a professional, compliance-focused platform. The integrity of our ecosystem depends on every participant conducting themselves with honesty, accuracy, and respect. This User Conduct Policy forms an integral part of the House of Frac Terms & Conditions. By registering on or using the Platform, you confirm that you have read, understood, and agreed to comply with this Policy in its entirety.';
+      ? 'Fracto is committed to protecting your privacy and handling your personal data with care, transparency, and respect. This Privacy Policy explains what information we collect, why we collect it, how we use and protect it, and your rights in relation to it. By accessing or using the Platform, you consent to the practices described in this Policy.'
+      : 'Fracto is a professional, compliance-focused platform. The integrity of our ecosystem depends on every participant conducting themselves with honesty, accuracy, and respect. This User Conduct Policy forms an integral part of the Fracto Terms & Conditions. By registering on or using the Platform, you confirm that you have read, understood, and agreed to comply with this Policy in its entirety.';
 
   return (
     <div className="bg-[var(--bg)] text-[var(--fg)] font-work transition-colors duration-300 min-h-screen">
@@ -208,7 +208,7 @@ export default function PrivacyPolicy(): JSX.Element {
               <div className="mt-16 pt-8 border-t border-[var(--fg)]/10 text-center">
                 <p className="font-16 text-[var(--fg)]/50 italic">
                   Effective Date: To be updated on launch. Last Updated: May
-                  2026. House of Frac reserves the right to update this policy
+                  2026. Fracto reserves the right to update this policy
                   at any time.
                 </p>
               </div>

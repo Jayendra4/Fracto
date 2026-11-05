@@ -12,7 +12,7 @@ export function PaymentsTrackingTab() {
   const [statusFilter, setStatusFilter] = useState('All Statuses');
 
   const handleRetry = () => {
-    toast.success('Retry instruction sent to HOF-INV-0204 — please re-confirm bank reference');
+    toast.success('Retry instruction sent to FRACTO-INV-0204 — please re-confirm bank reference');
   };
 
   const getStatusBadge = (status: string) => {
@@ -47,32 +47,32 @@ export function PaymentsTrackingTab() {
   // Subscriptions records from HTML
   const subscriptions = [
     {
-      investor: 'HOF-INV-0017',
-      spv: 'HOF-SPV-027',
+      investor: 'FRACTO-INV-0017',
+      spv: 'FRACTO-SPV-027',
       amount: 'AED 100,000',
       ref: 'UTR2845512',
       status: 'Completed',
       note: '',
     },
     {
-      investor: 'HOF-INV-0143',
-      spv: 'HOF-SPV-027',
+      investor: 'FRACTO-INV-0143',
+      spv: 'FRACTO-SPV-027',
       amount: 'AED 480,000',
       ref: 'UTR2845598',
       status: 'Completed',
       note: '',
     },
     {
-      investor: 'HOF-INV-0092',
-      spv: 'HOF-SPV-027',
+      investor: 'FRACTO-INV-0092',
+      spv: 'FRACTO-SPV-027',
       amount: 'AED 50,000',
       ref: '—',
       status: 'Processing',
       note: '',
     },
     {
-      investor: 'HOF-INV-0204',
-      spv: 'HOF-SPV-027',
+      investor: 'FRACTO-INV-0204',
+      spv: 'FRACTO-SPV-027',
       amount: 'AED 75,000',
       ref: 'UTR2845631',
       status: 'Failed',
@@ -83,14 +83,14 @@ export function PaymentsTrackingTab() {
   // Commitment fees records from HTML
   const commitmentFees = [
     {
-      investor: 'HOF-INV-0211',
+      investor: 'FRACTO-INV-0211',
       asset: 'Heritage Court',
       amount: 'AED 2,500',
       status: 'Completed',
       note: '',
     },
     {
-      investor: 'HOF-INV-0066',
+      investor: 'FRACTO-INV-0066',
       asset: 'Marina Bay Residency',
       amount: 'AED 2,500',
       status: 'Refunded',

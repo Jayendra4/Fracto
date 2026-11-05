@@ -231,7 +231,7 @@ export function BrokerMgmtTab() {
             </CardHeader>
             <CardContent className="space-y-3">
               <div className="flex items-center justify-between p-3 rounded-lg bg-slate-950/20 border border-slate-850 hover:bg-slate-800/10 transition-colors">
-                <span className="text-sm font-semibold text-slate-300">HOF-LEAD-0042 (Investor &rarr; Converted)</span>
+                <span className="text-sm font-semibold text-slate-300">FRACTO-LEAD-0042 (Investor &rarr; Converted)</span>
                 <span className="inline-flex items-center px-2.5 py-0.5 rounded text-xs font-semibold bg-emerald-500/10 text-emerald-450 border border-emerald-500/25">Paid</span>
               </div>
               <div className="flex items-center justify-between p-3 rounded-lg bg-slate-950/20 border border-slate-850 hover:bg-slate-800/10 transition-colors">
@@ -239,7 +239,7 @@ export function BrokerMgmtTab() {
                 <span className="inline-flex items-center px-2.5 py-0.5 rounded text-xs font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/25">Qualified</span>
               </div>
               <div className="flex items-center justify-between p-3 rounded-lg bg-slate-950/20 border border-slate-850 hover:bg-slate-800/10 transition-colors">
-                <span className="text-sm font-semibold text-slate-300">HOF-LEAD-0039 (Investor &rarr; Stalled)</span>
+                <span className="text-sm font-semibold text-slate-300">FRACTO-LEAD-0039 (Investor &rarr; Stalled)</span>
                 <span className="inline-flex items-center px-2.5 py-0.5 rounded text-xs font-semibold bg-rose-500/10 text-rose-455 border border-rose-500/25">Qualified &mdash; Stalled</span>
               </div>
               <div className="flex items-center justify-between p-3 rounded-lg bg-slate-950/20 border border-slate-850 hover:bg-slate-800/10 transition-colors">

@@ -12,9 +12,9 @@ export function AuditLogsTab() {
   const [searchQuery, setSearchQuery] = useState('');
 
   const logs: AuditEntry[] = [
-    { time: '22 Jun 2026, 14:02', desc: 'RM flagged HOF-LEAD-0039 as stalled — escalated to Admin' },
+    { time: '22 Jun 2026, 14:02', desc: 'RM flagged FRACTO-LEAD-0039 as stalled — escalated to Admin' },
     { time: '21 Jun 2026, 09:15', desc: 'DD Summary (partial) submitted for Heritage Court by Legal/Valuation/DD team' },
-    { time: '15 Jun 2026, 11:40', desc: 'Admin approved investor access — HOF-INV-0098, Heritage Court' },
+    { time: '15 Jun 2026, 11:40', desc: 'Admin approved investor access — FRACTO-INV-0098, Heritage Court' },
     { time: '08 Jun 2026, 10:00', desc: 'Club vote opened — Heritage Court, Rajasthan Commercial' },
     { time: '10 Jun 2026, 16:20', desc: 'Admin approved Group Sharing — Heritage Court → Rajasthan Commercial' },
     { time: '04 Mar 2025, 09:00', desc: 'Admin approved KYC — Mudit V. Dudhoria' }

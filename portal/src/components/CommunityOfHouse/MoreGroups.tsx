@@ -79,13 +79,13 @@ export default function MoreGroups() {
               className="mb-12"
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-white bg-[#142F4D] text-xs mb-6 border border-[#3A76C0]/20">
-                ● House Of Frac Community
+                ● Fracto Community
               </div>
               <h1 className="font-serif text-xl sm:text-2xl md:text-3xl font-semibold text-[#0B2545] dark:text-white mb-4">
                 Find Your Community. Discover Better Opportunities.
               </h1>
               <p className="text-lg md:text-lg max-w-3xl leading-relaxed text-gray-500 dark:text-gray-400">
-                House of Frac Primary Clubs bring together prospective
+                Fracto Primary Clubs bring together prospective
                 co-owners, asset owners, brokers, and advisors who share a
                 common interest in specific real estate segments. Join a group
                 to stay informed, exchange insights, and access curated

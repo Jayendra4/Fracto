@@ -12,9 +12,9 @@ interface InvestorRecord {
 
 export function InvestorAccessTab() {
   const [investors, setInvestors] = useState<InvestorRecord[]>([
-    { id: 'HOF-INV-0211', ndaDate: '19 Jun 2026', status: 'Pending' },
-    { id: 'HOF-INV-0187', ndaDate: '20 Jun 2026', status: 'Pending' },
-    { id: 'HOF-INV-0098', ndaDate: '15 Jun 2026', status: 'Approved' }
+    { id: 'FRACTO-INV-0211', ndaDate: '19 Jun 2026', status: 'Pending' },
+    { id: 'FRACTO-INV-0187', ndaDate: '20 Jun 2026', status: 'Pending' },
+    { id: 'FRACTO-INV-0098', ndaDate: '15 Jun 2026', status: 'Approved' }
   ]);
 
   const [modalOpen, setModalOpen] = useState(false);

@@ -26,7 +26,7 @@ interface ChatNotificationContextType {
 }
 
 const API_BASE_URL =
-  import.meta.env.VITE_API_URL || 'https://api-houseoffrac.igamingadda.com';
+  import.meta.env.VITE_API_URL || 'https://fracto-api-lugr.onrender.com';
 
 const getProfilePath = (path: string | null) => {
   if (!path) return '/images/f-avatar.svg';

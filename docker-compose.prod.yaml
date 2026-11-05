@@ -47,7 +47,7 @@ services:
       - DATABASE_URL=postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-secret}@postgres:5432/${POSTGRES_DB:-hof}
       - REDIS_URI=redis://default:${REDIS_PASSWORD:-secret}@redis:6379
       - JWT_SECRET=${JWT_SECRET:-super_secret_jwt_key_hof_2026}
-      - PLATFORM_NAME=House of Frac
+      - PLATFORM_NAME=Fracto
     depends_on:
       postgres:
         condition: service_healthy

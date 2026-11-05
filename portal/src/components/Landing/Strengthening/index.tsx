@@ -19,7 +19,7 @@ export default function Strengthening() {
           </h2>
 
           <p className="text-[#CCCCCC] font-20  text-justify lg:px-0 px-4">
-            Partnering with House of FRAC to unlock new revenue streams through
+            Partnering with Fracto to unlock new revenue streams through
             SM REITs while offering your clients secure, asset-backed commercial
             real estate opportunities.
           </p>

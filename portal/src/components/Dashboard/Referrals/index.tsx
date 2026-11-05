@@ -138,8 +138,8 @@ export default function Referrals() {
                       {brokerReferralCode && (
                         <ShareMenu
                           signupUrl={`${window.location.origin}/signup?ref=${brokerReferralCode}&type=investor`}
-                          shareMessage={`Join House of Frac and start investing using my referral link:\n\n${window.location.origin}/signup?ref=${brokerReferralCode}&type=investor`}
-                          emailSubject="Join House of Frac and start investing"
+                          shareMessage={`Join Fracto and start investing using my referral link:\n\n${window.location.origin}/signup?ref=${brokerReferralCode}&type=investor`}
+                          emailSubject="Join Fracto and start investing"
                           label="Share Investor Referral"
                           variant="button"
                         />
@@ -456,8 +456,8 @@ function ReferralCard({
   const ownerName = fullData?.assetOwnerDetails?.firstName
     ? `${fullData.assetOwnerDetails.firstName} ${fullData.assetOwnerDetails.lastName ?? ''}`.trim()
     : 'there';
-  const shareMessage = `Hi ${ownerName}, list your property "${referral.name}" on House of Frac using my referral link:\n\n${signupUrl}`;
-  const emailSubject = `List your property "${referral.name}" on House of Frac`;
+  const shareMessage = `Hi ${ownerName}, list your property "${referral.name}" on Fracto using my referral link:\n\n${signupUrl}`;
+  const emailSubject = `List your property "${referral.name}" on Fracto`;
 
   return (
     <div className="bg-gray-50 dark:bg-white/5 rounded-2xl border border-[#E3E7EE] dark:border-white/10 shadow-sm hover:shadow-md transition-all duration-300">

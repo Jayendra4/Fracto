@@ -27,7 +27,7 @@ const cards = [
     number: '02',
     title: 'Onboarding New Properties',
     description:
-      'Channel Partners connect asset owners with House of Frac, help onboard quality real estate assets, expand platform inventory, and earn compensation through the success-fee model.',
+      'Channel Partners connect asset owners with Fracto, help onboard quality real estate assets, expand platform inventory, and earn compensation through the success-fee model.',
     points: [
       'Onboard institutional Asset Owners to the platform',
       'Negotiate commissions for successful asset introductions',
@@ -70,7 +70,7 @@ export default function BrokerPortal() {
             variants={fadeUp}
             className="mt-8 max-w-3xl mx-auto text-xl md:text-2xl text-[var(--fg)]/60 leading-relaxed font-medium"
           >
-            House of Frac provides Channel Partners with an institutional-grade
+            Fracto provides Channel Partners with an institutional-grade
             digital portal for lead generation, referrals, asset onboarding
             support, and commission management, enabling efficient and
             transparent operations.

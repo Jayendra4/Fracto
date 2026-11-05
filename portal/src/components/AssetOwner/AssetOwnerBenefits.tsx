@@ -21,14 +21,14 @@ const benefits = [
   {
     title: 'Unlock Liquidity',
     description:
-      'House of Frac enables asset owners to convert illiquid real estate holdings into structured investment opportunities, accessing capital without the requirement of a full outright sale. This approach allows asset owners to retain a meaningful stake in their asset while simultaneously unlocking liquidity from qualified Investors.',
+      'Fracto enables asset owners to convert illiquid real estate holdings into structured investment opportunities, accessing capital without the requirement of a full outright sale. This approach allows asset owners to retain a meaningful stake in their asset while simultaneously unlocking liquidity from qualified Investors.',
     icon: FaCoins,
     gradient: 'from-blue-500/20 to-blue-600/20',
   },
   {
     title: 'Global Reach',
     description:
-      'By listing on House of Frac, asset owners gain exposure to a growing network of verified Investors. The platforms structured discovery and digital presentation tools ensure that your asset reaches the right audience in a professional, compliance-governed environment.',
+      'By listing on Fracto, asset owners gain exposure to a growing network of verified Investors. The platforms structured discovery and digital presentation tools ensure that your asset reaches the right audience in a professional, compliance-governed environment.',
     icon: FaGlobe,
     gradient: 'from-indigo-500/20 to-indigo-600/20',
   },
@@ -42,14 +42,14 @@ const benefits = [
   {
     title: 'Compliance',
     description:
-      'House of Frac trustee-governed framework ensures that every asset listed on the platform meets institutional-grade regulatory compliance standards. Asset owners can operate with confidence knowing that their listing is backed by independent oversight and structured legal documentation.',
+      'Fracto trustee-governed framework ensures that every asset listed on the platform meets institutional-grade regulatory compliance standards. Asset owners can operate with confidence knowing that their listing is backed by independent oversight and structured legal documentation.',
     icon: FaBalanceScale,
     gradient: 'from-blue-600/20 to-indigo-600/20',
   },
   {
     title: 'Dual-Role Advantage',
     description:
-      'House of Frac recognises that many asset owners are also active Investors. The platform is designed to support dual-role participation, enabling the same user to function as an asset owner on one hand and a corporate Investors on the other. This flexibility is a unique feature of the House of Frac ecosystem.',
+      'Fracto recognises that many asset owners are also active Investors. The platform is designed to support dual-role participation, enabling the same user to function as an asset owner on one hand and a corporate Investors on the other. This flexibility is a unique feature of the Fracto ecosystem.',
     icon: FaUserTie,
     gradient: 'from-purple-500/20 to-purple-600/20',
   },

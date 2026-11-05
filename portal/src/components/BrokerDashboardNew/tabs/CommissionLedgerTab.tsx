@@ -134,7 +134,7 @@ export default function CommissionLedgerTab({
             <tbody className="divide-y divide-gray-300 dark:divide-white/5 text-gray-700 dark:text-gray-300">
               <tr>
                 <td className="py-3.5 px-2 sm:px-3 font-medium text-gray-800 dark:text-white">
-                  HOF-LEAD-0042 (Investor, Sora Heights)
+                  FRACTO-LEAD-0042 (Investor, Sora Heights)
                 </td>
                 <td className="py-3.5 px-2 sm:px-3 whitespace-nowrap">
                   0.5% of subscription
@@ -174,7 +174,7 @@ export default function CommissionLedgerTab({
               </tr>
               <tr>
                 <td className="py-3.5 px-2 sm:px-3 font-medium text-gray-800 dark:text-white">
-                  HOF-LEAD-0039 (Investor, in progress)
+                  FRACTO-LEAD-0039 (Investor, in progress)
                 </td>
                 <td className="py-3.5 px-2 sm:px-3 whitespace-nowrap">
                   0.5% of subscription
@@ -192,7 +192,7 @@ export default function CommissionLedgerTab({
           </table>
         </div>
         <div className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed bg-gray-50 dark:bg-white/5 p-3 rounded-lg border border-gray-200 dark:border-white/5 mt-4">
-          Commission is calculated and paid by House of Frac directly — you do
+          Commission is calculated and paid by Fracto directly — you do
           not collect or hold any investor or owner funds at any point.
         </div>
       </div> */}

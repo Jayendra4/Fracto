@@ -35,7 +35,7 @@ const quarters = [
 const performanceByAsset = [
   {
     asset: 'Sora Heights, Jaipur',
-    spv: 'HOF-SPV-014',
+    spv: 'FRACTO-SPV-014',
     invested: '₹15.0L',
     current: '₹16.1L',
     yield: '6.7%',
@@ -43,7 +43,7 @@ const performanceByAsset = [
   },
   {
     asset: 'Crescent Business Park',
-    spv: 'HOF-SPV-021',
+    spv: 'FRACTO-SPV-021',
     invested: '₹12.5L',
     current: '₹13.4L',
     yield: '7.1%',
@@ -51,7 +51,7 @@ const performanceByAsset = [
   },
   {
     asset: 'Marina Bay Residency',
-    spv: 'HOF-SPV-027',
+    spv: 'FRACTO-SPV-027',
     invested: '₹11.0L',
     current: '₹11.7L',
     yield: 'Pending allotment',
@@ -164,7 +164,7 @@ export default function ReturnsDashboardTab(): JSX.Element {
           </tbody>
         </table>
         <div className="font-11 text-gray-400 bg-[#FAFAFA] dark:bg-white/5 border border-dashed border-[#E3E7EE] dark:border-white/10 px-3 py-2.5 rounded-lg mt-4">
-          Indicative current value and yield figures only. House of Frac does
+          Indicative current value and yield figures only. Fracto does
           not guarantee, assure, or promise any fixed return, rental yield,
           capital appreciation, exit value, or repayment of capital.
         </div>

@@ -31,7 +31,7 @@ const steps = [
   {
     title: 'Income & Exit Opportunities',
     description:
-      'House of Frac provides asset performance updates, return distributions, and eligible exit options, enabling transparent participation through structured, compliant, and professionally managed investments.',
+      'Fracto provides asset performance updates, return distributions, and eligible exit options, enabling transparent participation through structured, compliant, and professionally managed investments.',
     icon: HiOutlineBanknotes,
     gradient: 'from-[#60A5FA] to-[#3A76C0]',
   },

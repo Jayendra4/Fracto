@@ -82,7 +82,7 @@ export const useRazorpay = () => {
             key: import.meta.env.VITE_RAZORPAY_KEY || 'rzp_test_placeholder',
             amount: amount,
             currency: currency,
-            name: 'House of Frac',
+            name: 'Fracto',
             description: 'Wallet Deposit',
             image: '/images/hof-logo2.png',
             order_id: orderId,

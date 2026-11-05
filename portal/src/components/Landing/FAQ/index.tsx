@@ -9,8 +9,8 @@ interface FAQItem {
 
 const faqs: FAQItem[] = [
   {
-    q: 'What is House of Frac?',
-    a: 'House of Frac is a technology-enabled platform that connects Investor with structured, professionally verified real estate participation opportunities in India. We make high-quality real estate accessible — with complete documentation, KYC compliance, and digital dashboards — starting at participation amounts that do not require large-ticket capital deployment.',
+    q: 'What is Fracto?',
+    a: 'Fracto is a technology-enabled platform that connects Investor with structured, professionally verified real estate participation opportunities in India. We make high-quality real estate accessible — with complete documentation, KYC compliance, and digital dashboards — starting at participation amounts that do not require large-ticket capital deployment.',
   },
   {
     q: 'How is participation structured legally?',
@@ -25,8 +25,8 @@ const faqs: FAQItem[] = [
     a: 'No. Projected returns shown in asset listings are indicative estimates based on available data at the time of listing. Actual returns may vary depending on asset performance, market conditions, and other factors. We encourage all Investor to read the risk disclosures for each opportunity carefully before participating.',
   },
   {
-    q: 'What happens to my participation if House of Frac shuts down?',
-    a: "Your participation is in the SPV that holds the underlying asset — not in House of Frac directly. The SPV is an independent legal entity that continues to exist irrespective of the platform's operational status. In such a scenario, the SPV, trustee arrangements, and applicable law govern the continued management and exit of the asset.",
+    q: 'What happens to my participation if Fracto shuts down?',
+    a: "Your participation is in the SPV that holds the underlying asset — not in Fracto directly. The SPV is an independent legal entity that continues to exist irrespective of the platform's operational status. In such a scenario, the SPV, trustee arrangements, and applicable law govern the continued management and exit of the asset.",
   },
   {
     q: 'How do I exit my participation?',
@@ -34,11 +34,11 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'Is my personal data safe?',
-    a: 'House of Frac collects and processes personal data in compliance with applicable Indian data protection laws, as described in our Privacy Policy. KYC documents and financial details are stored securely and shared only with authorised parties for transaction processing, regulatory compliance, or legal obligations.',
+    a: 'Fracto collects and processes personal data in compliance with applicable Indian data protection laws, as described in our Privacy Policy. KYC documents and financial details are stored securely and shared only with authorised parties for transaction processing, regulatory compliance, or legal obligations.',
   },
   {
     q: 'How do I get support?',
-    a: 'You can write to us at support@houseoffrac.com or use the Contact Us form on the website. We aim to respond to all queries within two business days.',
+    a: 'You can write to us at support@fracto.com or use the Contact Us form on the website. We aim to respond to all queries within two business days.',
   },
 ];
 

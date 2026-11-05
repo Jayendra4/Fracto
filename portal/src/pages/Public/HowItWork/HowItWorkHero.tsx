@@ -22,7 +22,7 @@ const HowItWorkHero = () => {
             transition={{ duration: 0.7, ease: 'easeOut' }}
             className="font-54 font-bold max-w-[600px] mx-auto text-center leading-tight tracking-wide"
           >
-            How House of Frac Works
+            How Fracto Works
           </motion.h2>
         </div>
 
@@ -46,7 +46,7 @@ const HowItWorkHero = () => {
               transition={{ duration: 0.6, ease: 'easeOut', delay: 0.2 }}
               className="font-20 lg:font-20 text-white/90 leading-relaxed font-light"
             >
-              House of Frac connects Investors with curated opportunities
+              Fracto connects Investors with curated opportunities
               through SPVs, ensuring asset-linked participation, legal
               separation, accountability, and clearly defined ownership rights.
             </motion.p>
@@ -73,7 +73,7 @@ const HowItWorkHero = () => {
             <div className="relative w-full max-w-[500px] lg:max-w-[700px] aspect-[4/3] rounded-[2rem] overflow-hidden shadow-2xl">
               <img
                 src="/images/howitwork/whyhof-building.png"
-                alt="House of Frac Building"
+                alt="Fracto Building"
                 className="w-full h-full object-cover"
               />
             </div>

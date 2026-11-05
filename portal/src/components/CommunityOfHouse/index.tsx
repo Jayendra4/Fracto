@@ -18,7 +18,7 @@ export default function Community() {
         viewport={{ once: true, amount: 0.5 }}
         className="text-white text-3xl md:text-4xl font-semibold mb-3 font-work"
       >
-        House of Frac Community
+        Fracto Community
       </motion.h1>
 
       <motion.p

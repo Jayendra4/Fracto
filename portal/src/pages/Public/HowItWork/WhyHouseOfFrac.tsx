@@ -16,7 +16,7 @@ export default function WhyHouseOfFrac() {
 
       <div className="relative mx-auto max-w-[1600px] text-white">
         <h2 className="text-center font-36 font-semibold mb-16">
-          Why House of Frac
+          Why Fracto
         </h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">

@@ -99,7 +99,7 @@ const AddMoneyToWallet = () => {
                 key: "rzp_test_SE2xCevA4T6YbJ",
                 amount: amount,
                 currency: currency,
-                name: "House Of Frac",
+                name: "Fracto",
                 description: "Wallet Deposit",
                 order_id: orderId,
                 prefill: {

@@ -24,7 +24,7 @@ const items = [
     icon: RiMoneyRupeeCircleLine,
     title: 'Income Tax Compliance',
     description:
-      'All distributions are subject to applicable TDS deductions under the Income Tax Act, 1961. House of Frac provides detailed distribution statements to assist Investors with their tax filings.',
+      'All distributions are subject to applicable TDS deductions under the Income Tax Act, 1961. Fracto provides detailed distribution statements to assist Investors with their tax filings.',
     accent: 'from-amber-500/20 to-yellow-400/10',
     iconColor: 'text-amber-400',
   },
@@ -61,7 +61,7 @@ export default function ComplianceSection() {
             transition={{ duration: 0.7, ease: 'easeOut', delay: 0.1 }}
             className="mt-4 font-20 text-[var(--fg)]/60 max-w-2xl mx-auto font-light"
           >
-            House of Frac is built with a clear understanding of the regulatory
+            Fracto is built with a clear understanding of the regulatory
             environment governing structured real estate participation in India.
           </motion.p>
         </div>

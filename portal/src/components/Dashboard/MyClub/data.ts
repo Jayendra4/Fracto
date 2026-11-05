@@ -72,7 +72,7 @@ export const clubDetails: ClubDetail[] = [
     members: 128,
     assetsUnderReviewLabel: '1 (Residential Complex Aurora)',
     about:
-      'A Primary Club for identified investors interested in residential real estate across Mumbai and Indore. The club exists to review assets introduced by House of Frac, ask questions before deciding, and vote on whether to proceed toward a Secondary Club and SPV structuring for a specific asset. Membership requires completed KYC. Voting follows a simple majority Yes threshold of 60% to form a Secondary Club. All members are bound by the Investment Club Membership Agreement.',
+      'A Primary Club for identified investors interested in residential real estate across Mumbai and Indore. The club exists to review assets introduced by Fracto, ask questions before deciding, and vote on whether to proceed toward a Secondary Club and SPV structuring for a specific asset. Membership requires completed KYC. Voting follows a simple majority Yes threshold of 60% to form a Secondary Club. All members are bound by the Investment Club Membership Agreement.',
     timeline: [
       { label: 'Notice Sent', date: '10 Jun', state: 'done' },
       { label: 'Discussion Opened', date: '12 Jun', state: 'done' },
@@ -167,7 +167,7 @@ export const clubDetails: ClubDetail[] = [
     members: 54,
     assetsUnderReviewLabel: '1 (Beachside Resort Villa)',
     about:
-      'A Primary Club for identified investors interested in hospitality real estate across Goa. The club exists to review assets introduced by House of Frac, ask questions before deciding, and vote on whether to proceed toward a Secondary Club and SPV structuring for a specific asset. Membership requires completed KYC. Voting follows a simple majority Yes threshold of 60% to form a Secondary Club.',
+      'A Primary Club for identified investors interested in hospitality real estate across Goa. The club exists to review assets introduced by Fracto, ask questions before deciding, and vote on whether to proceed toward a Secondary Club and SPV structuring for a specific asset. Membership requires completed KYC. Voting follows a simple majority Yes threshold of 60% to form a Secondary Club.',
     timeline: [
       { label: 'Notice Sent', date: '15 Jun', state: 'done' },
       { label: 'Discussion Opened', date: '17 Jun', state: 'done' },

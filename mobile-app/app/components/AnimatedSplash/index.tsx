@@ -126,7 +126,7 @@ const AnimatedSplash = ({ onAnimationEnd, error, onRetry }: Props) => {
                     },
                 ]}
             >
-                HOUSE OF FRAC
+                FRACTO
             </Animated.Text>
             {error ? (
                 <View style={styles.topSpace}>

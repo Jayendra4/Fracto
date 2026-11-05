@@ -46,7 +46,7 @@ export default function Hero() {
           default
         />
         <source
-          src="https://staging-api.houseoffrac.com/storage/hof.mp4"
+          src="https://fracto-api-lugr.onrender.com/storage/hof.mp4"
           type="video/mp4"
         />
       </video>
@@ -99,7 +99,7 @@ export default function Hero() {
               <SwiperSlide>
                 <RoleCard
                   title="Channel Partner"
-                  description="Collaborate with House of Frac as a broker, wealth advisor, or consultant. Connect Investors with quality assets."
+                  description="Collaborate with Fracto as a broker, wealth advisor, or consultant. Connect Investors with quality assets."
                   url={ROUTES.BROKER}
                 />
               </SwiperSlide>
@@ -119,7 +119,7 @@ export default function Hero() {
             />
             <RoleCard
               title="Channel Partner"
-              description="Collaborate with House of Frac as a broker, wealth advisor, or consultant. Connect Investors with quality assets."
+              description="Collaborate with Fracto as a broker, wealth advisor, or consultant. Connect Investors with quality assets."
               url={ROUTES.BROKER}
             />
           </div>

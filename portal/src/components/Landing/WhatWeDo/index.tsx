@@ -19,7 +19,7 @@ const features: Feature[] = [
   {
     id: '02',
     title: 'Verified Assets',
-    desc: 'Every asset listed on House of Frac undergoes documentation review, financial assessment, legal title verification, and structured preparation before being presented to our registered Investor base.',
+    desc: 'Every asset listed on Fracto undergoes documentation review, financial assessment, legal title verification, and structured preparation before being presented to our registered Investor base.',
     align: 'left',
   },
   {
@@ -31,7 +31,7 @@ const features: Feature[] = [
   {
     id: '04',
     title: 'Structured Exit Pathways',
-    desc: 'Where applicable, House of Frac facilitates structured exit mechanisms, resale opportunities, or buyback arrangements between members— clearly defined in each assets legal documentation so you always know your options before you commit.',
+    desc: 'Where applicable, Fracto facilitates structured exit mechanisms, resale opportunities, or buyback arrangements between members— clearly defined in each assets legal documentation so you always know your options before you commit.',
     align: 'right',
   },
 ];
@@ -65,7 +65,7 @@ export default function WhatWeDo() {
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            House of Frac is a technology-enabled platform designed to connect
+            Fracto is a technology-enabled platform designed to connect
             Investor with curated, professionally structured real estate and
             asset-backed participation opportunities across India. We bring
             transparency, discipline, and accessibility to a space that has

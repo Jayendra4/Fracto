@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 const holdings = [
   {
     asset: 'Sora Heights, Jaipur',
-    spv: 'HOF-SPV-014',
+    spv: 'FRACTO-SPV-014',
     units: '1,500',
     invested: '₹15.0L',
     tags: ['Rental', 'Timeshare', 'Sale'],
@@ -12,7 +12,7 @@ const holdings = [
   },
   {
     asset: 'Crescent Business Park',
-    spv: 'HOF-SPV-021',
+    spv: 'FRACTO-SPV-021',
     units: '1,250',
     invested: '₹12.5L',
     tags: ['Rental', 'Sale'],

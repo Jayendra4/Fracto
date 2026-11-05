@@ -31,7 +31,7 @@ export default function TrainingRulesTab() {
         <p className="text-xs md:text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
           Promise or imply any guaranteed return, collect money from investors
           or owners on behalf of the platform, provide investment advice,
-          misrepresent House of Frac, share confidential or legal documents
+          misrepresent Fracto, share confidential or legal documents
           externally, or guarantee approval or funding outcomes.
         </p>
       </div>

@@ -22,7 +22,7 @@ const participants: Participant[] = [
   {
     title: 'For Trustees',
     description:
-      'Play a critical, independent fiduciary role within the House of Frac ecosystem. Monitor asset performance, oversee distribution processes, verify compliance with agreed documentation, and safeguard Investor interests — independently of both the platform and the asset owner.',
+      'Play a critical, independent fiduciary role within the Fracto ecosystem. Monitor asset performance, oversee distribution processes, verify compliance with agreed documentation, and safeguard Investor interests — independently of both the platform and the asset owner.',
   },
 ];
 import { motion } from 'framer-motion';
@@ -51,7 +51,7 @@ export default function ParticipantsSection() {
               transition={{ duration: 0.7, ease: 'easeOut', delay: 0.1 }}
               className="mt-4 font-20 text-[var(--fg)]/70 max-w-3xl mx-auto font-light"
             >
-              House of Frac is designed to serve every stakeholder in the
+              Fracto is designed to serve every stakeholder in the
               structured real estate ecosystem — seamlessly and professionally.
             </motion.p>
           </div>

@@ -39,7 +39,7 @@ export default function TransformAssetCTA() {
             transition={{ delay: 0.1 }}
             className="mx-auto mt-6 max-w-2xl text-lg md:text-xl text-white/70 leading-relaxed font-semibold opacity-80"
           >
-            Discover the future of real estate liquidity with House of Frac. Join our institutional-grade platform today.
+            Discover the future of real estate liquidity with Fracto. Join our institutional-grade platform today.
           </motion.p>
 
           {/* <motion.div

@@ -64,7 +64,7 @@ export default function WhyChoose(): JSX.Element {
         />
 
         {/* <h2 className="text-white font-96 font-semibold leading-[100%] mb-4">
-           House of Frac
+           Fracto
         </h2> */}
 
         <div

@@ -40,7 +40,7 @@ export function InvestorPhasesTab() {
                     </td>
                   </tr>
                   <tr className="hover:bg-slate-800/20 transition-colors">
-                    <td className="px-4 py-3 font-semibold text-white">HOF-LEAD-0042</td>
+                    <td className="px-4 py-3 font-semibold text-white">FRACTO-LEAD-0042</td>
                     <td className="px-4 py-3 text-xs text-slate-400">Complete</td>
                     <td className="px-4 py-3 text-right">
                       <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-emerald-500/10 text-emerald-450 border border-emerald-500/25">
@@ -49,7 +49,7 @@ export function InvestorPhasesTab() {
                     </td>
                   </tr>
                   <tr className="hover:bg-slate-800/20 transition-colors">
-                    <td className="px-4 py-3 font-semibold text-white">HOF-LEAD-0039</td>
+                    <td className="px-4 py-3 font-semibold text-white">FRACTO-LEAD-0039</td>
                     <td className="px-4 py-3 text-xs text-slate-400">7 of 14 — Bank Details</td>
                     <td className="px-4 py-3 text-right">
                       <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-rose-500/10 text-rose-400 border border-rose-500/25">
@@ -76,7 +76,7 @@ export function InvestorPhasesTab() {
             <div className="p-4 rounded-xl border border-slate-800 bg-slate-950/40 space-y-3">
               <div className="flex items-start justify-between gap-4">
                 <div>
-                  <h4 className="text-sm font-bold text-white">HOF-LEAD-0039</h4>
+                  <h4 className="text-sm font-bold text-white">FRACTO-LEAD-0039</h4>
                   <p className="text-xs text-slate-400 mt-1">
                     Stalled 6 days at Bank Details · RM: Riya Sharma already notified
                   </p>

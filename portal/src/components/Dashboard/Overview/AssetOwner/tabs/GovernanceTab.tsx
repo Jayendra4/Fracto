@@ -3,19 +3,19 @@ import { toast } from 'react-toastify';
 
 const mattersRegister = [
   {
-    spv: 'HOF-SPV-014',
+    spv: 'FRACTO-SPV-014',
     matter: 'Property Manager Renewal',
     raised: '08 Jun 2026',
     status: 'Vote Open' as const,
   },
   {
-    spv: 'HOF-SPV-014',
+    spv: 'FRACTO-SPV-014',
     matter: 'Annual Capex Reserve Approval',
     raised: '02 Mar 2026',
     status: 'Passed' as const,
   },
   {
-    spv: 'HOF-SPV-021',
+    spv: 'FRACTO-SPV-021',
     matter: 'Lease Renewal Approval — Anchor Tenant',
     raised: '14 Jan 2026',
     status: 'Passed' as const,
@@ -23,29 +23,29 @@ const mattersRegister = [
 ];
 
 const minutesArchive = [
-  'HOF-SPV-014 — AGM Minutes, Mar 2026',
-  'HOF-SPV-014 — Capex Reserve Vote Minutes, Mar 2026',
-  'HOF-SPV-021 — Lease Renewal Vote Minutes, Jan 2026',
+  'FRACTO-SPV-014 — AGM Minutes, Mar 2026',
+  'FRACTO-SPV-014 — Capex Reserve Vote Minutes, Mar 2026',
+  'FRACTO-SPV-021 — Lease Renewal Vote Minutes, Jan 2026',
 ];
 
 const distributionHistory = [
   {
     date: '12 Jun 2026',
-    spv: 'HOF-SPV-014',
+    spv: 'FRACTO-SPV-014',
     gross: '₹48,500',
     tds: '₹6,500',
     net: '₹42,000',
   },
   {
     date: '15 Mar 2026',
-    spv: 'HOF-SPV-021',
+    spv: 'FRACTO-SPV-021',
     gross: '₹1,15,000',
     tds: '₹15,000',
     net: '₹1,00,000',
   },
   {
     date: '10 Dec 2025',
-    spv: 'HOF-SPV-014',
+    spv: 'FRACTO-SPV-014',
     gross: '₹50,800',
     tds: '₹6,600',
     net: '₹44,200',

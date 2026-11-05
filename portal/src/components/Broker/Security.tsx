@@ -10,7 +10,7 @@ const securityFeatures = [
   {
     title: 'Trustee Oversight',
     description:
-      'Every asset submission, Investor referral, and commission lead managed by a Channel Partner is transparently monitored within House of Frac independent, trustee-governed framework. This oversight ensures that all partner activities are compliant, credible, and aligned with the legal and regulatory requirements of the platform.',
+      'Every asset submission, Investor referral, and commission lead managed by a Channel Partner is transparently monitored within Fracto independent, trustee-governed framework. This oversight ensures that all partner activities are compliant, credible, and aligned with the legal and regulatory requirements of the platform.',
     img: '/images/asset-owner/asset-check.svg',
   },
   {
@@ -37,7 +37,7 @@ export default function Security() {
           </h2>
           <div className="w-16 h-1 bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] mx-auto mt-4 rounded-full" />
           <p className="mt-6 text-base md:text-lg text-[var(--fg)]/60 max-w-3xl mx-auto leading-relaxed font-medium">
-            The House of Frac partner ecosystem is built on the same
+            The Fracto partner ecosystem is built on the same
             institutional-grade security and governance framework that underpins
             every other aspect of the platform. This ensures that Channel
             Partners, asset owners, and Investors all operate within a legally

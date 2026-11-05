@@ -372,7 +372,7 @@ export const NotificationTemplates: Record<
   [NotificationCode.INACTIVE_USER_REMINDER]: {
     title: 'We Miss You!',
     message:
-      'New investment opportunities are waiting for you on House of Frac.',
+      'New investment opportunities are waiting for you on Fracto.',
   },
 
   [NotificationCode.ASSET_SHARE_IN_GROUP]: {
@@ -392,9 +392,9 @@ export const NotificationTemplates: Record<
   },
 
   [NotificationCode.USER_REGISTRATION_NOTIFICATION]: {
-    title: 'Welcome to House of Frac!',
+    title: 'Welcome to Fracto!',
     message:
-      'Hi {{userName}}, welcome to House of Frac. Please complete your KYC to Explore',
+      'Hi {{userName}}, welcome to Fracto. Please complete your KYC to Explore',
   },
 
   [NotificationCode.INFORM_TO_USERS]: {

@@ -22,7 +22,7 @@ const blogs = [
     date: '02/10/2025',
     time: '5:39 min',
     title: 'How SPV-Based Co-Ownership Works: A Plain-Language Guide ',
-    text: 'Break down the mechanics of a Special Purpose Vehicle - what it holds, how rights are defined, and what it means for your participation in practical terms. No legal jargon, just a clear explanation of the structure behind every House of Frac opportunity.',
+    text: 'Break down the mechanics of a Special Purpose Vehicle - what it holds, how rights are defined, and what it means for your participation in practical terms. No legal jargon, just a clear explanation of the structure behind every Fracto opportunity.',
   },
   {
     id: 3,
@@ -38,7 +38,7 @@ const blogs = [
     image: '/images/home/ourblogs/blog-img1.png',
     date: '31/12/2025',
     time: '5:34 min',
-    title: 'How House of Frac Verifies Assets Before They Are Listed ',
+    title: 'How Fracto Verifies Assets Before They Are Listed ',
     text: 'An inside look at the documentation, review, and verification process that an asset goes through before it is made available to Investors on the platform. Understanding this process can help you evaluate listings with greater context.',
   },
   {
@@ -87,7 +87,7 @@ export default function Blogs() {
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            Insights, education, and updates from the House of Frac team —
+            Insights, education, and updates from the Fracto team —
             helping you participate in real estate with clarity and confidence.
           </p>
         </motion.div>

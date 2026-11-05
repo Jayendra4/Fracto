@@ -14,7 +14,7 @@ import {
 // this exists — placeholders for now so the payment popup is functional.
 const BANK_DETAILS = {
   accountNumber: '123456789012',
-  accountOwnerName: 'House of Frac Pvt Ltd',
+  accountOwnerName: 'Fracto Pvt Ltd',
   ifscCode: 'HDFC0000123',
   branchName: 'Mumbai Fort Branch',
 };

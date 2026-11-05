@@ -16,31 +16,31 @@ import { useSubmitContactUs } from '@/api/contact.api';
 const contactFaqs = [
   {
     q: 'I registered but have not received a verification email. What should I do?',
-    a: 'Please check your spam or junk folder first. If you still cannot find the email, write to support@houseoffrac.com with your registered mobile number and we will resolve it within one business day.',
+    a: 'Please check your spam or junk folder first. If you still cannot find the email, write to support@fracto.com with your registered mobile number and we will resolve it within one business day.',
   },
   {
     q: 'My KYC documents were rejected. What are the reasons and next steps?',
-    a: 'KYC documents may be rejected due to image quality issues, mismatched details, or unsupported document types. You will receive an email explaining the reason. You may re-submit through your account dashboard. If the issue persists, contact coowners@houseoffrac.com.',
+    a: 'KYC documents may be rejected due to image quality issues, mismatched details, or unsupported document types. You will receive an email explaining the reason. You may re-submit through your account dashboard. If the issue persists, contact coowners@fracto.com.',
   },
   {
     q: 'How do I update my registered mobile number or email address?',
-    a: 'Account detail updates are handled by our support team for security purposes. Write to support@houseoffrac.com from your registered email address with your request and a valid identity document.',
+    a: 'Account detail updates are handled by our support team for security purposes. Write to support@fracto.com from your registered email address with your request and a valid identity document.',
   },
   {
     q: 'I have made a payment. When will my participation be confirmed?',
-    a: 'Participation confirmation is issued after both payment receipt and full documentation execution are complete. You will receive a confirmation email and dashboard update within 3-5 business days of both being received. If you have not received confirmation beyond this period, contact coowners@houseoffrac.com with your transaction reference.',
+    a: 'Participation confirmation is issued after both payment receipt and full documentation execution are complete. You will receive a confirmation email and dashboard update within 3-5 business days of both being received. If you have not received confirmation beyond this period, contact coowners@fracto.com with your transaction reference.',
   },
   {
     q: 'How do I download my investment documents or distribution statements?',
-    a: 'All documents and statements are available in your Co-owner Dashboard under the Documents section. Log in to your account and navigate to the relevant asset to access them. If documents are missing, contact coowners@houseoffrac.com.',
+    a: 'All documents and statements are available in your Co-owner Dashboard under the Documents section. Log in to your account and navigate to the relevant asset to access them. If documents are missing, contact coowners@fracto.com.',
   },
   {
-    q: 'I want to list my property on House of Frac. How do I begin?',
-    a: 'Write to assets@houseoffrac.com with a brief overview of your property -- type, location, size, current occupancy or development stage, and your capital requirement. Our asset team will review your submission and get back to you within 2 business days to discuss the next steps.',
+    q: 'I want to list my property on Fracto. How do I begin?',
+    a: 'Write to assets@fracto.com with a brief overview of your property -- type, location, size, current occupancy or development stage, and your capital requirement. Our asset team will review your submission and get back to you within 2 business days to discuss the next steps.',
   },
   {
     q: 'How do I become a Channel Partner?',
-    a: 'Visit the Channel Partners section under Know More, or write to partners@houseoffrac.com. Our team will share the partner onboarding process, documentation requirements, and commission structure.',
+    a: 'Visit the Channel Partners section under Know More, or write to partners@fracto.com. Our team will share the partner onboarding process, documentation requirements, and commission structure.',
   },
 ];
 
@@ -103,7 +103,7 @@ const UnderlineInput = ({
 const contactDetails = [
   {
     label: 'Company Name',
-    value: 'House of Frac',
+    value: 'Fracto',
     icon: BsFillHouseFill,
   },
   {
@@ -211,7 +211,7 @@ export default function ContactUs(): JSX.Element {
           variants={stagger}
         >
           <motion.h1 className="font-48 font-bold mb-4" variants={fadeInUp}>
-            Contact House of Frac
+            Contact Fracto
           </motion.h1>
           <motion.p className="font-24 font-bold text-gray-500 dark:text-gray-400 max-w-5xl mx-auto">
             We Are Here to Help.
@@ -407,32 +407,32 @@ export default function ContactUs(): JSX.Element {
             const contacts = [
               {
                 title: 'General Enquiries',
-                desc: 'For questions about the platform, how it works, or any general information about House of Frac.',
-                email: 'support@houseoffrac.com',
+                desc: 'For questions about the platform, how it works, or any general information about Fracto.',
+                email: 'support@fracto.com',
                 response: 'Within 2 business days',
               },
               {
                 title: 'Investor Support',
                 desc: 'Already registered? For help with your account, KYC process, dashboard access, or any participation-related query.',
-                email: 'coowners@houseoffrac.com',
+                email: 'coowners@fracto.com',
                 response: 'Within 1 business day',
               },
               {
                 title: 'Asset Owner & Listing Support',
                 desc: 'Interested in listing a property or asset? For structuring queries, documentation guidance, and listing eligibility.',
-                email: 'assets@houseoffrac.com',
+                email: 'assets@fracto.com',
                 response: 'Within 2 business days',
               },
               {
                 title: 'Channel Partner Support',
                 desc: 'For partner onboarding, commission queries, lead tracking, or any partnership-related assistance.',
-                email: 'partners@houseoffrac.com',
+                email: 'partners@fracto.com',
                 response: 'Within 2 business days',
               },
               {
                 title: 'Compliance & Legal Queries',
                 desc: 'For questions related to documentation, platform compliance, or regulatory matters.',
-                email: 'compliance@houseoffrac.com',
+                email: 'compliance@fracto.com',
                 response: 'Within 3 business days',
               },
             ];
@@ -529,7 +529,7 @@ export default function ContactUs(): JSX.Element {
               Our Approach
             </h2>
             <p className="font-20 max-w-3xl mx-auto leading-relaxed text-[var(--fg)]/70 font-light">
-              House of Frac is building the future of structured real estate
+              Fracto is building the future of structured real estate
               participation. Let’s create ownership differently.
             </p>
           </div>

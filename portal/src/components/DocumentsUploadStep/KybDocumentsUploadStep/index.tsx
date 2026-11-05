@@ -187,7 +187,7 @@ export default function KybDocumentsUploadStep({
 
   const authorizeCompanyField: IFieldConfig = {
     name: 'authorizeCompany',
-    label: 'Authorizing Company to register on House of Frac',
+    label: 'Authorizing Company to register on Fracto',
     type: 'radio',
     options: [
       { label: 'Yes', value: 'yes' },

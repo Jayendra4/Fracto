@@ -9,13 +9,13 @@ export default function ShareInviteTab() {
 
   const generateAssetLink = (assetName: string) => {
     const code = assetName.split(' ')[0].toUpperCase();
-    const url = `https://houseoffrac.example/m/RK-${code}-2026`;
+    const url = `https://fracto.example/m/RK-${code}-2026`;
     setGeneratedAssetLink(url);
   };
 
   const generateClubLink = (clubName: string) => {
     const code = clubName.split(' ')[0].toUpperCase();
-    const url = `https://houseoffrac.example/c/RK-${code}-2026`;
+    const url = `https://fracto.example/c/RK-${code}-2026`;
     setGeneratedClubLink(url);
   };
 

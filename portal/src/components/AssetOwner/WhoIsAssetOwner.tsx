@@ -37,14 +37,14 @@ export default function WhoIsAssetOwner() {
             className="text-2xl md:text-3xl font-extrabold text-[var(--fg)] tracking-tight"
           >
             Who Can List Assets on{' '}
-            <span className="text-[#3A76C0]">House of Frac</span>
+            <span className="text-[#3A76C0]">Fracto</span>
           </motion.h2>
           <div className="w-20 h-1 bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] mx-auto mt-6 rounded-full" />
           <motion.p
             variants={fadeUp}
             className="mt-6 text-base md:text-lg text-[var(--fg)]/70 max-w-2xl mx-auto leading-relaxed font-light"
           >
-            House of Frac supports every type of asset owner with structured
+            Fracto supports every type of asset owner with structured
             participation frameworks, compliance-led onboarding, and
             professional digital tools.
           </motion.p>
@@ -74,7 +74,7 @@ export default function WhoIsAssetOwner() {
               <p className="mb-6 text-base lg:text-base text-[var(--fg)]/70 leading-relaxed">
                 Private Investors and individual property owners who wish to
                 unlock value from their real estate holdings through a
-                structured participation framework. House of Frac supports
+                structured participation framework. Fracto supports
                 individual owners with streamlined KYC verification, personal
                 asset management tools, direct Investor engagement, and a
                 professionally managed digital profile for their asset.

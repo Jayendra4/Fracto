@@ -77,7 +77,7 @@ export default function Map() {
           <img
             data-aos="zoom-in-down"
             src="/images/home/map-full.png"
-            alt="House Of Frac"
+            alt="Fracto"
             className="w-full"
           />
         </div>

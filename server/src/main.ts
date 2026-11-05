@@ -64,18 +64,22 @@ async function bootstrap() {
     }),
   );
   app.useGlobalFilters(new AllExceptionsFilter(app.get(HttpAdapterHost)));
-  const origins = appConfig.domain
-    ? [
-        new RegExp(
-          `^http[s]{0,1}://(?:${appConfig.domain}|[a-z0-9-]+.${appConfig.domain})$`,
-        ),
-        'https://staging.houseoffrac.igamingadda.com',
-        'https://admin-houseoffrac.igamingadda.com',
-        'https://trustee-houseoffrac.igamingadda.com',
-        'http://192.168.1.40:5173',
-        'https://k27xlrl8-5173.usw3.devtunnels.ms',
-      ]
-    : [];
+  const origins = [
+    new RegExp(`^https?://.*\\.vercel\\.app$`),
+    new RegExp(`^https?://.*\\.onrender\\.com$`),
+    ...(appConfig.domain
+      ? [
+          new RegExp(
+            `^http[s]{0,1}://(?:${appConfig.domain}|[a-z0-9-]+.${appConfig.domain})$`,
+          ),
+        ]
+      : []),
+    'https://staging.houseoffrac.igamingadda.com',
+    'https://admin-houseoffrac.igamingadda.com',
+    'https://trustee-houseoffrac.igamingadda.com',
+    'http://192.168.1.40:5173',
+    'https://k27xlrl8-5173.usw3.devtunnels.ms',
+  ];
   app.enableCors({
     origin: utilsService.isProductionApp()
       ? origins

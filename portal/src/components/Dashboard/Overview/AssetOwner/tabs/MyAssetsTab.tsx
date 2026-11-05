@@ -678,7 +678,7 @@ export default function MyAssetsTab({
                 </span>
               </h1>
               <p className="text-gray-500 dark:text-gray-400 font-14 mt-1">
-                HOF-SPV-014 · Funding closed, asset transitioned to Managed.
+                FRACTO-SPV-014 · Funding closed, asset transitioned to Managed.
               </p>
             </div>
           </div>
@@ -942,7 +942,7 @@ export default function MyAssetsTab({
                 </span>
               </h1>
               <p className="text-gray-500 dark:text-gray-400 font-14 mt-1">
-                HOF-SPV-021 · Managed since acquisition, now in Club-led exit
+                FRACTO-SPV-021 · Managed since acquisition, now in Club-led exit
                 process.
               </p>
             </div>

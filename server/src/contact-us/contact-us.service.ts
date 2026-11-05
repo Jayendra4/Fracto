@@ -24,7 +24,7 @@ export class ContactUsService {
     try {
       const sendMessagePayload: SendMessagePayload = {
         to: supportEmail,
-        subject: `New Contact Query from House of Frac`,
+        subject: `New Contact Query from Fracto`,
         mailBodyOrTemplate: {
           name: 'contact-us',
           data: {

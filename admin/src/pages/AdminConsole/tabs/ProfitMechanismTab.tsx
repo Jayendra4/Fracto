@@ -33,7 +33,7 @@ export function ProfitMechanismTab() {
     {
       id: 'marinabay',
       name: 'Marina Bay Residency, Dubai',
-      badge: 'HOF-SPV-027 · Subscription Open',
+      badge: 'FRACTO-SPV-027 · Subscription Open',
       badgeType: 'funding',
       rental: true,
       rentalDesc: 'Recurring income from a tenant/lease',
@@ -45,7 +45,7 @@ export function ProfitMechanismTab() {
     {
       id: 'soraheights',
       name: 'Sora Heights, Jaipur',
-      badge: 'HOF-SPV-014 · Managed',
+      badge: 'FRACTO-SPV-014 · Managed',
       badgeType: 'live',
       rental: true,
       rentalDesc: 'Recurring income from a tenant/lease',
@@ -57,7 +57,7 @@ export function ProfitMechanismTab() {
     {
       id: 'crescent',
       name: 'Crescent Business Park, Gurugram',
-      badge: 'HOF-SPV-021 · Exit In Progress',
+      badge: 'FRACTO-SPV-021 · Exit In Progress',
       badgeType: 'review',
       rental: true,
       rentalDesc: 'Recurring income from a tenant/lease',

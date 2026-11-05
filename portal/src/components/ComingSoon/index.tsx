@@ -28,7 +28,7 @@ const ComingSoon: React.FC = () => {
       <div className="mt-8 w-32 h-[3px] bg-gradient-to-r from-[#EF7B00] to-[#7D4810] rounded-full animate-pulse" />
 
       <p className="mt-10 text-sm text-[var(--fg)] ">
-        © {new Date().getFullYear()} House Of Frac
+        © {new Date().getFullYear()} Fracto
       </p>
     </div>
   );

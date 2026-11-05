@@ -15,7 +15,7 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     name: 'Sachin Sharma',
-    text: 'House of FRAC made SM REIT investing simple and transparent. I finally feel confident investing in commercial real estate.',
+    text: 'Fracto made SM REIT investing simple and transparent. I finally feel confident investing in commercial real estate.',
     src: 'images/home/user-img.png',
   },
   {
@@ -25,7 +25,7 @@ const testimonials: Testimonial[] = [
   },
   {
     name: 'Ashutosh Bhadoriya',
-    text: 'From onboarding to payouts, everything is seamless. House of FRAC truly feels Investor-first.',
+    text: 'From onboarding to payouts, everything is seamless. Fracto truly feels Investor-first.',
     src: 'images/home/user-img3.png',
   },
   {
@@ -40,7 +40,7 @@ const testimonials: Testimonial[] = [
   },
   {
     name: 'Jayesh Soni',
-    text: 'House of FRAC combines technology with trust. It’s a smart way to participate in SM REITs in India.',
+    text: 'Fracto combines technology with trust. It’s a smart way to participate in SM REITs in India.',
     src: 'images/home/user-img6.png',
   },
 ];
@@ -79,7 +79,7 @@ export default function TestimonialsSection(): JSX.Element {
               data-aos-delay="300"
             >
               Hear from Investor, asset owners, and channel partners who have
-              experienced the House of Frac platform.
+              experienced the Fracto platform.
             </p>
           </div>
 

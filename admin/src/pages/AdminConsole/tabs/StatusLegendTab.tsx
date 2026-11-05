@@ -367,7 +367,7 @@ export function StatusLegendTab() {
           <CardDescription className="text-slate-450">
             Applies to any money movement on the platform — subscriptions, distributions, commission
             payouts, asset acquisition payouts, and refunds. All payments flow through verified bank
-            accounts only; House of Frac never holds funds itself.
+            accounts only; Fracto never holds funds itself.
           </CardDescription>
         </CardHeader>
         <CardContent>

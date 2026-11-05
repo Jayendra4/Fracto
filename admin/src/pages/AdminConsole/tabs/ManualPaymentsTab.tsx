@@ -97,12 +97,12 @@ export function ManualPaymentsTab() {
     // Handle relative path prefixing
     if (!url.startsWith('http://') && !url.startsWith('https://')) {
       const cleanPath = url.startsWith('/') ? url : `/${url}`;
-      return `https://staging-api.houseoffrac.com${cleanPath}`;
+      return `https://fracto-api-lugr.onrender.com${cleanPath}`;
     }
 
     // Replace localhost directly with the staging domain
     if (url.includes('localhost')) {
-      return url.replace(/^https?:\/\/[^\/]+/, 'https://staging-api.houseoffrac.com');
+      return url.replace(/^https?:\/\/[^\/]+/, 'https://fracto-api-lugr.onrender.com');
     }
 
     return url;

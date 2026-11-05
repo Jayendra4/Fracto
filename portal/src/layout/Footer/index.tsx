@@ -150,10 +150,10 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:support@houseoffrac.com"
+                  href="mailto:support@fracto.com"
                   className="hover:text-gray-400"
                 >
-                  support@houseoffrac.com
+                  support@fracto.com
                 </a>
               </li>
             </ul>
@@ -166,7 +166,7 @@ export default function Footer() {
           className="opacity-30 font-220 leading-none font-semibold bg-gradient-to-b from-[#E8DEC4] via-[#E6E1D580] to-[#E6E1D580]  inline-flex items-baseline
   bg-clip-text text-transparent whitespace-nowrap"
         >
-          HOUSE OF FRAC
+          FRACTO
         </span>
       </div>
     </footer>

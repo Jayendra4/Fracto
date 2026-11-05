@@ -28,7 +28,7 @@ export default function WhoIsCI() {
             <div className="relative p-8 rounded-[2rem] bg-[var(--card)] border border-[var(--fg)]/10 shadow-xl overflow-hidden group">
               <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-[#3A76C0] to-[#60A5FA]" />
               <p className="font-20 leading-relaxed text-[var(--fg)]/90">
-                A Corporate Investor on the House of Frac platform is an end
+                A Corporate Investor on the Fracto platform is an end
                 user — whether an individual, a partnership, a private limited
                 company, or another legal entity — who registers on the platform
                 with the intention of participating in structured real estate

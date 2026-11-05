@@ -1,4 +1,4 @@
-name: House of Frac CI/CD Quality Gate
+name: Fracto CI/CD Quality Gate
 
 on:
   push:

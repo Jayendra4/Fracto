@@ -97,7 +97,7 @@ export default function Hero() {
               className="mt-6 font-20 font-medium text-[var(--fg)]/90 leading-relaxed"
               variants={fadeUp}
             >
-              House of Frac enables Investors to access curated real estate
+              Fracto enables Investors to access curated real estate
               opportunities through a transparent, professionally managed,
               compliance-first investment platform.
             </motion.p>

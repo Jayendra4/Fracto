@@ -68,7 +68,7 @@ export function TimeshareTab() {
       <Card className="bg-slate-900/50 border-slate-800/80">
         <CardHeader className="flex flex-row items-center justify-between pb-2">
           <CardTitle className="text-lg text-white font-semibold flex items-center">
-            Sora Heights, Jaipur — HOF-SPV-014
+            Sora Heights, Jaipur — FRACTO-SPV-014
             <span className="ml-2 inline-flex items-center px-2.5 py-0.5 rounded text-xs font-semibold bg-emerald-500/10 text-emerald-450 border border-emerald-500/25">
               Collecting
             </span>
@@ -161,7 +161,7 @@ export function TimeshareTab() {
         isOpen={modalOpen}
         onClose={() => setModalOpen(false)}
         title="Create Timeshare Distribution?"
-        description="This will propose a distribution of ₹1,84,200 to all Sora Heights (HOF-SPV-014) fractional owners based on their unit share. The proposal will be routed to the Trustee bank for smart contract release."
+        description="This will propose a distribution of ₹1,84,200 to all Sora Heights (FRACTO-SPV-014) fractional owners based on their unit share. The proposal will be routed to the Trustee bank for smart contract release."
         onConfirm={handleConfirmDistribution}
       />
     </div>
