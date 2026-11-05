@@ -251,7 +251,7 @@ export default function Property(): JSX.Element | null {
                       className="
                         relative w-full font-semibold font-16
                         px-6 py-3 lg:py-2.5 rounded-xl text-white shadow-md cursor-pointer
-                        transition-all duration-300 ease-in-out hover:shadow-lg hover:brightness-110 active:scale-[0.98] bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] 
+                        transition-all duration-300 ease-in-out hover:shadow-lg hover:brightness-110 active:scale-[0.98] bg-gradient-to-r from-[#4F46E5] to-[#2563EB] 
                       "
                     >
                       Get More Details
@@ -266,7 +266,7 @@ export default function Property(): JSX.Element | null {
       <div className="flex justify-center pb-3 pt-6">
         <Link
           to={targetPath}
-          className="group inline-flex items-center justify-center gap-3 px-8 py-3.5 rounded-xl bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white font-18 font-semibold transition-all duration-300 hover:brightness-110 active:scale-95 shadow-lg cursor-pointer"
+          className="group inline-flex items-center justify-center gap-3 px-8 py-3.5 rounded-xl bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white font-18 font-semibold transition-all duration-300 hover:brightness-110 active:scale-95 shadow-lg cursor-pointer"
         >
           See More Properties
           <FiArrowRight

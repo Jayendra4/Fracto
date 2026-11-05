@@ -152,7 +152,7 @@ export default function Properties() {
                       className={`flex-1 lg:flex-none px-6 lg:px-9 py-2.5 rounded-full text-xs lg:text-sm font-bold transition-all duration-300
                           ${
                             assetStatus === opt.value
-                              ? 'bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] bg-[#3A76C0] shadow-md text-white'
+                              ? 'bg-gradient-to-r from-[#4F46E5] to-[#2563EB] bg-[#4F46E5] shadow-md text-white'
                               : 'text-gray-900 hover:bg-gray-100'
                           }`}
                     >
@@ -169,7 +169,7 @@ export default function Properties() {
                           filterOpen ||
                           activeFilters.subType ||
                           activeFilters.newlyAdded
-                            ? 'border-[#3A76C0] bg-[#3A76C0]/10 text-[#3A76C0]'
+                            ? 'border-[#4F46E5] bg-[#4F46E5]/10 text-[#4F46E5]'
                             : 'border-gray-200 text-gray-700 bg-white hover:bg-gray-50'
                         }`}
                   >

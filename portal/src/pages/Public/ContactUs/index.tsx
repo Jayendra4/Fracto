@@ -233,7 +233,7 @@ export default function ContactUs(): JSX.Element {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, ease: [0.6, 0.05, 0.01, 0.9] }}
         >
-          <div className="lg:w-[40%] p-8 md:p-12 rounded-[1.5rem] text-white relative flex flex-col justify-between overflow-hidden bg-gradient-to-br from-[#3A76C0] to-[#60A5FA]">
+          <div className="lg:w-[40%] p-8 md:p-12 rounded-[1.5rem] text-white relative flex flex-col justify-between overflow-hidden bg-gradient-to-br from-[#4F46E5] to-[#2563EB]">
             {/* Glass decoration */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-black/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
@@ -382,7 +382,7 @@ export default function ContactUs(): JSX.Element {
                 type="button"
                 onClick={handleSubmit}
                 disabled={isSubmitting}
-                className="bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] hover:brightness-110 transition-all text-white px-10 py-3 rounded-xl font-semibold font-16 shadow-lg active:scale-95 disabled:opacity-60 disabled:cursor-not-allowed disabled:active:scale-100 inline-flex items-center justify-center gap-2"
+                className="bg-gradient-to-r from-[#4F46E5] to-[#2563EB] hover:brightness-110 transition-all text-white px-10 py-3 rounded-xl font-semibold font-16 shadow-lg active:scale-95 disabled:opacity-60 disabled:cursor-not-allowed disabled:active:scale-100 inline-flex items-center justify-center gap-2"
               >
                 {isSubmitting && (
                   <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
@@ -446,9 +446,9 @@ export default function ContactUs(): JSX.Element {
               <motion.div
                 key={idx}
                 variants={fadeInUp}
-                className="bg-[var(--inner-card)] p-6 md:p-8 rounded-[1.5rem] border border-[var(--fg)]/5 hover:border-[#3A76C0]/40 hover:shadow-lg hover:shadow-[#3A76C0]/10 hover:-translate-y-1 hover:bg-[#3A76C0]/5 transition-all duration-300 flex flex-col gap-3 cursor-default"
+                className="bg-[var(--inner-card)] p-6 md:p-8 rounded-[1.5rem] border border-[var(--fg)]/5 hover:border-[#4F46E5]/40 hover:shadow-lg hover:shadow-[#4F46E5]/10 hover:-translate-y-1 hover:bg-[#4F46E5]/5 transition-all duration-300 flex flex-col gap-3 cursor-default"
               >
-                <h3 className="font-20 font-bold text-[#3A76C0]">
+                <h3 className="font-20 font-bold text-[#4F46E5]">
                   {item.title}
                 </h3>
                 <p className="font-16 text-[var(--fg)]/70 font-light leading-relaxed flex-1">
@@ -521,7 +521,7 @@ export default function ContactUs(): JSX.Element {
           transition={{ duration: 0.8 }}
         >
           {/* Background layered effect matching About Us footer */}
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#3A76C0]/5 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#4F46E5]/5 pointer-events-none"></div>
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-500/10 rounded-full blur-[120px] pointer-events-none"></div>
 
           <div className="relative z-10 max-w-4xl mx-auto">

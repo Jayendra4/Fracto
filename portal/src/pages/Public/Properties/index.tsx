@@ -227,7 +227,7 @@ export default function Properties() {
                     }}
                     className={`px-6 lg:px-9 py-2.5 rounded-full text-xs lg:text-sm font-bold transition-all duration-300 ${
                       activeTab === tab.value
-                        ? 'bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] bg-[#3A76C0] shadow-md text-white'
+                        ? 'bg-gradient-to-r from-[#4F46E5] to-[#2563EB] bg-[#4F46E5] shadow-md text-white'
                         : 'text-gray-900 hover:bg-gray-100'
                     }`}
                   >
@@ -454,7 +454,7 @@ export default function Properties() {
                             className="
                               relative overflow-hidden w-full font-semibold font-16
                               px-6 py-3 lg:py-2.5 rounded-xl text-white shadow-md
-                              transition-all duration-300 ease-in-out group-hover:shadow-[0_4px_14px_0_rgba(96,165,250,0.39)] bg-gradient-to-r from-[#3A76C0] to-[#60A5FA]
+                              transition-all duration-300 ease-in-out group-hover:shadow-[0_4px_14px_0_rgba(96,165,250,0.39)] bg-gradient-to-r from-[#4F46E5] to-[#2563EB]
                               disabled:opacity-60 disabled:cursor-not-allowed
                             "
                           >

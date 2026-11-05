@@ -130,7 +130,7 @@ export default function MobileSidebar({
         >
           <IoCloseSharp
             size={24}
-            className="group-hover:text-[#3A76C0] transition-colors"
+            className="group-hover:text-[#4F46E5] transition-colors"
           />
         </button>
       </div>
@@ -177,8 +177,8 @@ export default function MobileSidebar({
                 <span className="text-lg font-bold text-[var(--fg)] leading-tight tracking-tight truncate">
                   {userName}
                 </span>
-                <p className="text-[10px] font-bold uppercase tracking-[0.1em] text-[#3A76C0] mt-1 opacity-80 flex items-center gap-1">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#3A76C0] inline-block animate-pulse" />
+                <p className="text-[10px] font-bold uppercase tracking-[0.1em] text-[#4F46E5] mt-1 opacity-80 flex items-center gap-1">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#4F46E5] inline-block animate-pulse" />
                   {formatRole(roleLower)}
                 </p>
               </div>
@@ -194,9 +194,9 @@ export default function MobileSidebar({
                   border border-[var(--fg)]/10
                   flex items-center justify-center
                   text-[var(--fg)]/40
-                  hover:text-[#3A76C0]
-                  hover:bg-[#3A76C0]/10
-                  hover:border-[#3A76C0]/20
+                  hover:text-[#4F46E5]
+                  hover:bg-[#4F46E5]/10
+                  hover:border-[#4F46E5]/20
                   transition-all duration-300
                 "
                 title="Edit profile"
@@ -235,14 +235,14 @@ export default function MobileSidebar({
                       }}
                       className="group flex items-center gap-4 py-3.5 px-5 rounded-2xl hover:bg-[var(--fg)]/[0.03] active:scale-[0.98] transition-all duration-300 border border-transparent hover:border-[var(--fg)]/5"
                     >
-                      <div className="w-10 h-10 rounded-xl bg-[var(--fg)]/[0.03] group-hover:bg-[#3A76C0]/10 flex items-center justify-center text-[var(--fg)]/40 group-hover:text-[#3A76C0] transition-colors">
+                      <div className="w-10 h-10 rounded-xl bg-[var(--fg)]/[0.03] group-hover:bg-[#4F46E5]/10 flex items-center justify-center text-[var(--fg)]/40 group-hover:text-[#4F46E5] transition-colors">
                         {getLinkIcon(label)}
                       </div>
                       <span className="text-base font-semibold text-[var(--fg)]/70 group-hover:text-[var(--fg)] transition-colors">
                         {label}
                       </span>
                       <FaAngleRight
-                        className="ml-auto opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 text-[#3A76C0]"
+                        className="ml-auto opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 text-[#4F46E5]"
                         size={14}
                       />
                     </Link>
@@ -254,14 +254,14 @@ export default function MobileSidebar({
                     onClick={close}
                     className="group flex items-center gap-4 py-3.5 px-5 rounded-2xl hover:bg-[var(--fg)]/[0.03] active:scale-[0.98] transition-all duration-300 border border-transparent hover:border-[var(--fg)]/5"
                   >
-                    <div className="w-10 h-10 rounded-xl bg-[var(--fg)]/[0.03] group-hover:bg-[#3A76C0]/10 flex items-center justify-center text-[var(--fg)]/40 group-hover:text-[#3A76C0] transition-colors">
+                    <div className="w-10 h-10 rounded-xl bg-[var(--fg)]/[0.03] group-hover:bg-[#4F46E5]/10 flex items-center justify-center text-[var(--fg)]/40 group-hover:text-[#4F46E5] transition-colors">
                       <FiUsers size={18} />
                     </div>
                     <span className="text-base font-semibold text-[var(--fg)]/70 group-hover:text-[var(--fg)] transition-colors">
                       My Club
                     </span>
                     <FaAngleRight
-                      className="ml-auto opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 text-[#3A76C0]"
+                      className="ml-auto opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 text-[#4F46E5]"
                       size={14}
                     />
                   </Link>
@@ -272,14 +272,14 @@ export default function MobileSidebar({
                   onClick={close}
                   className="group flex items-center gap-4 py-3.5 px-5 rounded-2xl hover:bg-[var(--fg)]/[0.03] active:scale-[0.98] transition-all duration-300 border border-transparent hover:border-[var(--fg)]/5"
                 >
-                  <div className="w-10 h-10 rounded-xl bg-[var(--fg)]/[0.03] group-hover:bg-[#3A76C0]/10 flex items-center justify-center text-[var(--fg)]/40 group-hover:text-[#3A76C0] transition-colors">
+                  <div className="w-10 h-10 rounded-xl bg-[var(--fg)]/[0.03] group-hover:bg-[#4F46E5]/10 flex items-center justify-center text-[var(--fg)]/40 group-hover:text-[#4F46E5] transition-colors">
                     <FiMessageCircle size={18} />
                   </div>
                   <span className="text-base font-semibold text-[var(--fg)]/70 group-hover:text-[var(--fg)] transition-colors">
                     Chat
                   </span>
                   <FaAngleRight
-                    className="ml-auto opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 text-[#3A76C0]"
+                    className="ml-auto opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 text-[#4F46E5]"
                     size={14}
                   />
                 </Link>
@@ -294,7 +294,7 @@ export default function MobileSidebar({
                     onClick={close}
                     className="group flex items-center gap-4 py-3.5 px-5 rounded-2xl hover:bg-[var(--fg)]/[0.03] active:scale-[0.98] transition-all duration-300 border border-transparent hover:border-[var(--fg)]/5"
                   >
-                    <div className="w-10 h-10 rounded-xl bg-[var(--fg)]/[0.03] group-hover:bg-[#3A76C0]/10 flex items-center justify-center text-[var(--fg)]/40 group-hover:text-[#3A76C0] transition-colors">
+                    <div className="w-10 h-10 rounded-xl bg-[var(--fg)]/[0.03] group-hover:bg-[#4F46E5]/10 flex items-center justify-center text-[var(--fg)]/40 group-hover:text-[#4F46E5] transition-colors">
                       <FiShield size={18} />
                     </div>
                     <span className="text-base font-semibold text-[var(--fg)]/70 group-hover:text-[var(--fg)] transition-colors">
@@ -303,7 +303,7 @@ export default function MobileSidebar({
                         : 'KYC Status'}
                     </span>
                     <FaAngleRight
-                      className="ml-auto opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 text-[#3A76C0]"
+                      className="ml-auto opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 text-[#4F46E5]"
                       size={14}
                     />
                   </Link>
@@ -341,14 +341,14 @@ export default function MobileSidebar({
                       }}
                       className="group bg-red-500 flex items-center gap-4 py-3.5 px-5 rounded-2xl hover:bg-[var(--fg)]/[0.03] active:scale-[0.98] transition-all duration-300 border border-transparent hover:border-[var(--fg)]/5"
                     >
-                      <div className="w-10 h-10 rounded-xl bg-[var(--fg)]/[0.03] group-hover:bg-[#3A76C0]/10 flex items-center justify-center text-[var(--fg)]/40 group-hover:text-[#3A76C0] transition-colors">
+                      <div className="w-10 h-10 rounded-xl bg-[var(--fg)]/[0.03] group-hover:bg-[#4F46E5]/10 flex items-center justify-center text-[var(--fg)]/40 group-hover:text-[#4F46E5] transition-colors">
                         {getLinkIcon(label)}
                       </div>
                       <span className="text-base font-semibold text-[var(--fg)]/70 group-hover:text-[var(--fg)] transition-colors">
                         {label}
                       </span>
                       <FaAngleRight
-                        className="ml-auto opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 text-[#3A76C0]"
+                        className="ml-auto opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 text-[#4F46E5]"
                         size={14}
                       />
                     </Link>
@@ -380,7 +380,7 @@ export default function MobileSidebar({
             <Link
               to="/login"
               onClick={close}
-              className="w-full bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white py-4 rounded-2xl text-base font-bold shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 active:scale-[0.95] transition-all duration-300 flex items-center justify-center gap-3 overflow-hidden relative group/login"
+              className="w-full bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white py-4 rounded-2xl text-base font-bold shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 active:scale-[0.95] transition-all duration-300 flex items-center justify-center gap-3 overflow-hidden relative group/login"
             >
               <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover/login:translate-x-[100%] transition-transform duration-700 ease-in-out" />
               Sign In{' '}
@@ -397,7 +397,7 @@ export default function MobileSidebar({
             >
               <FaUserPlus
                 size={16}
-                className="text-[#3A76C0] group-hover:scale-110 transition-transform"
+                className="text-[#4F46E5] group-hover:scale-110 transition-transform"
               />
               Create Account
             </Link>

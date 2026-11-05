@@ -37,9 +37,9 @@ export default function WhoIsAssetOwner() {
             className="text-2xl md:text-3xl font-extrabold text-[var(--fg)] tracking-tight"
           >
             Who Can List Assets on{' '}
-            <span className="text-[#3A76C0]">Fracto</span>
+            <span className="text-[#4F46E5]">Fracto</span>
           </motion.h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] mx-auto mt-6 rounded-full" />
+          <div className="w-20 h-1 bg-gradient-to-r from-[#4F46E5] to-[#2563EB] mx-auto mt-6 rounded-full" />
           <motion.p
             variants={fadeUp}
             className="mt-6 text-base md:text-lg text-[var(--fg)]/70 max-w-2xl mx-auto leading-relaxed font-light"
@@ -60,11 +60,11 @@ export default function WhoIsAssetOwner() {
             variants={cardVariants}
             className="group relative rounded-[2.5rem] bg-[var(--card)] p-10 lg:p-12 text-left border border-[var(--fg)]/10 shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden"
           >
-            <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-[#3A76C0] to-[#60A5FA]" />
+            <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-[#4F46E5] to-[#2563EB]" />
             <div className="absolute -top-10 -right-10 w-40 h-40 bg-blue-500/5 blur-3xl rounded-full" />
 
             <div className="relative z-10">
-              <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#3A76C0]/10 text-[#3A76C0] transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
+              <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#4F46E5]/10 text-[#4F46E5] transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
                 <FaUser size={24} />
               </div>
 
@@ -91,7 +91,7 @@ export default function WhoIsAssetOwner() {
                     key={idx}
                     className="flex items-center gap-3 text-[var(--fg)]/80 text-base lg:text-base"
                   >
-                    <div className="flex-shrink-0 text-[#3A76C0]">
+                    <div className="flex-shrink-0 text-[#4F46E5]">
                       <CiCircleCheck size={20} />
                     </div>
                     {item}
@@ -110,11 +110,11 @@ export default function WhoIsAssetOwner() {
             variants={cardVariants}
             className="group relative rounded-[2.5rem] bg-[var(--card)] p-10 lg:p-12 text-left border border-[var(--fg)]/10 shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden"
           >
-            <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-[#60A5FA] to-[#3A76C0]" />
+            <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-[#60A5FA] to-[#4F46E5]" />
             <div className="absolute -top-10 -right-10 w-40 h-40 bg-indigo-500/5 blur-3xl rounded-full" />
 
             <div className="relative z-10">
-              <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#3A76C0]/10 text-[#3A76C0] transform group-hover:scale-110 group-hover:-rotate-3 transition-all duration-500">
+              <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#4F46E5]/10 text-[#4F46E5] transform group-hover:scale-110 group-hover:-rotate-3 transition-all duration-500">
                 <FaBuilding size={24} />
               </div>
 
@@ -141,7 +141,7 @@ export default function WhoIsAssetOwner() {
                     key={idx}
                     className="flex items-center gap-3 text-[var(--fg)]/80 text-base lg:text-base"
                   >
-                    <div className="flex-shrink-0 text-[#3A76C0]">
+                    <div className="flex-shrink-0 text-[#4F46E5]">
                       <CiCircleCheck size={20} />
                     </div>
                     {item}

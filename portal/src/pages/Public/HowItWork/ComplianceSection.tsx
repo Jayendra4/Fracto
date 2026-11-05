@@ -9,7 +9,7 @@ const items = [
     title: 'SPV-Based Legal Structure',
     description:
       'Asset participation is facilitated through Special Purpose Vehicles -- private limited companies or LLPs -- that hold the underlying property. Investors participate by holding equity shares or units in the SPV, as governed by the Companies Act, 2013 or LLP Act, 2008. This structure provides well-defined rights, clear documentation, and legal separation between the platform and the asset.',
-    accent: 'from-[#3A76C0]/20 to-[#60A5FA]/10',
+    accent: 'from-[#4F46E5]/20 to-[#2563EB]/10',
     iconColor: 'text-[#60A5FA]',
   },
   {

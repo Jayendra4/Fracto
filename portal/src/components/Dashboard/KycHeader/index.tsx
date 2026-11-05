@@ -77,7 +77,7 @@ export default function KycHeader({ scrolled }: KycHeaderProps) {
 
             <Link
               to={redirectPath}
-              className="group relative flex items-center justify-center gap-2 px-6 py-2.5 bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white shadow-md hover:shadow-lg hover:brightness-110 transition-all duration-300 font-bold text-sm lg:text-base rounded-xl active:scale-95"
+              className="group relative flex items-center justify-center gap-2 px-6 py-2.5 bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white shadow-md hover:shadow-lg hover:brightness-110 transition-all duration-300 font-bold text-sm lg:text-base rounded-xl active:scale-95"
             >
               <CiShare1 className="text-lg transition-transform group-hover:rotate-12" />
               <span>{ctaText}</span>

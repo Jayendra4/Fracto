@@ -12,9 +12,9 @@ export default function WhoIsCI() {
           className="text-center mb-16"
         >
           <h2 className="font-48 font-bold tracking-tight">
-            Who Is a <span className="text-[#3A76C0]">Corporate Investor</span>
+            Who Is a <span className="text-[#4F46E5]">Corporate Investor</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] mx-auto mt-4 rounded-full" />
+          <div className="w-24 h-1 bg-gradient-to-r from-[#4F46E5] to-[#2563EB] mx-auto mt-4 rounded-full" />
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12 lg:gap-24">
@@ -26,7 +26,7 @@ export default function WhoIsCI() {
             className="space-y-8"
           >
             <div className="relative p-8 rounded-[2rem] bg-[var(--card)] border border-[var(--fg)]/10 shadow-xl overflow-hidden group">
-              <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-[#3A76C0] to-[#60A5FA]" />
+              <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-[#4F46E5] to-[#2563EB]" />
               <p className="font-20 leading-relaxed text-[var(--fg)]/90">
                 A Corporate Investor on the Fracto platform is an end
                 user — whether an individual, a partnership, a private limited
@@ -37,7 +37,7 @@ export default function WhoIsCI() {
             </div>
 
             <div className="relative p-8 rounded-[2rem] bg-[var(--card)] border border-[var(--fg)]/10 shadow-xl overflow-hidden group">
-              <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-[#60A5FA] to-[#3A76C0]" />
+              <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-[#60A5FA] to-[#4F46E5]" />
               <p className="font-20 leading-relaxed text-[var(--fg)]/90">
                 Rather than acquiring an entire property outright, Corporate
                 Investors gain proportional economic participation by engaging
@@ -57,7 +57,7 @@ export default function WhoIsCI() {
             className="flex justify-center lg:justify-end"
           >
             <div className="relative group">
-              <div className="absolute -inset-4 bg-gradient-to-r from-[#3A76C0]/20 to-[#60A5FA]/20 rounded-[2.5rem] blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+              <div className="absolute -inset-4 bg-gradient-to-r from-[#4F46E5]/20 to-[#2563EB]/20 rounded-[2.5rem] blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
               <div className="relative w-full max-w-[550px] aspect-[4/3] rounded-[2rem] overflow-hidden shadow-2xl border-4 border-[var(--card)]">
                 <img
                   src="/images/corporateInvestor/building.png"

@@ -168,7 +168,7 @@ export default function ProfilePictureModal({
             <button
               onClick={handleUpdate}
               disabled={!selectedFile || uploading}
-              className="flex-1 py-3 px-6 rounded-xl bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white font-semibold shadow-lg hover:shadow-blue-500/20 hover:brightness-110 transition-all duration-300 disabled:opacity-50 flex items-center justify-center gap-2 active:scale-[0.98]"
+              className="flex-1 py-3 px-6 rounded-xl bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white font-semibold shadow-lg hover:shadow-blue-500/20 hover:brightness-110 transition-all duration-300 disabled:opacity-50 flex items-center justify-center gap-2 active:scale-[0.98]"
             >
               <FiCheck size={18} />
               Update Photo

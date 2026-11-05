@@ -184,7 +184,7 @@ export default function ReferredAssetDetail() {
     data: { label: string; value: any }[]
   ) => (
     <div className="bg-white dark:bg-[#132436] p-3 sm:p-6 rounded-xl border border-[#E3E7EE] dark:border-white/10 shadow-sm">
-      <h3 className="text-xs capitalize font-bold text-[#3A76C0] dark:text-[#73B7FF]  tracking-[0.2em] mb-5 pb-2 border-b border-[#E3E7EE] dark:border-white/10">
+      <h3 className="text-xs capitalize font-bold text-[#4F46E5] dark:text-[#73B7FF]  tracking-[0.2em] mb-5 pb-2 border-b border-[#E3E7EE] dark:border-white/10">
         {title}
       </h3>
 
@@ -313,7 +313,7 @@ export default function ReferredAssetDetail() {
             if (!shortDesc) return null;
             return (
               <div className="bg-white dark:bg-[#132436] p-3 sm:p-6 rounded-xl border border-[#E3E7EE] dark:border-white/10 shadow-sm">
-                <h3 className="text-xs capitalize font-bold text-[#3A76C0] dark:text-[#73B7FF] tracking-[0.2em] mb-4 pb-2 border-b border-[#E3E7EE] dark:border-white/10">
+                <h3 className="text-xs capitalize font-bold text-[#4F46E5] dark:text-[#73B7FF] tracking-[0.2em] mb-4 pb-2 border-b border-[#E3E7EE] dark:border-white/10">
                   Short Description
                 </h3>
                 <div className="text-base text-[#0B2545] dark:text-white leading-relaxed">
@@ -331,7 +331,7 @@ export default function ReferredAssetDetail() {
             if (!detailedDesc) return null;
             return (
               <div className="bg-white dark:bg-[#132436] p-3 sm:p-6 rounded-xl border border-[#E3E7EE] dark:border-white/10 shadow-sm">
-                <h3 className="text-xs capitalize font-bold text-[#3A76C0] dark:text-[#73B7FF] tracking-[0.2em] mb-4 pb-2 border-b border-[#E3E7EE] dark:border-white/10">
+                <h3 className="text-xs capitalize font-bold text-[#4F46E5] dark:text-[#73B7FF] tracking-[0.2em] mb-4 pb-2 border-b border-[#E3E7EE] dark:border-white/10">
                   Detailed Description
                 </h3>
                 <div className="text-base text-[#0B2545] dark:text-white leading-relaxed whitespace-pre-wrap">
@@ -343,7 +343,7 @@ export default function ReferredAssetDetail() {
 
           {/* DOCUMENTS */}
           <div className="bg-white dark:bg-[#132436] p-6 rounded-xl border border-[#E3E7EE] dark:border-white/10 shadow-sm">
-            <h3 className="text-xs font-bold text-[#3A76C0] dark:text-[#73B7FF] uppercase tracking-[0.2em] mb-5 pb-2 border-b border-[#E3E7EE] dark:border-white/10">
+            <h3 className="text-xs font-bold text-[#4F46E5] dark:text-[#73B7FF] uppercase tracking-[0.2em] mb-5 pb-2 border-b border-[#E3E7EE] dark:border-white/10">
               Documents & Media
             </h3>
             {[
@@ -352,7 +352,7 @@ export default function ReferredAssetDetail() {
               { title: 'Property Documents', items: propertyDocs },
             ].map(({ title, items }) => (
               <div key={title} className="space-y-4 mt-8">
-                <h4 className="text-sm font-bold tracking-widest uppercase text-[#3A76C0] dark:text-[#73B7FF]">
+                <h4 className="text-sm font-bold tracking-widest uppercase text-[#4F46E5] dark:text-[#73B7FF]">
                   {title}
                 </h4>
 

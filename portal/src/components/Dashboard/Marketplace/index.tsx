@@ -143,10 +143,10 @@ function MarketplaceCard({
   return (
     <motion.div
       variants={cardVariants}
-      className="group relative bg-white dark:bg-[#132436] border border-[#E3E7EE] dark:border-white/10 rounded-2xl overflow-hidden hover:border-[#3A76C0]/30 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/10 dark:hover:shadow-black/20 transition-all duration-300"
+      className="group relative bg-white dark:bg-[#132436] border border-[#E3E7EE] dark:border-white/10 rounded-2xl overflow-hidden hover:border-[#4F46E5]/30 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/10 dark:hover:shadow-black/20 transition-all duration-300"
     >
       {/* Accent bar */}
-      <div className="h-1 w-full bg-gradient-to-r from-[#3A76C0] to-[#60A5FA]" />
+      <div className="h-1 w-full bg-gradient-to-r from-[#4F46E5] to-[#2563EB]" />
 
       <div className="p-5">
         {/* Trending badge */}
@@ -161,8 +161,8 @@ function MarketplaceCard({
 
         {/* Header: icon + title + status */}
         <div className="flex items-start gap-3 mb-4">
-          <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[#3A76C0]/20 to-[#60A5FA]/10 border border-[#3A76C0]/15 flex items-center justify-center shrink-0">
-            <FaBuilding className="text-[#3A76C0] dark:text-[#60A5FA] text-base" />
+          <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[#4F46E5]/20 to-[#2563EB]/10 border border-[#4F46E5]/15 flex items-center justify-center shrink-0">
+            <FaBuilding className="text-[#4F46E5] dark:text-[#60A5FA] text-base" />
           </div>
           <div className="flex-1 min-w-0">
             <p className="text-sm font-semibold text-[#0B2545] dark:text-white line-clamp-1 leading-snug">
@@ -225,7 +225,7 @@ function MarketplaceCard({
                 state: { assetId: asset.assetId, groupId: asset.groupId },
               })
             }
-            className="flex-1 h-9 rounded-xl font-semibold text-xs bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white shadow-sm shadow-blue-500/20 hover:shadow-blue-500/40 transition-all duration-200 flex items-center justify-center gap-1.5 overflow-hidden relative group/buy cursor-pointer"
+            className="flex-1 h-9 rounded-xl font-semibold text-xs bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white shadow-sm shadow-blue-500/20 hover:shadow-blue-500/40 transition-all duration-200 flex items-center justify-center gap-1.5 overflow-hidden relative group/buy cursor-pointer"
           >
             <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover/buy:translate-x-[100%] transition-transform duration-700" />
             <span className="relative z-10">Buy / Sell</span>
@@ -318,7 +318,7 @@ export default function Marketplace() {
                 value={search}
                 onChange={(e) => handleSearch(e.target.value)}
                 placeholder="Search assets..."
-                className="w-full h-10 pl-10 pr-4 rounded-xl bg-white dark:bg-[#132436] border border-[#E3E7EE] dark:border-white/10 text-[#0B2545] dark:text-white placeholder:text-gray-300 dark:placeholder:text-gray-600 text-sm outline-none focus:border-[#3A76C0]/50 focus:ring-1 focus:ring-[#3A76C0]/30 transition-all duration-200"
+                className="w-full h-10 pl-10 pr-4 rounded-xl bg-white dark:bg-[#132436] border border-[#E3E7EE] dark:border-white/10 text-[#0B2545] dark:text-white placeholder:text-gray-300 dark:placeholder:text-gray-600 text-sm outline-none focus:border-[#4F46E5]/50 focus:ring-1 focus:ring-[#4F46E5]/30 transition-all duration-200"
               />
             </div>
           </motion.div>
@@ -452,7 +452,7 @@ export default function Marketplace() {
                         onClick={() => goToPage(item as number)}
                         className={`w-8 h-8 rounded-lg text-xs font-semibold transition-all duration-200 cursor-pointer ${
                           page === item
-                            ? 'bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white shadow-sm shadow-blue-500/20'
+                            ? 'bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white shadow-sm shadow-blue-500/20'
                             : 'border border-[#E3E7EE] dark:border-white/10 bg-white dark:bg-[#132436] text-gray-400 dark:text-gray-500 hover:text-[#0B2545] dark:hover:text-white hover:border-[#1F4FE0]/30'
                         }`}
                       >

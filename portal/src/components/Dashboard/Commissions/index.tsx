@@ -154,7 +154,7 @@ export default function Commissions() {
                       <h2 className="font-36">Commissions</h2>
                       <button
                         onClick={() => navigate(0)}
-                        className="flex md:hidden font-16 p-2 rounded-md bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] shadow-md hover:shadow-lg hover:brightness-110 transition-all duration-300 gap-1 justify-center items-center whitespace-nowrap cursor-pointer text-white"
+                        className="flex md:hidden font-16 p-2 rounded-md bg-gradient-to-r from-[#4F46E5] to-[#2563EB] shadow-md hover:shadow-lg hover:brightness-110 transition-all duration-300 gap-1 justify-center items-center whitespace-nowrap cursor-pointer text-white"
                       >
                         <GrRotateLeft size={18} /> Refresh
                       </button>
@@ -167,7 +167,7 @@ export default function Commissions() {
                   </div>
                   <button
                     onClick={() => navigate(0)}
-                    className="hidden md:flex font-18 px-5 py-1.5 mt-4 rounded-md bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] shadow-md hover:shadow-lg hover:brightness-110 flex-row gap-2 justify-center items-center w-full sm:w-auto whitespace-nowrap cursor-pointer text-white transition-all duration-300"
+                    className="hidden md:flex font-18 px-5 py-1.5 mt-4 rounded-md bg-gradient-to-r from-[#4F46E5] to-[#2563EB] shadow-md hover:shadow-lg hover:brightness-110 flex-row gap-2 justify-center items-center w-full sm:w-auto whitespace-nowrap cursor-pointer text-white transition-all duration-300"
                   >
                     <GrRotateLeft className="shrink-0" size={18} /> Refresh
                   </button>
@@ -233,7 +233,7 @@ export default function Commissions() {
                       <button
                         disabled={isLoading}
                         onClick={() => setWithdrawModalOpen(true)}
-                        className="mt-4 w-full py-2 bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] shadow-md hover:shadow-lg hover:brightness-110 transition-all duration-300 text-white text-xs font-bold rounded-lg disabled:opacity-50"
+                        className="mt-4 w-full py-2 bg-gradient-to-r from-[#4F46E5] to-[#2563EB] shadow-md hover:shadow-lg hover:brightness-110 transition-all duration-300 text-white text-xs font-bold rounded-lg disabled:opacity-50"
                       >
                         Withdraw Funds
                       </button>

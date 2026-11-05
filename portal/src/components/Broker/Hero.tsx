@@ -69,9 +69,9 @@ export default function Hero() {
           >
             <motion.div
               variants={fadeUp}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#3A76C0]/10 text-[#3A76C0] text-sm font-bold tracking-wide mb-8"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#4F46E5]/10 text-[#4F46E5] text-sm font-bold tracking-wide mb-8"
             >
-              <div className="w-2 h-2 rounded-full bg-[#3A76C0] animate-pulse" />
+              <div className="w-2 h-2 rounded-full bg-[#4F46E5] animate-pulse" />
               CHANNEL PARTNER NETWORK
             </motion.div>
 
@@ -80,7 +80,7 @@ export default function Hero() {
               className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-[1.1] text-[var(--fg)] tracking-tight"
             >
               Drive Growth as a <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#3A76C0] to-[#60A5FA]">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4F46E5] to-[#2563EB]">
                 Channel Partner
               </span>
             </motion.h1>
@@ -90,8 +90,8 @@ export default function Hero() {
               className="mt-6 text-lg md:text-xl font-bold text-[var(--fg)]/90 leading-tight"
             >
               The Bridge Between{' '}
-              <span className="text-[#3A76C0]">Investors</span> and{' '}
-              <span className="text-[#3A76C0]">Premium Assets</span>
+              <span className="text-[#4F46E5]">Investors</span> and{' '}
+              <span className="text-[#4F46E5]">Premium Assets</span>
             </motion.p>
 
             <motion.p
@@ -110,7 +110,7 @@ export default function Hero() {
             >
               <button
                 // to={`${isAuthenticated ? '/properties' : '/login'}`}
-                className="group inline-flex items-center gap-3 rounded-xl bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] px-8 py-4 text-lg font-bold text-white shadow-lg shadow-blue-500/20 transition-all hover:brightness-110"
+                className="group inline-flex items-center gap-3 rounded-xl bg-gradient-to-r from-[#4F46E5] to-[#2563EB] px-8 py-4 text-lg font-bold text-white shadow-lg shadow-blue-500/20 transition-all hover:brightness-110"
               >
                 Join The Network
                 <span className="transition-transform group-hover:translate-x-1.5">
@@ -131,7 +131,7 @@ export default function Hero() {
                   variants={badgeVariants}
                   className="flex items-center gap-3 text-[var(--fg)]/60 font-medium"
                 >
-                  <div className="w-10 h-10 rounded-full bg-[var(--fg)]/10 flex items-center justify-center text-[#3A76C0] shadow-sm">
+                  <div className="w-10 h-10 rounded-full bg-[var(--fg)]/10 flex items-center justify-center text-[#4F46E5] shadow-sm">
                     {item.icon}
                   </div>
                   <span className="text-[var(--fg)] opacity-90">

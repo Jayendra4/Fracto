@@ -88,7 +88,7 @@ export default function Hero() {
               Own Real Estate.
               <br />
               {/* {' '} */}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#3A76C0] to-[#60A5FA]">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4F46E5] to-[#2563EB]">
                 Differently.
               </span>
             </motion.h2>
@@ -114,7 +114,7 @@ export default function Hero() {
 
             <motion.button
               variants={fadeUp}
-              className="group mt-10 inline-flex items-center gap-3 rounded-xl bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] px-6 py-3 font-16 font-bold text-white shadow-lg shadow-blue-500/20 transition-all hover:brightness-110 cursor-pointer"
+              className="group mt-10 inline-flex items-center gap-3 rounded-xl bg-gradient-to-r from-[#4F46E5] to-[#2563EB] px-6 py-3 font-16 font-bold text-white shadow-lg shadow-blue-500/20 transition-all hover:brightness-110 cursor-pointer"
               onClick={() => navigate(path)}
             >
               Invest Now

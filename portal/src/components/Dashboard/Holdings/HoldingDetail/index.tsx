@@ -189,7 +189,7 @@ export default function HoldingDetail() {
                     Verified
                   </span>
                 )}
-                <span className="px-2.5 py-1 rounded-full border border-[#3A76C0]/30 bg-[#3A76C0]/10 text-[#60A5FA] text-xs font-semibold shrink-0">
+                <span className="px-2.5 py-1 rounded-full border border-[#4F46E5]/30 bg-[#4F46E5]/10 text-[#60A5FA] text-xs font-semibold shrink-0">
                   {holding.status}
                 </span>
               </div>
@@ -456,7 +456,7 @@ export default function HoldingDetail() {
                                   x2="100%"
                                   y2="0%"
                                 >
-                                  <stop offset="0%" stopColor="#3A76C0" />
+                                  <stop offset="0%" stopColor="#4F46E5" />
                                   <stop offset="100%" stopColor="#60A5FA" />
                                 </linearGradient>
                               </defs>

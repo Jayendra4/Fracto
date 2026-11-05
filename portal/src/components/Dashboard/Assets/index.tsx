@@ -437,7 +437,7 @@ export default function Assets() {
                   className={`flex-1 md:flex-none px-4 md:px-6 py-1.5 rounded-full text-xs md:text-sm font-medium transition-all duration-300
                     ${
                       activeTab === 'onboarded'
-                        ? 'bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] shadow-md text-white'
+                        ? 'bg-gradient-to-r from-[#4F46E5] to-[#2563EB] shadow-md text-white'
                         : 'text-[var(--fg)]/40 hover:text-[var(--fg)] hover:bg-[var(--fg)]/5'
                     }`}
                 >
@@ -453,7 +453,7 @@ export default function Assets() {
                 className={`flex-1 md:flex-none px-4 md:px-6 py-1.5 rounded-full text-xs md:text-sm font-medium transition-all duration-300
                   ${
                     activeTab === 'purchased'
-                      ? 'bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] shadow-md text-white'
+                      ? 'bg-gradient-to-r from-[#4F46E5] to-[#2563EB] shadow-md text-white'
                       : 'text-[var(--fg)]/40 hover:text-[var(--fg)] hover:bg-[var(--fg)]/5'
                   }`}
               >
@@ -526,7 +526,7 @@ export default function Assets() {
                               <button
                                 key={i + 1}
                                 onClick={() => setPage(i + 1)}
-                                className={`flex-shrink-0 px-3 py-1 rounded-md text-sm border transition-all duration-300 ${page === i + 1 ? 'bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white border-transparent' : 'text-[var(--fg)] border-[var(--fg)]/10'}`}
+                                className={`flex-shrink-0 px-3 py-1 rounded-md text-sm border transition-all duration-300 ${page === i + 1 ? 'bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white border-transparent' : 'text-[var(--fg)] border-[var(--fg)]/10'}`}
                               >
                                 {i + 1}
                               </button>
@@ -568,7 +568,7 @@ export default function Assets() {
                               setOnboardedStatus(status as any);
                               setPage(1);
                             }}
-                            className={`px-4 md:px-6 py-2 rounded-lg text-xs md:text-sm font-medium transition-all duration-300 ${onboardedStatus === status ? 'bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white shadow-md' : 'text-[var(--fg)]/40 hover:text-[var(--fg)] hover:bg-[var(--fg)]/5'}`}
+                            className={`px-4 md:px-6 py-2 rounded-lg text-xs md:text-sm font-medium transition-all duration-300 ${onboardedStatus === status ? 'bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white shadow-md' : 'text-[var(--fg)]/40 hover:text-[var(--fg)] hover:bg-[var(--fg)]/5'}`}
                           >
                             {status}
                           </button>
@@ -628,7 +628,7 @@ export default function Assets() {
                                 <button
                                   key={i + 1}
                                   onClick={() => setPage(i + 1)}
-                                  className={`flex-shrink-0 px-3 py-1 rounded-md text-sm border transition-all duration-300 ${page === i + 1 ? 'bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white border-transparent' : 'text-[var(--fg)] border-[var(--fg)]/10'}`}
+                                  className={`flex-shrink-0 px-3 py-1 rounded-md text-sm border transition-all duration-300 ${page === i + 1 ? 'bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white border-transparent' : 'text-[var(--fg)] border-[var(--fg)]/10'}`}
                                 >
                                   {i + 1}
                                 </button>

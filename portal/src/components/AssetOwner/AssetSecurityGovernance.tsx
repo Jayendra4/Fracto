@@ -39,9 +39,9 @@ export default function AssetSecurityGovernance() {
         >
           <h2 className="text-3xl md:text-4xl font-extrabold text-[var(--fg)] tracking-tight">
             Built On{' '}
-            <span className="text-[#3A76C0]">Security & Governance</span>
+            <span className="text-[#4F46E5]">Security & Governance</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] mx-auto mt-6 rounded-full" />
+          <div className="w-20 h-1 bg-gradient-to-r from-[#4F46E5] to-[#2563EB] mx-auto mt-6 rounded-full" />
           <p className="mt-8 text-lg md:text-xl text-[var(--fg)]/60 max-w-3xl mx-auto leading-relaxed font-semibold opacity-80">
             Our institutional-grade security framework ensures that every asset
             and every transaction is legitimate, legal, and protected.
@@ -78,11 +78,11 @@ export default function AssetSecurityGovernance() {
                 <div className="absolute top-0 right-0 w-24 h-24 bg-blue-500/5 blur-2xl rounded-full translate-x-12 -translate-y-12 opacity-0 group-hover:opacity-100 transition-opacity" />
 
                 <div className="relative z-10">
-                  <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-[#3A76C0]/10 text-white shadow-sm transition-transform group-hover:scale-110 group-hover:-rotate-3">
+                  <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-[#4F46E5]/10 text-white shadow-sm transition-transform group-hover:scale-110 group-hover:-rotate-3">
                     <img src={feature.img} alt="" className="w-10 h-10" />
                   </div>
 
-                  <h3 className="mb-4 text-2xl font-bold text-[var(--fg)] group-hover:text-[#3A76C0] transition-colors">
+                  <h3 className="mb-4 text-2xl font-bold text-[var(--fg)] group-hover:text-[#4F46E5] transition-colors">
                     {feature.title}
                   </h3>
 

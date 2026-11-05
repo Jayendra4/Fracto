@@ -21,13 +21,13 @@ export default function CustomButton({
 
   const variantStyles: Record<string, string> = {
     primary:
-      'bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white hover:shadow-lg hover:brightness-110 shadow-md',
+      'bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white hover:shadow-lg hover:brightness-110 shadow-md',
     secondary: 'bg-[var(--fg)]/10 text-[var(--fg)] hover:bg-[var(--fg)]/20',
     danger: 'bg-red-500 text-white hover:bg-red-600',
     outline:
       'border border-[var(--fg)]/10 text-[var(--fg)] hover:bg-[var(--fg)]/5',
     formButton:
-      'bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white hover:shadow-lg hover:brightness-110 shadow-md',
+      'bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white hover:shadow-lg hover:brightness-110 shadow-md',
   };
 
   const variantClasses = disabled

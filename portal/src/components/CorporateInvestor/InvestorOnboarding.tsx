@@ -12,28 +12,28 @@ const steps = [
     description:
       'Investors create a verified account, provide identification and contact details, and gain access to explore investment opportunities. Account creation involves providing basic identification details, contact information, and creating a secure login profile.',
     icon: HiOutlineBuildingOffice2,
-    gradient: 'from-[#3A76C0] to-[#60A5FA]',
+    gradient: 'from-[#4F46E5] to-[#2563EB]',
   },
   {
     title: 'KYC Verification & Trustee Approval',
     description:
       'Investors must complete KYC verification by submitting required identification and compliance documents. Upon trustee-approved verification, accounts are activated for investment participation.',
     icon: HiOutlineIdentification,
-    gradient: 'from-[#60A5FA] to-[#3A76C0]',
+    gradient: 'from-[#60A5FA] to-[#4F46E5]',
   },
   {
     title: 'Investment Capabilities (Post-Approval)',
     description:
       'After KYC approval, Investors can explore vetted opportunities, review asset details and documents, track holdings, and manage participation through a secure Investor dashboard.',
     icon: HiOutlineChartBarSquare,
-    gradient: 'from-[#3A76C0] to-[#60A5FA]',
+    gradient: 'from-[#4F46E5] to-[#2563EB]',
   },
   {
     title: 'Income & Exit Opportunities',
     description:
       'Fracto provides asset performance updates, return distributions, and eligible exit options, enabling transparent participation through structured, compliant, and professionally managed investments.',
     icon: HiOutlineBanknotes,
-    gradient: 'from-[#60A5FA] to-[#3A76C0]',
+    gradient: 'from-[#60A5FA] to-[#4F46E5]',
   },
 ];
 
@@ -65,7 +65,7 @@ export default function InvestorOnboarding() {
           >
             <h2 className="font-48 font-bold leading-tight">
               Investor Onboarding & <br className="hidden sm:block" />
-              <span className="text-[#3A76C0]">Access Model</span>
+              <span className="text-[#4F46E5]">Access Model</span>
             </h2>
             <p className="mt-6 font-20 text-[var(--fg)]/70 max-w-2xl mx-auto">
               A comprehensive institutional-grade onboarding process designed

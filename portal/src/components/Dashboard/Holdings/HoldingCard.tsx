@@ -63,7 +63,7 @@ export default function HoldingCard({ holding }: { holding: Holding }) {
 
   return (
     <motion.div
-      whileHover={{ y: -2, boxShadow: '0 8px 32px rgba(58,118,192,0.12)' }}
+      whileHover={{ y: -2, boxShadow: '0 8px 32px rgba(79, 70, 229,0.12)' }}
       transition={{ duration: 0.2 }}
       onClick={() => navigate(`${holdingsBasePath}/${holding.id}`)}
       className="cursor-pointer bg-white dark:bg-[#132436] border border-[#E3E7EE] dark:border-white/10 shadow-sm rounded-2xl px-5 py-5 flex flex-col gap-4 relative overflow-hidden group"

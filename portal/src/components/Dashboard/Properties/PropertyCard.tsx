@@ -271,7 +271,7 @@ export function PropertyCard({ property }: { property: Property }) {
             className="
               relative overflow-hidden w-full font-semibold font-16
               px-6 py-2.5 rounded-xl text-white shadow-md cursor-pointer
-              transition-all duration-300 ease-in-out hover:shadow-[0_4px_14px_0_rgba(96,165,250,0.39)] bg-gradient-to-r from-[#3A76C0] to-[#60A5FA]
+              transition-all duration-300 ease-in-out hover:shadow-[0_4px_14px_0_rgba(96,165,250,0.39)] bg-gradient-to-r from-[#4F46E5] to-[#2563EB]
             "
           >
             View Details

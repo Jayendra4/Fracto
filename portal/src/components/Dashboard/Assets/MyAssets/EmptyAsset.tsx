@@ -17,7 +17,7 @@ export default function EmptyAssets() {
       </p>
       <Link
         to={'/primary-club'}
-        className="px-5 py-3 lg:px-9 lg:py-4 bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] shadow-md hover:shadow-lg hover:brightness-110 transition-all duration-300 text-white font-20 rounded-xl font-medium flex flex-row justify-center items-center gap-2 cursor-pointer max-w-[300px] whitespace-nowrap"
+        className="px-5 py-3 lg:px-9 lg:py-4 bg-gradient-to-r from-[#4F46E5] to-[#2563EB] shadow-md hover:shadow-lg hover:brightness-110 transition-all duration-300 text-white font-20 rounded-xl font-medium flex flex-row justify-center items-center gap-2 cursor-pointer max-w-[300px] whitespace-nowrap"
       >
         <CiShare1 size={24} className="bold" />
         <span> Explore Properties</span>

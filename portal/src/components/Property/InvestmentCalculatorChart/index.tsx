@@ -205,7 +205,7 @@ export default function InvestmentCalculatorChart({
                     setFractionsOwned(Math.min(val, maxFractions));
                   }
                 }}
-                className="w-[90px] bg-white dark:bg-white/5 border border-[#E3E7EE] dark:border-white/10 rounded-lg px-2 py-1 text-sm text-[#0B2545] dark:text-white outline-none focus:border-[#3A76C0]/50 transition-colors"
+                className="w-[90px] bg-white dark:bg-white/5 border border-[#E3E7EE] dark:border-white/10 rounded-lg px-2 py-1 text-sm text-[#0B2545] dark:text-white outline-none focus:border-[#4F46E5]/50 transition-colors"
               />
               <button
                 onClick={() => setFractionsOwned(20)}

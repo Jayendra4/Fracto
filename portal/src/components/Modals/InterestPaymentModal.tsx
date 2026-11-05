@@ -395,7 +395,7 @@ export default function InterestPaymentModal({
               type="button"
               onClick={() => setStep('pay')}
               disabled={!signName.trim() || !signature.trim() || !signAgreed}
-              className="w-full py-3 rounded-xl bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white font-16 font-semibold transition hover:brightness-110 active:scale-95 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full py-3 rounded-xl bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white font-16 font-semibold transition hover:brightness-110 active:scale-95 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
             >
               Sign & Continue
             </button>
@@ -507,7 +507,7 @@ export default function InterestPaymentModal({
             <button
               type="button"
               onClick={() => setStep('form')}
-              className="w-full mt-3 py-3 rounded-xl bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white font-16 font-semibold transition hover:brightness-110 active:scale-95 shadow-lg"
+              className="w-full mt-3 py-3 rounded-xl bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white font-16 font-semibold transition hover:brightness-110 active:scale-95 shadow-lg"
             >
               Payment Verify
             </button>
@@ -685,7 +685,7 @@ export default function InterestPaymentModal({
                 screenshotUploading ||
                 (isUnlock && !consentChecked)
               }
-              className="w-full mt-2 py-3 rounded-xl bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white font-16 font-semibold transition hover:brightness-110 active:scale-95 shadow-lg disabled:opacity-60 disabled:cursor-not-allowed"
+              className="w-full mt-2 py-3 rounded-xl bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white font-16 font-semibold transition hover:brightness-110 active:scale-95 shadow-lg disabled:opacity-60 disabled:cursor-not-allowed"
             >
               {isSubmitting ? (
                 <span className="flex items-center justify-center gap-2">

@@ -52,7 +52,7 @@ export default function RwaStep({
                 handleRouteForStep(rwaStep);
               }
             }}
-            className="bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] shadow-md hover:shadow-lg hover:brightness-110 transition-all duration-300 text-white cursor-pointer font-20 font-medium px-5 py-3 min-w-[170px] rounded-xl"
+            className="bg-gradient-to-r from-[#4F46E5] to-[#2563EB] shadow-md hover:shadow-lg hover:brightness-110 transition-all duration-300 text-white cursor-pointer font-20 font-medium px-5 py-3 min-w-[170px] rounded-xl"
           >
             Complete Now!
           </button>

@@ -78,7 +78,7 @@ export default function MoreGroups() {
               animate={{ opacity: 1, y: 0 }}
               className="mb-12"
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-white bg-[#142F4D] text-xs mb-6 border border-[#3A76C0]/20">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-white bg-[#142F4D] text-xs mb-6 border border-[#4F46E5]/20">
                 ● Fracto Community
               </div>
               <h1 className="font-serif text-xl sm:text-2xl md:text-3xl font-semibold text-[#0B2545] dark:text-white mb-4">
@@ -114,7 +114,7 @@ export default function MoreGroups() {
                         transition={{ delay: idx * 0.1 }}
                         className="relative w-full h-full flex flex-col"
                       >
-                        <div className="absolute text-white top-4 right-4 bg-[#3A76C0]/20 text-10 px-2 py-1 rounded-full border border-[#3A76C0]/30 z-20">
+                        <div className="absolute text-white top-4 right-4 bg-[#4F46E5]/20 text-10 px-2 py-1 rounded-full border border-[#4F46E5]/30 z-20">
                           ● Top Highlighted
                         </div>
                         <GroupCard
@@ -153,7 +153,7 @@ export default function MoreGroups() {
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
                   placeholder="Search Club"
-                  className="bg-white dark:bg-[#0d1a27] border border-[#E3E7EE] dark:border-white/10 h-10 w-full rounded-xl py-2 pl-10 pr-2 text-[#0B2545] dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline-none focus:border-[#3A76C0]/50 transition-all text-xs sm:text-sm"
+                  className="bg-white dark:bg-[#0d1a27] border border-[#E3E7EE] dark:border-white/10 h-10 w-full rounded-xl py-2 pl-10 pr-2 text-[#0B2545] dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline-none focus:border-[#4F46E5]/50 transition-all text-xs sm:text-sm"
                 />
               </div>
 

@@ -59,11 +59,11 @@ const OnboardedCard: React.FC<AssetCardProps> = ({
       <div className="p-6 border-b border-[var(--fg)]/5">
         <div className="flex items-start justify-between">
           <div className="flex items-center gap-4">
-            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#3A76C0]/20 to-[#60A5FA]/20 flex items-center justify-center text-[#3A76C0] group-hover:scale-105 transition-transform">
+            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#4F46E5]/20 to-[#2563EB]/20 flex items-center justify-center text-[#4F46E5] group-hover:scale-105 transition-transform">
               <FaBuilding size={28} />
             </div>
             <div className="pr-4">
-              <h2 className="text-xl font-semibold text-[var(--fg)] group-hover:text-[#3A76C0] transition-colors leading-tight line-clamp-1">
+              <h2 className="text-xl font-semibold text-[var(--fg)] group-hover:text-[#4F46E5] transition-colors leading-tight line-clamp-1">
                 {assetName}
               </h2>
               <p className="text-sm font-medium text-[var(--fg)]/40 flex flex-wrap items-center gap-2 mt-1.5">
@@ -139,11 +139,11 @@ const OnboardedCard: React.FC<AssetCardProps> = ({
         </div>
 
         <div className="grid  grid-cols-1 gap-2">
-          <div className="bg-gradient-to-br from-[#3A76C0]/5 to-transparent p-3 rounded-2xl border border-[#3A76C0]/10">
+          <div className="bg-gradient-to-br from-[#4F46E5]/5 to-transparent p-3 rounded-2xl border border-[#4F46E5]/10">
             <p className="text-[9px] font-medium uppercase tracking-widest text-[var(--fg)]/40 mb-1">
               Market Val
             </p>
-            <p className="text-sm font-bold text-[#3A76C0]">
+            <p className="text-sm font-bold text-[#4F46E5]">
               ₹ {(marketValue || 0).toLocaleString()}
             </p>
           </div>
@@ -193,7 +193,7 @@ const OnboardedCard: React.FC<AssetCardProps> = ({
                 {(totalFractions || 0).toLocaleString()}
               </span>
             </div>
-            <div className="flex items-center justify-between border-t border-[var(--fg)]/5 pt-2 text-[#3A76C0]">
+            <div className="flex items-center justify-between border-t border-[var(--fg)]/5 pt-2 text-[#4F46E5]">
               <span className="text-[10px] font-medium uppercase tracking-widest opacity-40">
                 Remaining
               </span>
@@ -227,7 +227,7 @@ const OnboardedCard: React.FC<AssetCardProps> = ({
         </div>
 
         <Link to={`/dashboard/PropertyFractionDetails/${id}`}>
-          <div className="w-full flex items-center justify-center gap-2 group/btn rounded-xl py-3.5 font-semibold text-sm bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 transition-all duration-300 text-white cursor-pointer overflow-hidden relative">
+          <div className="w-full flex items-center justify-center gap-2 group/btn rounded-xl py-3.5 font-semibold text-sm bg-gradient-to-r from-[#4F46E5] to-[#2563EB] shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 transition-all duration-300 text-white cursor-pointer overflow-hidden relative">
             <span className="relative z-10 flex items-center gap-2">
               View Insights & History <FaChartLine />
             </span>

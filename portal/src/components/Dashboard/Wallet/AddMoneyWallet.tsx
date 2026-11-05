@@ -389,7 +389,7 @@ export default function AddMoneyWallet({ onClose }: { onClose: () => void }) {
         <button
           disabled={isSubmitDisabled}
           onClick={handleSubmit}
-          className="w-full mt-6 px-6 py-3.5 font-16 font-semibold rounded-xl text-white bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] hover:shadow-lg hover:shadow-blue-500/20 hover:brightness-110 active:scale-[0.98] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+          className="w-full mt-6 px-6 py-3.5 font-16 font-semibold rounded-xl text-white bg-gradient-to-r from-[#4F46E5] to-[#2563EB] hover:shadow-lg hover:shadow-blue-500/20 hover:brightness-110 active:scale-[0.98] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
         >
           Proceed to Payment
         </button>

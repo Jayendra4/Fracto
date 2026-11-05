@@ -274,8 +274,8 @@ const PropertyDetails = () => {
   const renderLockOverlay = () => (
     <div className="absolute inset-0 z-20 flex flex-col items-center justify-center rounded-xl bg-black/40 backdrop-blur-sm">
       <div className="flex flex-col items-center gap-4 px-6 py-8 rounded-2xl bg-white dark:bg-[#132436] border border-[#E3E7EE] dark:border-white/10 shadow-xl text-center w-full min-w-[280px] max-w-sm mx-auto">
-        <div className="w-14 h-14 rounded-full bg-[#3A76C0]/10 flex items-center justify-center">
-          <MdLock size={28} className="text-[#3A76C0] dark:text-[#73B7FF]" />
+        <div className="w-14 h-14 rounded-full bg-[#4F46E5]/10 flex items-center justify-center">
+          <MdLock size={28} className="text-[#4F46E5] dark:text-[#73B7FF]" />
         </div>
         <div>
           <p className="text-base font-bold text-[#0B2545] dark:text-white">
@@ -311,7 +311,7 @@ const PropertyDetails = () => {
           <button
             onClick={handleUnlockClick}
             disabled={isJoiningGroup}
-            className="group inline-flex items-center mt-1 justify-center gap-3 px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white font-14 font-semibold transition-all duration-300 hover:brightness-110 active:scale-95 shadow-lg cursor-pointer disabled:opacity-60"
+            className="group inline-flex items-center mt-1 justify-center gap-3 px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white font-14 font-semibold transition-all duration-300 hover:brightness-110 active:scale-95 shadow-lg cursor-pointer disabled:opacity-60"
           >
             {isJoiningGroup ? 'Joining...' : 'Join Club'}
           </button>
@@ -322,7 +322,7 @@ const PropertyDetails = () => {
         ) : (
           <button
             onClick={handleUnlockClick}
-            className="group inline-flex items-center mt-1 justify-center gap-3 px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white font-14 font-semibold transition-all duration-300 hover:brightness-110 active:scale-95 shadow-lg cursor-pointer"
+            className="group inline-flex items-center mt-1 justify-center gap-3 px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white font-14 font-semibold transition-all duration-300 hover:brightness-110 active:scale-95 shadow-lg cursor-pointer"
           >
             <MdLockOpen size={18} />
             {isUnlockFailed ? 'Retry Payment' : 'Unlock Documents'}
@@ -357,7 +357,7 @@ const PropertyDetails = () => {
             {!iconShow ? (
               <span
                 title="Chat"
-                className="cursor-pointer text-[#0B2545] dark:text-white text-xl bg-white dark:bg-[#132436] border border-[#E3E7EE] dark:border-white/10 shadow-sm hover:border-[#3A76C0]/40 hover:bg-[#3A76C0] hover:text-white hover:scale-110 hover:shadow-md hover:shadow-[#3A76C0]/50 p-2 rounded-xl transition-all duration-300 active:scale-95 flex items-center justify-center"
+                className="cursor-pointer text-[#0B2545] dark:text-white text-xl bg-white dark:bg-[#132436] border border-[#E3E7EE] dark:border-white/10 shadow-sm hover:border-[#4F46E5]/40 hover:bg-[#4F46E5] hover:text-white hover:scale-110 hover:shadow-md hover:shadow-[#4F46E5]/50 p-2 rounded-xl transition-all duration-300 active:scale-95 flex items-center justify-center"
                 onClick={() => handleStartChat(Number(id))}
               >
                 <IoChatbubble />
@@ -372,7 +372,7 @@ const PropertyDetails = () => {
             ${
               isSaved
                 ? 'bg-yellow-400/20 border border-yellow-400/50 text-yellow-600 dark:text-yellow-400'
-                : 'bg-white dark:bg-[#132436] border border-[#E3E7EE] dark:border-white/10 hover:border-[#3A76C0]/40 text-[#0B2545] dark:text-white'
+                : 'bg-white dark:bg-[#132436] border border-[#E3E7EE] dark:border-white/10 hover:border-[#4F46E5]/40 text-[#0B2545] dark:text-white'
             }
             ${saving ? 'opacity-60 cursor-not-allowed' : 'hover:shadow-md cursor-pointer'}
           `}
@@ -459,7 +459,7 @@ const PropertyDetails = () => {
           data.data?.status !== 'Reviewed' && <PriceComingSoon />}
 
         <div className="bg-white dark:bg-[#132436] mb-6 lg:mb-10 p-6 rounded-2xl border border-[#E3E7EE] dark:border-white/10 shadow-sm">
-          <h3 className="text-xs font-serif font-bold text-[#3A76C0] dark:text-[#73B7FF] uppercase tracking-[0.2em] mb-5">
+          <h3 className="text-xs font-serif font-bold text-[#4F46E5] dark:text-[#73B7FF] uppercase tracking-[0.2em] mb-5">
             Basic Information
           </h3>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-5">
@@ -536,7 +536,7 @@ const PropertyDetails = () => {
                 onClick={() => setDocsOpen((prev) => !prev)}
               >
                 <div className="flex items-center gap-2">
-                  <h3 className="text-xs font-serif font-bold text-[#3A76C0] dark:text-[#73B7FF] uppercase tracking-[0.2em]">
+                  <h3 className="text-xs font-serif font-bold text-[#4F46E5] dark:text-[#73B7FF] uppercase tracking-[0.2em]">
                     Documents
                   </h3>
 
@@ -544,7 +544,7 @@ const PropertyDetails = () => {
                     <span className="flex items-center gap-1 text-[10px] text-gray-500 dark:text-white/60 bg-gray-100 dark:bg-black/30 px-2 py-0.5 rounded-full border border-[#E3E7EE] dark:border-white/10">
                       <MdLock
                         size={10}
-                        className="text-[#3A76C0] font-serif dark:text-[#73B7FF]"
+                        className="text-[#4F46E5] font-serif dark:text-[#73B7FF]"
                       />{' '}
                       Locked
                     </span>
@@ -595,7 +595,7 @@ const PropertyDetails = () => {
                     <button
                       onClick={handleUnlockClick}
                       disabled={isJoiningGroup}
-                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white text-xs font-semibold transition-all duration-300 hover:brightness-110 active:scale-95 shadow-lg cursor-pointer disabled:opacity-60"
+                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white text-xs font-semibold transition-all duration-300 hover:brightness-110 active:scale-95 shadow-lg cursor-pointer disabled:opacity-60"
                     >
                       {isJoiningGroup ? 'Joining...' : 'Join Club'}
                     </button>
@@ -606,7 +606,7 @@ const PropertyDetails = () => {
                   ) : (
                     <button
                       onClick={handleUnlockClick}
-                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white text-xs font-semibold transition-all duration-300 hover:brightness-110 active:scale-95 shadow-lg cursor-pointer"
+                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white text-xs font-semibold transition-all duration-300 hover:brightness-110 active:scale-95 shadow-lg cursor-pointer"
                     >
                       <MdLockOpen size={14} />{' '}
                       {isUnlockFailed ? 'Retry Payment' : 'Unlock Documents'}
@@ -642,7 +642,7 @@ const PropertyDetails = () => {
               </AnimatePresence>
 
               <div className="hidden lg:block">
-                <h3 className="text-xs font-serif font-bold text-[#3A76C0] dark:text-[#73B7FF] uppercase tracking-[0.2em] mb-6 pb-2 border-b border-[#E3E7EE] dark:border-white/10">
+                <h3 className="text-xs font-serif font-bold text-[#4F46E5] dark:text-[#73B7FF] uppercase tracking-[0.2em] mb-6 pb-2 border-b border-[#E3E7EE] dark:border-white/10">
                   Documents
                 </h3>
                 {[{ title: 'Property Documents', items: allDocuments }].map(

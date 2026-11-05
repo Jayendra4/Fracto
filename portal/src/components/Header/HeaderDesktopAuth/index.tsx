@@ -266,11 +266,11 @@ export default function HeaderDesktopAuth({
                   </span>
                   <FiChevronDown
                     className={`text-lg xl:text-xl text-[var(--fg)]/30 transition-transform duration-500 cubic-bezier(0.34, 1.56, 0.64, 1) ${
-                      dropdownOpen ? 'rotate-180 text-[#3A76C0]' : ''
+                      dropdownOpen ? 'rotate-180 text-[#4F46E5]' : ''
                     }`}
                   />
                 </div>
-                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#3A76C0] mt-1.5 leading-snug opacity-80 max-w-[130px] xl:max-w-[170px] line-clamp-3">
+                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#4F46E5] mt-1.5 leading-snug opacity-80 max-w-[130px] xl:max-w-[170px] line-clamp-3">
                   {formatRole(roleLower)}
                 </p>
               </div>
@@ -291,7 +291,7 @@ export default function HeaderDesktopAuth({
                       className="flex items-center gap-4 px-5 py-5 hover:bg-[var(--fg)]/5 transition-all duration-300 group/item"
                       onClick={() => setDropdownOpen(false)}
                     >
-                      <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-[var(--fg)]/10 group-hover/item:border-[#3A76C0]/50 transition-colors">
+                      <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-[var(--fg)]/10 group-hover/item:border-[#4F46E5]/50 transition-colors">
                         <img
                           src={profilePhotoUrl || '/images/menu.svg'}
                           alt="profile"
@@ -299,14 +299,14 @@ export default function HeaderDesktopAuth({
                         />
                       </div>
                       <div className="min-w-0 flex-1">
-                        <p className="text-sm font-bold truncate group-hover/item:text-[#3A76C0] transition-colors">
+                        <p className="text-sm font-bold truncate group-hover/item:text-[#4F46E5] transition-colors">
                           {userName}
                         </p>
                         <p className="text-[11px] text-[var(--fg)]/50 truncate font-medium">
                           {savedUser?.email}
                         </p>
                       </div>
-                      <div className="p-2 rounded-lg bg-[var(--fg)]/5 group-hover/item:bg-[#3A76C0]/10 text-[var(--fg)]/40 group-hover/item:text-[#3A76C0] transition-all">
+                      <div className="p-2 rounded-lg bg-[var(--fg)]/5 group-hover/item:bg-[#4F46E5]/10 text-[var(--fg)]/40 group-hover/item:text-[#4F46E5] transition-all">
                         <FaRegEdit className="text-sm" />
                       </div>
                     </Link>
@@ -320,12 +320,12 @@ export default function HeaderDesktopAuth({
                           type="button"
                           onClick={copyReferralCode}
                           title="Copy Referral Code"
-                          className="group/ref flex items-center justify-between w-full gap-2 pl-2.5 pr-1.5 py-1.5 rounded-lg bg-gradient-to-r from-[#3A76C0]/10 to-[#60A5FA]/10 border border-[#3A76C0]/30 hover:border-[#3A76C0]/50 transition-all cursor-pointer"
+                          className="group/ref flex items-center justify-between w-full gap-2 pl-2.5 pr-1.5 py-1.5 rounded-lg bg-gradient-to-r from-[#4F46E5]/10 to-[#2563EB]/10 border border-[#4F46E5]/30 hover:border-[#4F46E5]/50 transition-all cursor-pointer"
                         >
-                          <span className="font-mono text-[11px] font-bold tracking-wider text-[#3A76C0] truncate">
+                          <span className="font-mono text-[11px] font-bold tracking-wider text-[#4F46E5] truncate">
                             {savedUser.referralCode}
                           </span>
-                          <span className="flex items-center justify-center shrink-0 w-6 h-6 rounded-md bg-[#3A76C0]/10 text-[#3A76C0]/80 group-hover/ref:bg-[#3A76C0]/20 group-hover/ref:text-[#3A76C0] transition-colors">
+                          <span className="flex items-center justify-center shrink-0 w-6 h-6 rounded-md bg-[#4F46E5]/10 text-[#4F46E5]/80 group-hover/ref:bg-[#4F46E5]/20 group-hover/ref:text-[#4F46E5] transition-colors">
                             {referralCopied ? (
                               <FiCheck size={11} />
                             ) : (
@@ -403,17 +403,17 @@ export default function HeaderDesktopAuth({
         <div className="hidden lg:flex justify-end items-center gap-4">
           <Link
             to="/login"
-            className="group relative flex items-center justify-center px-8 py-2.5 text-base font-bold text-[var(--fg)] bg-transparent border-2 border-[var(--fg)]/10 hover:border-[#3A76C0]/50 rounded-xl transition-all duration-300 active:scale-95 shadow-sm whitespace-nowrap overflow-hidden"
+            className="group relative flex items-center justify-center px-8 py-2.5 text-base font-bold text-[var(--fg)] bg-transparent border-2 border-[var(--fg)]/10 hover:border-[#4F46E5]/50 rounded-xl transition-all duration-300 active:scale-95 shadow-sm whitespace-nowrap overflow-hidden"
           >
-            <span className="relative z-10 transition-colors group-hover:text-[#3A76C0]">
+            <span className="relative z-10 transition-colors group-hover:text-[#4F46E5]">
               Login
             </span>
-            <div className="absolute inset-0 bg-[#3A76C0]/5 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+            <div className="absolute inset-0 bg-[#4F46E5]/5 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
           </Link>
 
           <Link
             to="/signup"
-            className="group relative flex items-center justify-center px-8 py-2.5 text-base font-extrabold bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white rounded-xl transition-all duration-300 hover:scale-[1.05] active:scale-95 shadow-[0_4px_15px_rgba(58,118,192,0.3)] hover:shadow-[0_8px_25px_rgba(58,118,192,0.4)] whitespace-nowrap"
+            className="group relative flex items-center justify-center px-8 py-2.5 text-base font-extrabold bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white rounded-xl transition-all duration-300 hover:scale-[1.05] active:scale-95 shadow-[0_4px_15px_rgba(79, 70, 229,0.3)] hover:shadow-[0_8px_25px_rgba(79, 70, 229,0.4)] whitespace-nowrap"
             aria-label="sign-up"
           >
             Get Started

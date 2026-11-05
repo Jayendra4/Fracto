@@ -48,7 +48,7 @@ function StepIndicator({
                 i < current
                   ? 'bg-green text-white'
                   : i === current
-                    ? 'bg-gradient-to-br from-[#3A76C0] to-[#60A5FA] text-white shadow-lg shadow-blue-500/30'
+                    ? 'bg-gradient-to-br from-[#4F46E5] to-[#2563EB] text-white shadow-lg shadow-blue-500/30'
                     : 'bg-gray-100 dark:bg-white/10 text-gray-400 dark:text-gray-500'
               }`}
             >
@@ -167,7 +167,7 @@ function ActionButton({
     'w-full py-3 rounded-xl font-semibold text-sm transition-all duration-300 flex items-center justify-center gap-2 relative overflow-hidden group/btn';
   const styles = {
     primary:
-      'bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 disabled:opacity-40 disabled:cursor-not-allowed',
+      'bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 disabled:opacity-40 disabled:cursor-not-allowed',
     outline:
       'border border-[#E3E7EE] dark:border-white/10 text-[#0B2545] dark:text-white hover:bg-gray-50 dark:hover:bg-white/5 disabled:opacity-40 disabled:cursor-not-allowed',
     danger:
@@ -316,7 +316,7 @@ export function SellShareModal({
                     className={`w-full px-3 sm:px-4 py-3 rounded-xl border bg-white dark:bg-[#132436] text-[#0B2545] dark:text-white text-sm focus:outline-none focus:ring-2 font-semibold transition-colors ${
                       errors.askPrice
                         ? 'border-red-500/60 focus:ring-red-500/30'
-                        : 'border-[#E3E7EE] dark:border-white/10 focus:ring-[#3A76C0]/40'
+                        : 'border-[#E3E7EE] dark:border-white/10 focus:ring-[#4F46E5]/40'
                     }`}
                     placeholder={String(marketPrice)}
                     min={1}
@@ -349,7 +349,7 @@ export function SellShareModal({
                     className={`w-full px-3 sm:px-4 py-3 rounded-xl border bg-white dark:bg-[#132436] text-[#0B2545] dark:text-white text-sm focus:outline-none focus:ring-2 font-semibold transition-colors ${
                       errors.units
                         ? 'border-red-500/60 focus:ring-red-500/30'
-                        : 'border-[#E3E7EE] dark:border-white/10 focus:ring-[#3A76C0]/40'
+                        : 'border-[#E3E7EE] dark:border-white/10 focus:ring-[#4F46E5]/40'
                     }`}
                     placeholder="Enter units to sell"
                     min={1}
@@ -535,7 +535,7 @@ export function BuyShareModal({
     <ModalShell
       title="Place Bid (Buy Units)"
       icon={<MdShoppingCart size={18} className="text-[#60A5FA]" />}
-      iconColor="bg-[#3A76C0]/10"
+      iconColor="bg-[#4F46E5]/10"
       onClose={onClose}
     >
       {!done ? (
@@ -583,7 +583,7 @@ export function BuyShareModal({
                       setBidPrice(e.target.value);
                       setErrors((prev) => ({ ...prev, bidPrice: undefined }));
                     }}
-                    className={`w-full px-3 sm:px-4 py-3 rounded-xl border bg-white dark:bg-[#132436] text-[#0B2545] dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-[#3A76C0]/40 font-semibold ${errors.bidPrice ? 'border-red-500' : 'border-[#E3E7EE] dark:border-white/10'}`}
+                    className={`w-full px-3 sm:px-4 py-3 rounded-xl border bg-white dark:bg-[#132436] text-[#0B2545] dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-[#4F46E5]/40 font-semibold ${errors.bidPrice ? 'border-red-500' : 'border-[#E3E7EE] dark:border-white/10'}`}
                     placeholder="Enter bid price"
                     min={1}
                   />
@@ -608,7 +608,7 @@ export function BuyShareModal({
                       setUnits(e.target.value);
                       setErrors((prev) => ({ ...prev, units: undefined }));
                     }}
-                    className={`w-full px-3 sm:px-4 py-3 rounded-xl border bg-white dark:bg-[#132436] text-[#0B2545] dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-[#3A76C0]/40 font-semibold ${errors.units ? 'border-red-500' : 'border-[#E3E7EE] dark:border-white/10'}`}
+                    className={`w-full px-3 sm:px-4 py-3 rounded-xl border bg-white dark:bg-[#132436] text-[#0B2545] dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-[#4F46E5]/40 font-semibold ${errors.units ? 'border-red-500' : 'border-[#E3E7EE] dark:border-white/10'}`}
                     placeholder="Enter number of units"
                     min={1}
                   />
@@ -681,7 +681,7 @@ export function BuyShareModal({
                 exit={{ opacity: 0, x: -20 }}
                 className="space-y-4"
               >
-                <div className="bg-[#3A76C0]/5 border border-[#3A76C0]/20 rounded-xl p-3 sm:p-4 text-sm text-center space-y-1">
+                <div className="bg-[#4F46E5]/5 border border-[#4F46E5]/20 rounded-xl p-3 sm:p-4 text-sm text-center space-y-1">
                   <p className="text-gray-500 dark:text-gray-400">
                     Placing bid for
                   </p>
@@ -1016,7 +1016,7 @@ export function DirectBuyModal({
                     type="number"
                     value={units}
                     onChange={(e) => setUnits(e.target.value)}
-                    className="w-full px-3 sm:px-4 py-3 rounded-xl border border-[#E3E7EE] dark:border-white/10 bg-white dark:bg-[#132436] text-[#0B2545] dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-[#3A76C0]/40 font-semibold"
+                    className="w-full px-3 sm:px-4 py-3 rounded-xl border border-[#E3E7EE] dark:border-white/10 bg-white dark:bg-[#132436] text-[#0B2545] dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-[#4F46E5]/40 font-semibold"
                     min={1}
                   />
                 </div>
@@ -1195,7 +1195,7 @@ export function DirectBuyFromListingModal({
     <ModalShell
       title="Direct Buy (Accept Ask)"
       icon={<MdShoppingCart size={18} className="text-[#60A5FA]" />}
-      iconColor="bg-[#3A76C0]/10"
+      iconColor="bg-[#4F46E5]/10"
       onClose={onClose}
     >
       {!done ? (
@@ -1260,7 +1260,7 @@ export function DirectBuyFromListingModal({
                     className={`w-full px-3 sm:px-4 py-3 rounded-xl border bg-white dark:bg-[#132436] text-[#0B2545] dark:text-white text-sm focus:outline-none focus:ring-2 font-semibold transition-colors ${
                       unitError
                         ? 'border-red-500/60 focus:ring-red-500/30'
-                        : 'border-[#E3E7EE] dark:border-white/10 focus:ring-[#3A76C0]/40'
+                        : 'border-[#E3E7EE] dark:border-white/10 focus:ring-[#4F46E5]/40'
                     }`}
                     min={1}
                     max={remainingUnits}
@@ -1297,7 +1297,7 @@ export function DirectBuyFromListingModal({
                 exit={{ opacity: 0, x: -20 }}
                 className="space-y-4"
               >
-                <div className="bg-[#3A76C0]/5 border border-[#3A76C0]/20 rounded-xl p-3 sm:p-4 text-sm text-center space-y-1">
+                <div className="bg-[#4F46E5]/5 border border-[#4F46E5]/20 rounded-xl p-3 sm:p-4 text-sm text-center space-y-1">
                   <p className="text-gray-500 dark:text-gray-400">
                     Buying from {sellerName}
                   </p>
@@ -1326,7 +1326,7 @@ export function DirectBuyFromListingModal({
                   <button
                     onClick={handleConfirm}
                     disabled={isPending}
-                    className="w-full py-3 rounded-xl font-semibold text-sm bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 disabled:opacity-60 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center"
+                    className="w-full py-3 rounded-xl font-semibold text-sm bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 disabled:opacity-60 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center"
                   >
                     {isPending ? (
                       <span className="flex items-center justify-center gap-2">
@@ -1490,7 +1490,7 @@ export function DirectSellModal({
                     className={`w-full px-3 sm:px-4 py-3 rounded-xl border bg-white dark:bg-[#132436] text-[#0B2545] dark:text-white text-sm focus:outline-none focus:ring-2 font-semibold transition-colors ${
                       unitError
                         ? 'border-red-500/60 focus:ring-red-500/30'
-                        : 'border-[#E3E7EE] dark:border-white/10 focus:ring-[#3A76C0]/40'
+                        : 'border-[#E3E7EE] dark:border-white/10 focus:ring-[#4F46E5]/40'
                     }`}
                     min={1}
                     max={remainingUnits}
@@ -1615,7 +1615,7 @@ function SuccessScreen({
       </div>
       <button
         onClick={onClose}
-        className="mt-2 px-8 py-3 rounded-xl bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white text-sm font-semibold shadow-lg"
+        className="mt-2 px-8 py-3 rounded-xl bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white text-sm font-semibold shadow-lg"
       >
         Done
       </button>

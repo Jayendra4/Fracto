@@ -91,9 +91,9 @@ export default function AssetOwnerJourney() {
             variants={fadeUp}
             className="text-2xl md:text-3xl font-extrabold text-[var(--fg)] tracking-tight"
           >
-            The <span className="text-[#3A76C0]">Asset Owner</span> Journey
+            The <span className="text-[#4F46E5]">Asset Owner</span> Journey
           </motion.h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] mx-auto mt-6 rounded-full" />
+          <div className="w-20 h-1 bg-gradient-to-r from-[#4F46E5] to-[#2563EB] mx-auto mt-6 rounded-full" />
           <motion.p
             variants={fadeUp}
             className="mt-6 text-base md:text-lg text-[var(--fg)]/70 max-w-3xl mx-auto leading-relaxed font-semibold opacity-80"
@@ -108,7 +108,7 @@ export default function AssetOwnerJourney() {
 
         <div className="relative mt-20">
           {/* Central Line */}
-          <div className="absolute left-1/2 top-0 h-full w-[2px] -translate-x-1/2 bg-gradient-to-b from-[#3A76C0] via-blue-400 to-[#3A76C0] opacity-20 hidden lg:block" />
+          <div className="absolute left-1/2 top-0 h-full w-[2px] -translate-x-1/2 bg-gradient-to-b from-[#4F46E5] via-blue-400 to-[#4F46E5] opacity-20 hidden lg:block" />
 
           <div className="space-y-12 md:space-y-12">
             {steps.map((step, index) => {
@@ -128,12 +128,12 @@ export default function AssetOwnerJourney() {
                       className={`relative w-full lg:max-w-[650px] ${isLeft ? 'lg:pr-16' : 'lg:pl-16'}`}
                     >
                       <div
-                        className={`group relative p-6 lg:p-8 rounded-[1.5rem] bg-[var(--card)] border border-[var(--fg)]/10 shadow-xl hover:shadow-2xl transition-all duration-500 font-work ${isLeft ? 'md:text-right border-r-4 border-[#3A76C0]' : 'md:text-left border-l-4 border-[#3A76C0]'}`}
+                        className={`group relative p-6 lg:p-8 rounded-[1.5rem] bg-[var(--card)] border border-[var(--fg)]/10 shadow-xl hover:shadow-2xl transition-all duration-500 font-work ${isLeft ? 'md:text-right border-r-4 border-[#4F46E5]' : 'md:text-left border-l-4 border-[#4F46E5]'}`}
                       >
                         <div
                           className={`flex items-center gap-4 mb-5 ${isLeft ? 'md:flex-row-reverse' : ''}`}
                         >
-                          <span className="text-2xl font-bold text-[#3A76C0]/20">
+                          <span className="text-2xl font-bold text-[#4F46E5]/20">
                             0{index + 1}
                           </span>
                           <h3 className="text-lg lg:text-xl font-bold tracking-tight text-[var(--fg)]">
@@ -159,7 +159,7 @@ export default function AssetOwnerJourney() {
                         type: 'spring',
                         stiffness: 200,
                       }}
-                      className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#3A76C0] text-white shadow-xl shadow-blue-500/30 border-4 border-[var(--bg)]"
+                      className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#4F46E5] text-white shadow-xl shadow-blue-500/30 border-4 border-[var(--bg)]"
                     >
                       <Icon className="h-6 w-6" />
                     </motion.div>

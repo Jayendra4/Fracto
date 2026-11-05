@@ -113,7 +113,7 @@ export default function AssetCard({ asset }: { asset: Asset }) {
           )}
 
           <span className="md:flex items-center gap-2 text-[var(--fg)]/60 font-medium text-sm hidden whitespace-nowrap ml-auto group/loc hover:text-[var(--fg)] transition-colors">
-            <CiLocationOn className="text-lg group-hover/loc:text-[#3A76C0] transition-colors" />
+            <CiLocationOn className="text-lg group-hover/loc:text-[#4F46E5] transition-colors" />
             {asset?.location}
           </span>
         </div>
@@ -140,7 +140,7 @@ export default function AssetCard({ asset }: { asset: Asset }) {
                 className={`w-full h-11 rounded-xl font-semibold text-sm transition-all duration-300 flex items-center justify-center gap-2 overflow-hidden relative group/btn ${
                   disableBuyMore
                     ? 'bg-[var(--fg)]/[0.03] text-[var(--fg)]/20 cursor-not-allowed border border-[var(--fg)]/10'
-                    : 'bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 cursor-pointer'
+                    : 'bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 cursor-pointer'
                 }`}
               >
                 {!disableBuyMore && (
@@ -162,7 +162,7 @@ export default function AssetCard({ asset }: { asset: Asset }) {
             </div>
           )}
 
-          <button className="w-full h-11 rounded-xl font-semibold text-sm border border-[#3A76C0]/30 bg-gradient-to-br from-[#3A76C0]/10 to-transparent text-[#58A9FF] hover:border-[#3A76C0] hover:bg-[#3A76C0]/20 hover:shadow-[0_0_20px_rgba(58,118,192,0.2)] transition-all duration-300 flex items-center justify-center gap-2 group/sell cursor-pointer overflow-hidden relative">
+          <button className="w-full h-11 rounded-xl font-semibold text-sm border border-[#4F46E5]/30 bg-gradient-to-br from-[#4F46E5]/10 to-transparent text-[#58A9FF] hover:border-[#4F46E5] hover:bg-[#4F46E5]/20 hover:shadow-[0_0_20px_rgba(79, 70, 229,0.2)] transition-all duration-300 flex items-center justify-center gap-2 group/sell cursor-pointer overflow-hidden relative">
             <div className="absolute inset-0 bg-white/5 opacity-0 group-hover/sell:opacity-100 transition-opacity duration-300" />
             <span className="relative z-10 flex items-center gap-2">
               Sell{' '}

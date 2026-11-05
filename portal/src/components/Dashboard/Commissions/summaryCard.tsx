@@ -18,7 +18,7 @@ export default function SummaryCard({
       }`}
     >
       <div className="flex items-center justify-between mb-2">
-        <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[#3A76C0]/20 to-[#60A5FA]/10 border border-[#3A76C0]/15 flex items-center justify-center text-[#3A76C0] dark:text-[#60A5FA]">
+        <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[#4F46E5]/20 to-[#2563EB]/10 border border-[#4F46E5]/15 flex items-center justify-center text-[#4F46E5] dark:text-[#60A5FA]">
           {icon}
         </div>
 

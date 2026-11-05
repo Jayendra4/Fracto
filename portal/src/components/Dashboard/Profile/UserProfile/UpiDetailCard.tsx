@@ -48,7 +48,7 @@ export default function UpiDetailsCard({
         {onAddUpi && (
           <button
             onClick={onAddUpi}
-            className="flex items-center justify-center gap-2 px-5 py-2.5 font-12 font-semibold rounded-lg text-white bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] hover:shadow-md hover:brightness-110 active:scale-[0.98] transition-all duration-300"
+            className="flex items-center justify-center gap-2 px-5 py-2.5 font-12 font-semibold rounded-lg text-white bg-gradient-to-r from-[#4F46E5] to-[#2563EB] hover:shadow-md hover:brightness-110 active:scale-[0.98] transition-all duration-300"
           >
             <FiPlus size={16} />
             Link UPI ID
@@ -73,7 +73,7 @@ export default function UpiDetailsCard({
         {onAddUpi && (
           <button
             onClick={onAddUpi}
-            className="flex items-center justify-center gap-2 font-12 px-5 py-2.5 font-semibold rounded-lg text-white bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] transition-all duration-300 hover:shadow-md hover:brightness-110 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#60A5FA]/60 whitespace-nowrap"
+            className="flex items-center justify-center gap-2 font-12 px-5 py-2.5 font-semibold rounded-lg text-white bg-gradient-to-r from-[#4F46E5] to-[#2563EB] transition-all duration-300 hover:shadow-md hover:brightness-110 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#60A5FA]/60 whitespace-nowrap"
           >
             <FiPlus size={16} />
             Add UPI

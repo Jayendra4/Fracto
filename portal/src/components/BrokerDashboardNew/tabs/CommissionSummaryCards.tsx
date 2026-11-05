@@ -195,7 +195,7 @@ export default function CommissionSummaryCards() {
             <button
               disabled={isLoading}
               onClick={() => setWithdrawModalOpen(true)}
-              className="mt-4 w-full py-2 bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] shadow-md hover:shadow-lg hover:brightness-110 transition-all duration-300 text-white text-xs font-bold rounded-lg disabled:opacity-50 cursor-pointer"
+              className="mt-4 w-full py-2 bg-gradient-to-r from-[#4F46E5] to-[#2563EB] shadow-md hover:shadow-lg hover:brightness-110 transition-all duration-300 text-white text-xs font-bold rounded-lg disabled:opacity-50 cursor-pointer"
             >
               Withdraw Funds
             </button>

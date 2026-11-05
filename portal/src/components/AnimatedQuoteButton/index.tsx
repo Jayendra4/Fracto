@@ -50,14 +50,14 @@ export default function AnimatedQuoteButton({ title }: { title: string }) {
     <Link
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="group relative flex items-center justify-center bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white rounded-full font-medium shadow-lg w-fit transition-all duration-300 cursor-pointer hover:brightness-110 active:scale-95"
+      className="group relative flex items-center justify-center bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white rounded-full font-medium shadow-lg w-fit transition-all duration-300 cursor-pointer hover:brightness-110 active:scale-95"
       aria-label={title}
       to={targetPath}
     >
       <div className="flex items-center gap-2 sm:gap-3 md:gap-4 mr-2">
         <span
           className="
-            relative flex items-center justify-center rounded-full overflow-hidden bg-white/20 text-white transition-colors duration-300 group-hover:bg-white group-hover:text-[#3A76C0] w-9 h-9 sm:w-11 sm:h-11 md:w-16 md:h-16 "
+            relative flex items-center justify-center rounded-full overflow-hidden bg-white/20 text-white transition-colors duration-300 group-hover:bg-white group-hover:text-[#4F46E5] w-9 h-9 sm:w-11 sm:h-11 md:w-16 md:h-16 "
         >
           <div className="relative flex items-center justify-center w-full h-full">
             <AnimatePresence initial={false} mode="wait">

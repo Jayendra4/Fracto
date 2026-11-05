@@ -43,7 +43,7 @@ export default function TermsAndCondition() {
           >
             <div className="space-y-12">
               <motion.p
-                className="font-18 text-[var(--fg)]/60 font-light leading-relaxed border-l-4 border-[#3A76C0] pl-4"
+                className="font-18 text-[var(--fg)]/60 font-light leading-relaxed border-l-4 border-[#4F46E5] pl-4"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: 'easeOut', delay: 0.1 }}

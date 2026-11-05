@@ -57,9 +57,9 @@ function StatCard({
       variants={itemVariants}
       className="bg-white dark:bg-[#132436] border border-[#E3E7EE] dark:border-white/10 shadow-sm rounded-2xl p-5 flex items-start gap-4 relative overflow-hidden group"
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-[#3A76C0]/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#4F46E5]/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
       <div
-        className={`p-2.5 rounded-xl ${accent ? 'bg-gradient-to-br from-[#3A76C0] to-[#60A5FA]' : 'bg-[#F5F8FF] dark:bg-white/10'} shrink-0`}
+        className={`p-2.5 rounded-xl ${accent ? 'bg-gradient-to-br from-[#4F46E5] to-[#2563EB]' : 'bg-[#F5F8FF] dark:bg-white/10'} shrink-0`}
       >
         <span
           className={accent ? 'text-white' : 'text-[#0B2545] dark:text-white'}
@@ -303,7 +303,7 @@ export default function Holdings() {
 
             <Link
               to="/dashboard/my-holdings/saved-assets"
-              className="w-full sm:w-auto text-center px-5 py-2 rounded-lg bg-[#3A76C0] text-white font-medium hover:opacity-90 transition"
+              className="w-full sm:w-auto text-center px-5 py-2 rounded-lg bg-[#4F46E5] text-white font-medium hover:opacity-90 transition"
             >
               Saved Assets
             </Link>
@@ -394,7 +394,7 @@ export default function Holdings() {
                           setCurrentPage((p) => Math.max(1, p - 1))
                         }
                         disabled={currentPage === 1}
-                        className="w-8 h-8 rounded-lg border border-[#E3E7EE] dark:border-white/10 bg-white dark:bg-[#132436] text-[#0B2545] dark:text-white hover:border-[#3A76C0] disabled:opacity-30 disabled:cursor-not-allowed transition duration-200 flex items-center justify-center cursor-pointer"
+                        className="w-8 h-8 rounded-lg border border-[#E3E7EE] dark:border-white/10 bg-white dark:bg-[#132436] text-[#0B2545] dark:text-white hover:border-[#4F46E5] disabled:opacity-30 disabled:cursor-not-allowed transition duration-200 flex items-center justify-center cursor-pointer"
                         aria-label="Previous page"
                       >
                         <FiChevronLeft className="text-sm" />
@@ -414,8 +414,8 @@ export default function Holdings() {
                             onClick={() => setCurrentPage(Number(item))}
                             className={`w-8 h-8 rounded-lg text-xs font-semibold transition duration-200 cursor-pointer ${
                               currentPage === item
-                                ? 'bg-[#3A76C0] text-white shadow-xs'
-                                : 'border border-[#E3E7EE] dark:border-white/10 bg-white dark:bg-[#132436] text-[#0B2545] dark:text-white hover:border-[#3A76C0]'
+                                ? 'bg-[#4F46E5] text-white shadow-xs'
+                                : 'border border-[#E3E7EE] dark:border-white/10 bg-white dark:bg-[#132436] text-[#0B2545] dark:text-white hover:border-[#4F46E5]'
                             }`}
                           >
                             {item}
@@ -428,7 +428,7 @@ export default function Holdings() {
                           setCurrentPage((p) => (isNextDisabled ? p : p + 1))
                         }
                         disabled={isNextDisabled}
-                        className="w-8 h-8 rounded-lg border border-[#E3E7EE] dark:border-white/10 bg-white dark:bg-[#132436] text-[#0B2545] dark:text-white hover:border-[#3A76C0] disabled:opacity-30 disabled:cursor-not-allowed transition duration-200 flex items-center justify-center cursor-pointer"
+                        className="w-8 h-8 rounded-lg border border-[#E3E7EE] dark:border-white/10 bg-white dark:bg-[#132436] text-[#0B2545] dark:text-white hover:border-[#4F46E5] disabled:opacity-30 disabled:cursor-not-allowed transition duration-200 flex items-center justify-center cursor-pointer"
                         aria-label="Next page"
                       >
                         <FiChevronRight className="text-sm" />

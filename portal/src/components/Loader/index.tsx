@@ -18,14 +18,14 @@ const Loader: React.FC<LoaderProps> = ({ isFullPage = true }) => {
         <motion.div
           animate={{ rotate: 360 }}
           transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-          className="absolute w-24 h-24 md:w-32 md:h-32 border-2 border-dashed border-[#3A76C0]/30 rounded-full"
+          className="absolute w-24 h-24 md:w-32 md:h-32 border-2 border-dashed border-[#4F46E5]/30 rounded-full"
         />
 
         {/* Pulsing Back Glow */}
         <motion.div
           animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0.4, 0.2] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute w-20 h-20 md:w-28 md:h-28 bg-[#3A76C0]/10 blur-3xl rounded-full"
+          className="absolute w-20 h-20 md:w-28 md:h-28 bg-[#4F46E5]/10 blur-3xl rounded-full"
         />
 
         {/* The Rotating Logo */}
@@ -55,7 +55,7 @@ const Loader: React.FC<LoaderProps> = ({ isFullPage = true }) => {
             <motion.div
               animate={{ x: [-200, 200] }}
               transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-              className="w-1/2 h-full bg-gradient-to-r from-transparent via-[#3A76C0] to-transparent"
+              className="w-1/2 h-full bg-gradient-to-r from-transparent via-[#4F46E5] to-transparent"
             />
           </div>
         </div>

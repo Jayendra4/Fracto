@@ -69,7 +69,7 @@ const redirectPath = isCompany ? '/dashboard/onboarding' : '/dashboard/kyc';
       </div>
       <Link
         to={redirectPath}
-        className={`relative z-10 max-w-[160px] px-4 py-2 bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white shadow-[0_0_15px_rgba(96,165,250,0.5)] hover:shadow-[0_0_25px_rgba(96,165,250,0.8)] hover:-translate-y-0.5 hover:brightness-110 font-16 rounded-xl font-medium flex flex-row justify-center items-center gap-2 cursor-pointer whitespace-nowrap w-full md:w-auto transition-all duration-300 ${
+        className={`relative z-10 max-w-[160px] px-4 py-2 bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white shadow-[0_0_15px_rgba(96,165,250,0.5)] hover:shadow-[0_0_25px_rgba(96,165,250,0.8)] hover:-translate-y-0.5 hover:brightness-110 font-16 rounded-xl font-medium flex flex-row justify-center items-center gap-2 cursor-pointer whitespace-nowrap w-full md:w-auto transition-all duration-300 ${
           scrolled ? 'border-0 rounded-r-xl' : 'border-0'
         }`}
       >

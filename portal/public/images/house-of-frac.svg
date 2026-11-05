@@ -1,10 +1,15 @@
 <svg width="68" height="68" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="68" height="68" rx="34" fill="#FFB816"/>
-<rect x="11.8373" y="39.5112" width="8.2075" height="24.3519" fill="white"/>
-<rect x="47.9579" y="39.5112" width="8.2075" height="24.3519" fill="white"/>
-<path d="M22.0452 10.3599L28.6021 5.2739L56.4319 29.043L56.1762 39.6023L22.0452 10.3599Z" fill="white"/>
-<path d="M34.1318 10.5338L28.1727 4.88195L12.2749 18.3888L11.843 29.5713L34.1318 10.5338Z" fill="white"/>
-<rect x="27.98" y="39.5112" width="12.8073" height="8.2075" fill="white"/>
-<rect x="27.98" y="55.655" width="12.8073" height="8.2075" fill="white"/>
-<path d="M45.2981 22.8628L19.4325 33.8408L35.8109 19.5481L45.6332 22.727L45.2981 22.8628Z" fill="white"/>
+  <defs>
+    <linearGradient id="fracto_fav_grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+  </defs>
+  <rect width="68" height="68" rx="20" fill="url(#fracto_fav_grad)"/>
+  <path d="M25.5 27.5V11H23.1C20.6 11.2 20 13.1 20 14.1V28.5C20.9 34.6 26.2 36 28.7 36C28.7 34.4 28.7 31 28.7 30.3C26.4 30.3 25.6 28.4 25.5 27.5Z" fill="white"/>
+  <path d="M46.6 24.7V19.1H38.5C32.5 19.8 30.7 24.5 30.6 26.8C30.6 30.8 30.6 39.3 30.6 40.8C30.6 42.3 29 43.3 28.2 43.7H27.4V49.3H28.5C34.3 48.3 36 43.7 36.1 41.5V27.8C36.1 25.7 38.1 24.9 39.1 24.7H46.6Z" fill="white"/>
+  <path d="M25.6 39.8C23 39.1 20.8 37.1 20 36.1C20 42.3 20 52.8 20 54.8C20.2 56.8 21.9 57.5 22.7 57.6H25.6C25.5 53.9 25.5 47 25.6 39.8Z" fill="white"/>
+  <path d="M46.7 40.1H41V57.7H43C45.7 57.7 46.6 55.7 46.7 54.8V40.1Z" fill="white"/>
+  <path d="M46.6 14C46.5 11.6 44.5 11 43.5 11H41V15.1H46.6V14Z" fill="white"/>
+  <rect x="37.9" y="30.3" width="8.7" height="5.6" fill="white"/>
 </svg>

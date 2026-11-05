@@ -87,7 +87,7 @@ export default function AssetHero() {
               className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.1] text-[var(--fg)] tracking-tight"
             >
               Asset Owners at <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#3A76C0] to-[#60A5FA]">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4F46E5] to-[#2563EB]">
                 Fracto
               </span>
             </motion.h1>
@@ -99,7 +99,7 @@ export default function AssetHero() {
               Unlock Value from Real-World Assets{' '}
               <br className="hidden sm:block" />
               Through{' '}
-              <span className="text-[#3A76C0]">Fractional Ownership</span>
+              <span className="text-[#4F46E5]">Fractional Ownership</span>
             </motion.p>
 
             <motion.p
@@ -125,7 +125,7 @@ export default function AssetHero() {
                 onClick={() =>
                   navigate(isAuthenticated ? '/primary-club' : '/login')
                 }
-                className="group inline-flex items-center gap-3 rounded-xl bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] px-8 py-4 text-lg font-bold text-white shadow-lg shadow-blue-500/20 transition-all hover:brightness-110"
+                className="group inline-flex items-center gap-3 rounded-xl bg-gradient-to-r from-[#4F46E5] to-[#2563EB] px-8 py-4 text-lg font-bold text-white shadow-lg shadow-blue-500/20 transition-all hover:brightness-110"
               >
                 Begin The Journey
                 <span className="transition-transform group-hover:translate-x-1">
@@ -198,11 +198,11 @@ export default function AssetHero() {
                 className={`absolute top-0 right-0 w-24 h-24 bg-gradient-to-br ${feature.gradient} blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
               />
               <div className="flex items-center gap-5 relative z-10">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#3A76C0] to-[#60A5FA] flex items-center justify-center text-white shadow-lg">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#4F46E5] to-[#2563EB] flex items-center justify-center text-white shadow-lg">
                   {feature.icon}
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-[var(--fg)] group-hover:text-[#3A76C0] transition-colors">
+                  <h3 className="text-lg font-bold text-[var(--fg)] group-hover:text-[#4F46E5] transition-colors">
                     {feature.title}
                   </h3>
                   <p className="text-sm text-[var(--fg)]/60">

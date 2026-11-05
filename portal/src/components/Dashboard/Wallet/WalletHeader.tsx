@@ -17,7 +17,7 @@ export default function WalletHeader({ onAddBankClick }: WalletHeaderProps) {
       </div>
       <button
         onClick={onAddBankClick}
-        className="px-5 py-2.5 bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white hover:shadow-md hover:brightness-110 transition-all duration-300 font-12 rounded-lg font-semibold flex flex-row justify-center items-center gap-2 cursor-pointer whitespace-nowrap"
+        className="px-5 py-2.5 bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white hover:shadow-md hover:brightness-110 transition-all duration-300 font-12 rounded-lg font-semibold flex flex-row justify-center items-center gap-2 cursor-pointer whitespace-nowrap"
       >
         <FiPlus size={16} />
         <span>Add Now</span>

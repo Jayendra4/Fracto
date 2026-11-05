@@ -97,7 +97,7 @@ export default function OnboardedAssets() {
                 onClick={() => handleFilterChange(f)}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                   statusFilter === f
-                    ? 'bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white shadow-md'
+                    ? 'bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white shadow-md'
                     : 'text-[var(--fg)]/60 hover:text-[var(--fg)]'
                 }`}
               >
@@ -193,7 +193,7 @@ export default function OnboardedAssets() {
                               `/dashboard/rwa/onboarded-assets/${asset.id}`
                             )
                           }
-                          className="group inline-flex gap-1.5 items-center text-[#3A76C0] font-semibold hover:text-[#60A5FA] transition-all"
+                          className="group inline-flex gap-1.5 items-center text-[#4F46E5] font-semibold hover:text-[#60A5FA] transition-all"
                         >
                           Details
                           <MdKeyboardArrowRight

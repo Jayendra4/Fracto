@@ -33,7 +33,7 @@ export default function HowItWorkCTA() {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <button className="group inline-flex items-center gap-3 rounded-xl bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] px-8 py-4 font-18 font-semibold text-white shadow-md transition-all duration-300 hover:shadow-lg hover:brightness-110 active:scale-[0.98]">
+          <button className="group inline-flex items-center gap-3 rounded-xl bg-gradient-to-r from-[#4F46E5] to-[#2563EB] px-8 py-4 font-18 font-semibold text-white shadow-md transition-all duration-300 hover:shadow-lg hover:brightness-110 active:scale-[0.98]">
             Start Investing Today
             <FiArrowRight
               className="relative z-10 transition-transform duration-300 group-hover:translate-x-2 "

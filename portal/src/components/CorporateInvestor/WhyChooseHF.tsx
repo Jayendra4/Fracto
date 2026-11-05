@@ -29,9 +29,9 @@ function WhyChooseHF() {
               className="font-48 font-bold tracking-tight"
             >
               Why Investor Choose{' '}
-              <span className="text-[#3A76C0]">Fracto</span>
+              <span className="text-[#4F46E5]">Fracto</span>
             </motion.h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] mx-auto mt-6 rounded-full" />
+            <div className="w-24 h-1 bg-gradient-to-r from-[#4F46E5] to-[#2563EB] mx-auto mt-6 rounded-full" />
             <motion.p
               variants={fadeUp}
               className="mt-8 font-22 text-[var(--fg)]/70 leading-relaxed"
@@ -51,10 +51,10 @@ function WhyChooseHF() {
               className="order-2 lg:order-1"
             >
               <div className="p-8 lg:p-12 rounded-[2.5rem] bg-[var(--card)] border border-[var(--fg)]/10 shadow-2xl relative overflow-hidden group">
-                <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-[#3A76C0] to-[#60A5FA]" />
+                <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-[#4F46E5] to-[#2563EB]" />
                 <p className="font-26 font-medium leading-relaxed tracking-tight">
                   {/* Fracto combines{' '}
-                  <span className="text-[#3A76C0]">
+                  <span className="text-[#4F46E5]">
                     asset-backed investments
                   </span>
                   , fractional accessibility, and institutional-grade governance
@@ -68,25 +68,25 @@ function WhyChooseHF() {
 
                 <div className="mt-10 grid grid-cols-2 gap-6 opacity-60">
                   <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-[#3A76C0]" />
+                    <div className="w-2 h-2 rounded-full bg-[#4F46E5]" />
                     <span className="font-semibold text-sm uppercase tracking-wider">
                       Secured
                     </span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-[#3A76C0]" />
+                    <div className="w-2 h-2 rounded-full bg-[#4F46E5]" />
                     <span className="font-semibold text-sm uppercase tracking-wider">
                       Transparent
                     </span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-[#3A76C0]" />
+                    <div className="w-2 h-2 rounded-full bg-[#4F46E5]" />
                     <span className="font-semibold text-sm uppercase tracking-wider">
                       Liquid
                     </span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-[#3A76C0]" />
+                    <div className="w-2 h-2 rounded-full bg-[#4F46E5]" />
                     <span className="font-semibold text-sm uppercase tracking-wider">
                       Managed
                     </span>
@@ -103,7 +103,7 @@ function WhyChooseHF() {
               className="flex justify-center order-1 lg:order-2"
             >
               <div className="relative group">
-                <div className="absolute -inset-6 bg-gradient-to-r from-[#3A76C0]/20 to-[#60A5FA]/20 rounded-[3rem] blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                <div className="absolute -inset-6 bg-gradient-to-r from-[#4F46E5]/20 to-[#2563EB]/20 rounded-[3rem] blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                 <div className="relative overflow-hidden rounded-[2.5rem] shadow-2xl w-full max-w-[620px] border-8 border-[var(--card)]">
                   <img
                     src="/images/corporateInvestor/choose.jpg"

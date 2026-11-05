@@ -27,7 +27,7 @@ export const Input = ({
           e.preventDefault(); //
         }
       }}
-      className="w-full bg-[#0A1A2F] p-3 rounded-md text-white placeholder-gray-500 outline-none border border-white/10 focus:border-[#3A76C0] transition-all"
+      className="w-full bg-[#0A1A2F] p-3 rounded-md text-white placeholder-gray-500 outline-none border border-white/10 focus:border-[#4F46E5] transition-all"
     />
 
     {error && (
@@ -68,7 +68,7 @@ export const TextArea = ({
       <textarea
         {...props}
         rows={4}
-        className="w-full bg-[#0A1A2F] p-3 rounded-md text-white placeholder-gray-500 outline-none border border-white/10 focus:border-[#3A76C0] transition-all resize-none"
+        className="w-full bg-[#0A1A2F] p-3 rounded-md text-white placeholder-gray-500 outline-none border border-white/10 focus:border-[#4F46E5] transition-all resize-none"
       />
 
       <div className="flex justify-between items-start mt-1">
@@ -116,7 +116,7 @@ export const Select = ({
         value={value}
         onChange={onChange}
         onBlur={onBlur}
-        className="w-full bg-[#0A1A2F] p-3 pr-10 rounded-md outline-none border border-white/10 focus:border-[#3A76C0] text-white appearance-none"
+        className="w-full bg-[#0A1A2F] p-3 pr-10 rounded-md outline-none border border-white/10 focus:border-[#4F46E5] text-white appearance-none"
       >
         <option value="">Select</option>
 
@@ -202,7 +202,7 @@ export const SearchableSelect = ({
           }}
           className={`w-full bg-[#0A1A2F] p-3  rounded-md border border-white/10 text-white flex items-center justify-between cursor-pointer transition
             ${disabled ? 'opacity-50 cursor-not-allowed' : 'hover:border-white/30'}
-            ${open ? 'border-[#3A76C0]' : ''}
+            ${open ? 'border-[#4F46E5]' : ''}
           `}
         >
           <span className={selected ? 'text-white' : 'text-white/40'}>
@@ -223,7 +223,7 @@ export const SearchableSelect = ({
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder="Search..."
-                className="w-full bg-[#0d2035] text-white text-sm px-3 py-2 rounded-md outline-none border border-white/10 focus:border-[#3A76C0] placeholder:text-white/30"
+                className="w-full bg-[#0d2035] text-white text-sm px-3 py-2 rounded-md outline-none border border-white/10 focus:border-[#4F46E5] placeholder:text-white/30"
               />
             </div>
 
@@ -254,7 +254,7 @@ export const SearchableSelect = ({
                       setSearch('');
                     }}
                     className={`px-3 py-2 text-sm text-start cursor-pointer hover:bg-white/5 transition
-                      ${value === o.value ? 'bg-[#3A76C0]/20 text-[#3A76C0]' : 'text-white'}
+                      ${value === o.value ? 'bg-[#4F46E5]/20 text-[#4F46E5]' : 'text-white'}
                     `}
                   >
                     {o.label}

@@ -39,10 +39,10 @@ const Card = ({
     <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 blur-3xl rounded-full translate-x-12 -translate-y-12 group-hover:bg-blue-500/10 transition-colors duration-500" />
 
     <div className="relative z-10">
-      <div className="w-14 h-14 rounded-2xl bg-[#3A76C0]/10 flex items-center justify-center text-[#3A76C0] mb-6 group-hover:bg-[#3A76C0] group-hover:text-white transition-all duration-500 transform group-hover:scale-110 group-hover:rotate-3">
+      <div className="w-14 h-14 rounded-2xl bg-[#4F46E5]/10 flex items-center justify-center text-[#4F46E5] mb-6 group-hover:bg-[#4F46E5] group-hover:text-white transition-all duration-500 transform group-hover:scale-110 group-hover:rotate-3">
         {icon}
       </div>
-      <h4 className="font-24 font-bold mb-4 tracking-tight group-hover:text-[#3A76C0] transition-colors">
+      <h4 className="font-24 font-bold mb-4 tracking-tight group-hover:text-[#4F46E5] transition-colors">
         {title}
       </h4>
       <p className="font-18 text-[var(--fg)]/70 leading-relaxed group-hover:text-[var(--fg)]/90 transition-colors">
@@ -66,10 +66,10 @@ function BenefitsFractional() {
           >
             <h2 className="font-48 font-bold tracking-tight">
               Benefits of{' '}
-              <span className="text-[#3A76C0]">Structural Investment</span>{' '}
+              <span className="text-[#4F46E5]">Structural Investment</span>{' '}
               <br className="hidden lg:block" /> with Fracto
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] mx-auto mt-6 rounded-full" />
+            <div className="w-24 h-1 bg-gradient-to-r from-[#4F46E5] to-[#2563EB] mx-auto mt-6 rounded-full" />
             <p className="mt-8 font-20 text-[var(--fg)]/70 max-w-2xl mx-auto">
               Empowering corporate entities to build a diversified portfolio of
               income-generating real estate with institutional-grade security.

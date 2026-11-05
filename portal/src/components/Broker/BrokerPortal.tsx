@@ -63,9 +63,9 @@ export default function BrokerPortal() {
             variants={fadeUp}
             className="text-4xl md:text-5xl font-bold tracking-tight text-[var(--fg)]"
           >
-            Digital <span className="text-[#3A76C0]">Partner Portal</span>
+            Digital <span className="text-[#4F46E5]">Partner Portal</span>
           </motion.h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] mx-auto mt-6 rounded-full" />
+          <div className="w-24 h-1 bg-gradient-to-r from-[#4F46E5] to-[#2563EB] mx-auto mt-6 rounded-full" />
           <motion.p
             variants={fadeUp}
             className="mt-8 max-w-3xl mx-auto text-xl md:text-2xl text-[var(--fg)]/60 leading-relaxed font-medium"
@@ -89,12 +89,12 @@ export default function BrokerPortal() {
               className="group relative overflow-hidden rounded-[2.5rem] bg-[var(--card)] p-10 lg:p-12 border border-[var(--fg)]/10 shadow-xl hover:shadow-2xl transition-all duration-500"
             >
               {/* Massive Backdrop Number */}
-              <span className="pointer-events-none absolute -top-10 -right-5 text-[180px] font-bold text-[var(--fg)]/5 select-none leading-none group-hover:text-[#3A76C0]/10 transition-colors duration-500">
+              <span className="pointer-events-none absolute -top-10 -right-5 text-[180px] font-bold text-[var(--fg)]/5 select-none leading-none group-hover:text-[#4F46E5]/10 transition-colors duration-500">
                 {card.number}
               </span>
 
               <div className="relative z-10">
-                <h3 className="mb-6 text-3xl font-bold tracking-tight text-[#3A76C0] leading-tight">
+                <h3 className="mb-6 text-3xl font-bold tracking-tight text-[#4F46E5] leading-tight">
                   {card.title}
                 </h3>
 
@@ -108,7 +108,7 @@ export default function BrokerPortal() {
                       key={i}
                       className="flex items-start gap-4 text-[var(--fg)]/60 text-lg leading-snug group-hover:text-[var(--fg)]/90 transition-colors"
                     >
-                      <div className="flex-shrink-0 mt-1 text-[#3A76C0]">
+                      <div className="flex-shrink-0 mt-1 text-[#4F46E5]">
                         <CiCircleCheck size={24} />
                       </div>
                       {point}

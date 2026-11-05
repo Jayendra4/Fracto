@@ -58,7 +58,7 @@ export default function BrokerDashboardPortal() {
           >
             <Link
               to={`${isAuthenticated && role === 'Broker' ? '/dashboard' : '/login'}`}
-              className="group inline-flex items-center gap-2.5 rounded-lg bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] px-6 py-2.5 text-base font-bold text-white shadow-xl shadow-blue-500/10 transition-all hover:scale-[1.05] active:scale-[0.95]"
+              className="group inline-flex items-center gap-2.5 rounded-lg bg-gradient-to-r from-[#4F46E5] to-[#2563EB] px-6 py-2.5 text-base font-bold text-white shadow-xl shadow-blue-500/10 transition-all hover:scale-[1.05] active:scale-[0.95]"
             >
               Access Partner Portal
               <span className="transition-transform group-hover:translate-x-1.5">

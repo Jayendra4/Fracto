@@ -51,7 +51,7 @@ export default function TransformAssetCTA() {
           >
             <button
               type="button"
-              className="group inline-flex items-center gap-4 rounded-2xl bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] px-8 py-4 text-lg font-bold text-white shadow-2xl shadow-blue-500/20 transition-all hover:scale-[1.05] active:scale-[0.95]"
+              className="group inline-flex items-center gap-4 rounded-2xl bg-gradient-to-r from-[#4F46E5] to-[#2563EB] px-8 py-4 text-lg font-bold text-white shadow-2xl shadow-blue-500/20 transition-all hover:scale-[1.05] active:scale-[0.95]"
             >
               Begin Your Asset Owner Journey
               <span className="transition-transform group-hover:translate-x-2">

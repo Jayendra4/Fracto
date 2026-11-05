@@ -61,9 +61,9 @@ export default function Capabilities() {
             <motion.div variants={fadeUp}>
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tight text-[var(--fg)]">
                 Unparalleled <br />
-                <span className="text-[#3A76C0]">Partner Capabilities</span>
+                <span className="text-[#4F46E5]">Partner Capabilities</span>
               </h2>
-              <div className="w-20 h-1 bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] mt-6 rounded-full" />
+              <div className="w-20 h-1 bg-gradient-to-r from-[#4F46E5] to-[#2563EB] mt-6 rounded-full" />
             </motion.div>
 
             <motion.p
@@ -83,10 +83,10 @@ export default function Capabilities() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1, duration: 0.5 }}
-                  className="group p-6 rounded-[2rem] bg-[var(--card)] border border-[var(--fg)]/10 hover:border-[#3A76C0]/30 transition-all duration-300"
+                  className="group p-6 rounded-[2rem] bg-[var(--card)] border border-[var(--fg)]/10 hover:border-[#4F46E5]/30 transition-all duration-300"
                 >
                   <div
-                    className={`mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#3A76C0]/10 text-[#3A76C0] group-hover:bg-[#3A76C0] group-hover:text-white transition-all duration-500`}
+                    className={`mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#4F46E5]/10 text-[#4F46E5] group-hover:bg-[#4F46E5] group-hover:text-white transition-all duration-500`}
                   >
                     <cap.icon size={24} />
                   </div>

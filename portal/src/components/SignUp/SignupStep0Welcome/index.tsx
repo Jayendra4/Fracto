@@ -84,7 +84,7 @@ export default function SignupStep0Welcome({
               flex-1 min-w-[140px] sm:min-w-[155px] h-auto sm:h-full p-3 sm:p-4 py-4 sm:py-6 rounded-2xl border transition-all duration-300 group overflow-hidden
               ${
                 isActive
-                  ? 'border-transparent bg-gradient-to-br from-[#3A76C0] to-[#60A5FA] shadow-[0_6px_16px_rgba(58,118,192,0.2)]'
+                  ? 'border-transparent bg-gradient-to-br from-[#4F46E5] to-[#2563EB] shadow-[0_6px_16px_rgba(79, 70, 229,0.2)]'
                   : 'border-[var(--fg)]/10 bg-[var(--inner-card)] hover:border-[var(--fg)]/30 hover:shadow-sm'
               }
             `}
@@ -109,7 +109,7 @@ export default function SignupStep0Welcome({
                     className={`font-semibold font-16 tracking-tight transition-colors duration-300 ${
                       isActive
                         ? 'text-white'
-                        : 'text-[var(--fg)] group-hover:text-[#3A76C0]'
+                        : 'text-[var(--fg)] group-hover:text-[#4F46E5]'
                     }`}
                   >
                     {role.label}

@@ -33,9 +33,9 @@ export default function Security() {
         >
           <h2 className="text-2xl md:text-3xl font-bold text-[var(--fg)] tracking-tight">
             Built On{' '}
-            <span className="text-[#3A76C0]">Security & Governance</span>
+            <span className="text-[#4F46E5]">Security & Governance</span>
           </h2>
-          <div className="w-16 h-1 bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] mx-auto mt-4 rounded-full" />
+          <div className="w-16 h-1 bg-gradient-to-r from-[#4F46E5] to-[#2563EB] mx-auto mt-4 rounded-full" />
           <p className="mt-6 text-base md:text-lg text-[var(--fg)]/60 max-w-3xl mx-auto leading-relaxed font-medium">
             The Fracto partner ecosystem is built on the same
             institutional-grade security and governance framework that underpins
@@ -58,11 +58,11 @@ export default function Security() {
               <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 blur-3xl rounded-full translate-x-12 -translate-y-12 opacity-0 group-hover:opacity-100 transition-opacity" />
 
               <div className="relative z-10">
-                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-xl bg-[#3A76C0]/10 text-white shadow-sm transition-transform group-hover:scale-110 group-hover:-rotate-3">
+                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-xl bg-[#4F46E5]/10 text-white shadow-sm transition-transform group-hover:scale-110 group-hover:-rotate-3">
                   <img src={feature.img} alt="" className="w-10 h-10" />
                 </div>
 
-                <h3 className="mb-3 text-lg lg:text-xl font-bold text-[var(--fg)] group-hover:text-[#3A76C0] transition-colors">
+                <h3 className="mb-3 text-lg lg:text-xl font-bold text-[var(--fg)] group-hover:text-[#4F46E5] transition-colors">
                   {feature.title}
                 </h3>
 

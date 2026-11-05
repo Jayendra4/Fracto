@@ -474,7 +474,7 @@ export default function BuyFractionModal({
                 Number(amount) > 500000
               }
               onClick={handleProceed}
-              className="w-full mt-8 px-6 py-3.5 font-16 font-semibold rounded-xl text-white bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] hover:shadow-[0_0_20px_rgba(96,165,250,0.4)] hover:brightness-110 active:scale-[0.98] transition-all duration-300 disabled:opacity-50 disabled:pointer-events-none flex items-center justify-center gap-2"
+              className="w-full mt-8 px-6 py-3.5 font-16 font-semibold rounded-xl text-white bg-gradient-to-r from-[#4F46E5] to-[#2563EB] hover:shadow-[0_0_20px_rgba(96,165,250,0.4)] hover:brightness-110 active:scale-[0.98] transition-all duration-300 disabled:opacity-50 disabled:pointer-events-none flex items-center justify-center gap-2"
             >
               Proceed to Payment
             </button>

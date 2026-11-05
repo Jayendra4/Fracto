@@ -56,7 +56,7 @@ export default function CommissionStatus() {
                 </p>
               </div>
 
-              <div className="px-5 py-3 rounded-xl bg-gradient-to-br from-[#3A76C0]/10 to-[#60A5FA]/5 border border-[#3A76C0]/15 space-y-1 shrink-0">
+              <div className="px-5 py-3 rounded-xl bg-gradient-to-br from-[#4F46E5]/10 to-[#2563EB]/5 border border-[#4F46E5]/15 space-y-1 shrink-0">
                 <p className="font-12 md:font-14 text-gray-500 dark:text-gray-400">
                   Commission Amount
                 </p>

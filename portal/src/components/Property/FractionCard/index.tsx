@@ -240,7 +240,7 @@ export default function FractionCard({
               ${
                 isSoldOut
                   ? 'bg-dark-grey cursor-not-allowed opacity-50'
-                  : 'bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] hover:shadow-[0_4px_14px_0_rgba(96,165,250,0.39)]'
+                  : 'bg-gradient-to-r from-[#4F46E5] to-[#2563EB] hover:shadow-[0_4px_14px_0_rgba(96,165,250,0.39)]'
               }
             `}
             >
@@ -359,7 +359,7 @@ export default function FractionCard({
                   type="button"
                   onClick={onPayNow}
                   disabled={isJoiningGroup}
-                  className="w-full py-2 rounded-lg bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white font-semibold text-sm transition-all duration-300 hover:brightness-110 active:scale-95 shadow-md cursor-pointer disabled:opacity-60"
+                  className="w-full py-2 rounded-lg bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white font-semibold text-sm transition-all duration-300 hover:brightness-110 active:scale-95 shadow-md cursor-pointer disabled:opacity-60"
                 >
                   {isJoiningGroup ? 'Joining...' : 'Join Club'}
                 </button>
@@ -373,7 +373,7 @@ export default function FractionCard({
                 <button
                   type="button"
                   onClick={onPayNow}
-                  className="w-full py-2 rounded-lg bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white font-semibold text-sm transition-all duration-300 hover:brightness-110 active:scale-95 shadow-md cursor-pointer"
+                  className="w-full py-2 rounded-lg bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white font-semibold text-sm transition-all duration-300 hover:brightness-110 active:scale-95 shadow-md cursor-pointer"
                 >
                   {isPaymentFailed ? 'Retry Payment' : 'Pay Now'}
                 </button>
@@ -407,7 +407,7 @@ export default function FractionCard({
               <button
                 type="button"
                 onClick={() => setInterestStep('yes')}
-                className="flex-1 py-2.5 rounded-xl bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white font-semibold font-14 transition hover:brightness-110 active:scale-95 shadow-md cursor-pointer"
+                className="flex-1 py-2.5 rounded-xl bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white font-semibold font-14 transition hover:brightness-110 active:scale-95 shadow-md cursor-pointer"
               >
                 Yes
               </button>
@@ -450,7 +450,7 @@ export default function FractionCard({
               type="button"
               onClick={handleConfirmPurchase}
               disabled={!agreeChecked || isSigningConsent}
-              className="w-full py-3 rounded-xl bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white font-16 font-semibold transition hover:brightness-110 active:scale-95 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full py-3 rounded-xl bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white font-16 font-semibold transition hover:brightness-110 active:scale-95 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isSigningConsent ? 'Submitting...' : 'Submit & Continue'}
             </button>
@@ -481,7 +481,7 @@ export default function FractionCard({
               type="button"
               onClick={handleRejectPurchase}
               disabled={!noReason.trim() || isSigningConsent}
-              className="w-full py-3 rounded-xl bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white font-16 font-semibold transition hover:brightness-110 active:scale-95 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full py-3 rounded-xl bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white font-16 font-semibold transition hover:brightness-110 active:scale-95 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isSigningConsent ? 'Submitting...' : 'Submit'}
             </button>

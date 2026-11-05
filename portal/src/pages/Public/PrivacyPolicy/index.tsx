@@ -153,7 +153,7 @@ export default function PrivacyPolicy(): JSX.Element {
                   onClick={() => setActiveTab(tab.id as 'privacy' | 'conduct')}
                   className={`px-6 py-2 rounded-full font-semibold text-sm transition-all duration-300 ${
                     activeTab === tab.id
-                      ? 'bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white shadow-md'
+                      ? 'bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white shadow-md'
                       : 'text-[var(--fg)]/60 hover:text-[var(--fg)]'
                   }`}
                 >
@@ -178,7 +178,7 @@ export default function PrivacyPolicy(): JSX.Element {
               transition={{ duration: 0.4, ease: 'easeOut' }}
             >
               {/* Intro */}
-              <p className="font-18 text-[var(--fg)]/60 font-light leading-relaxed border-l-4 border-[#3A76C0] pl-4 mb-12">
+              <p className="font-18 text-[var(--fg)]/60 font-light leading-relaxed border-l-4 border-[#4F46E5] pl-4 mb-12">
                 {intro}
               </p>
 

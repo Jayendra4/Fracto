@@ -62,7 +62,7 @@ export default function AddUpiModal({ open, onClose }: Props) {
         <button
           onClick={handleSubmit}
           disabled={isPending || !upiId}
-          className="px-6 py-2.5 font-16 font-semibold rounded-xl text-white bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] hover:shadow-lg hover:shadow-blue-500/20 hover:brightness-110 active:scale-[0.98] transition-all duration-300 disabled:opacity-50 disabled:pointer-events-none"
+          className="px-6 py-2.5 font-16 font-semibold rounded-xl text-white bg-gradient-to-r from-[#4F46E5] to-[#2563EB] hover:shadow-lg hover:shadow-blue-500/20 hover:brightness-110 active:scale-[0.98] transition-all duration-300 disabled:opacity-50 disabled:pointer-events-none"
         >
           Link UPI ID
         </button>

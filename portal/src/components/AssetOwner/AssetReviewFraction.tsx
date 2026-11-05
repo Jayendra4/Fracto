@@ -37,7 +37,7 @@ function ProgressItem({
     <div className="space-y-3">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3 text-[var(--fg)]/80">
-          <Icon className="h-5 w-5 text-[#3A76C0]" />
+          <Icon className="h-5 w-5 text-[#4F46E5]" />
           <span className="font-medium">{label}</span>
         </div>
         <span className="font-bold text-[var(--fg)]">{value}%</span>
@@ -70,9 +70,9 @@ export default function AssetReviewFraction() {
             className="text-3xl md:text-4xl font-extrabold text-[var(--fg)] tracking-tight"
           >
             Asset Review and{' '}
-            <span className="text-[#3A76C0]">Structural Co-ownership</span>
+            <span className="text-[#4F46E5]">Structural Co-ownership</span>
           </motion.h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] mx-auto mt-6 rounded-full" />
+          <div className="w-20 h-1 bg-gradient-to-r from-[#4F46E5] to-[#2563EB] mx-auto mt-6 rounded-full" />
           <motion.p
             variants={fadeUp}
             className="mt-8 text-lg md:text-xl text-[var(--fg)]/70 max-w-3xl mx-auto leading-relaxed font-semibold opacity-80"
@@ -95,7 +95,7 @@ export default function AssetReviewFraction() {
 
             <div className="relative z-10">
               <div className="mb-10 flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-[#3A76C0]/10 flex items-center justify-center text-[#3A76C0]">
+                <div className="w-12 h-12 rounded-xl bg-[#4F46E5]/10 flex items-center justify-center text-[#4F46E5]">
                   <FaShieldAlt size={24} />
                 </div>
                 <div>
@@ -148,7 +148,7 @@ export default function AssetReviewFraction() {
 
             <div className="relative z-10">
               <div className="mb-10 flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-[#3A76C0]/10 flex items-center justify-center text-[#3A76C0]">
+                <div className="w-12 h-12 rounded-xl bg-[#4F46E5]/10 flex items-center justify-center text-[#4F46E5]">
                   <FaLayerGroup size={24} />
                 </div>
                 <div>
@@ -164,7 +164,7 @@ export default function AssetReviewFraction() {
               <div className="space-y-6">
                 <div className="flex items-center justify-between p-6 bg-[var(--fg)]/5 rounded-2xl border border-[var(--fg)]/5">
                   <div className="flex items-center gap-3 text-[var(--fg)]/80 text-lg">
-                    <FaCoins className="text-[#3A76C0]" />
+                    <FaCoins className="text-[#4F46E5]" />
                     <span>Total Structural Co-ownership</span>
                   </div>
                   <span className="text-2xl font-bold text-[var(--fg)]">
@@ -174,7 +174,7 @@ export default function AssetReviewFraction() {
 
                 <div className="flex items-center justify-between p-6 bg-[var(--fg)]/5 rounded-2xl border border-[var(--fg)]/5">
                   <div className="flex items-center gap-3 text-[var(--fg)]/80 text-lg">
-                    <FaPercentage className="text-[#3A76C0]" />
+                    <FaPercentage className="text-[#4F46E5]" />
                     <span>Available Structural Co-ownership</span>
                   </div>
                   <span className="text-2xl font-bold text-[var(--fg)]">
@@ -184,7 +184,7 @@ export default function AssetReviewFraction() {
 
                 <div className="flex items-center justify-between p-6 bg-[var(--fg)]/5 rounded-2xl border border-[var(--fg)]/5">
                   <div className="flex items-center gap-3 text-[var(--fg)]/80 text-lg">
-                    <FaUsers className="text-[#3A76C0]" />
+                    <FaUsers className="text-[#4F46E5]" />
                     <span>Investor Interest</span>
                   </div>
                   <span className="text-2xl font-bold text-[var(--fg)] text-green-500">
@@ -206,7 +206,7 @@ export default function AssetReviewFraction() {
                       initial={{ width: 0 }}
                       whileInView={{ width: '55%' }}
                       transition={{ duration: 1.2, ease: 'easeOut' }}
-                      className="h-full rounded-full bg-gradient-to-r from-[#3A76C0] to-[#60A5FA]"
+                      className="h-full rounded-full bg-gradient-to-r from-[#4F46E5] to-[#2563EB]"
                     />
                   </div>
                 </div>

@@ -222,7 +222,7 @@ export default function ProfileHeader({
             rounded-xl
             font-16 font-semibold
             text-white
-            bg-gradient-to-r from-[#3A76C0] to-[#60A5FA]
+            bg-gradient-to-r from-[#4F46E5] to-[#2563EB]
             transition-all duration-300
             hover:shadow-lg hover:shadow-blue-500/20 hover:brightness-110
             active:scale-[0.98]

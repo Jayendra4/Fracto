@@ -28,7 +28,7 @@ function InvestNow() {
             className="max-w-4xl"
           >
             <h2 className="font-60 font-bold leading-[1.1] mb-8">
-              Invest with <span className="text-[#3A76C0]">Control</span>.<br />
+              Invest with <span className="text-[#4F46E5]">Control</span>.<br />
               Earn with <span className="text-[#60A5FA]">Confidence</span>.
             </h2>
 
@@ -39,7 +39,7 @@ function InvestNow() {
             {/* <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="group inline-flex cursor-pointer items-center gap-4 rounded-2xl bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] px-10 py-4 font-20 font-bold text-white shadow-2xl shadow-blue-500/40 transition-all hover:brightness-110"
+              className="group inline-flex cursor-pointer items-center gap-4 rounded-2xl bg-gradient-to-r from-[#4F46E5] to-[#2563EB] px-10 py-4 font-20 font-bold text-white shadow-2xl shadow-blue-500/40 transition-all hover:brightness-110"
               onClick={()=>navigate('/properties')}            
             >
               Start Investing Now

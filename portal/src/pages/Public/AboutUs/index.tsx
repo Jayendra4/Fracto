@@ -49,7 +49,7 @@ export default function AboutUs(): JSX.Element {
               transition={{ duration: 0.8, ease: 'easeOut' }}
             >
               About House <br className="hidden md:block" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#3A76C0] to-[#60A5FA]">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4F46E5] to-[#2563EB]">
                 of Frac
               </span>
             </motion.h1>
@@ -145,7 +145,7 @@ export default function AboutUs(): JSX.Element {
               <div className="bg-[var(--card)] p-8 lg:p-12 rounded-[2rem] border border-[var(--fg)]/10 shadow-lg relative overflow-hidden">
                 <p className="font-24 md:font-30 text-[var(--fg)] leading-relaxed font-light relative z-10">
                   To simplify{' '}
-                  <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#3A76C0] to-[#60A5FA]">
+                  <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#4F46E5] to-[#2563EB]">
                     access to real estate and asset-backed opportunities
                   </span>{' '}
                   by combining structured legal frameworks, KYC-enabled
@@ -252,7 +252,7 @@ export default function AboutUs(): JSX.Element {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '0px 0px -10% 0px' }}
                 transition={{ duration: 0.6, delay: idx * 0.1 }}
-                className="bg-[var(--card)] min-h-[150px] px-8 py-10 rounded-[2rem] border-t-4 border-t-[#3A76C0] border border-[var(--fg)]/10 hover:border-[#3A76C0]/50 transition-all shadow-sm flex items-center justify-between"
+                className="bg-[var(--card)] min-h-[150px] px-8 py-10 rounded-[2rem] border-t-4 border-t-[#4F46E5] border border-[var(--fg)]/10 hover:border-[#4F46E5]/50 transition-all shadow-sm flex items-center justify-between"
               >
                 {/* Left Content */}
                 <h3 className="font-24 font-bold text-[var(--fg)] max-w-[70%] leading-snug">
@@ -263,7 +263,7 @@ export default function AboutUs(): JSX.Element {
                 <div className="flex items-center gap-5 ml-6">
                   <div className="w-px h-14 bg-[var(--fg)]/10" />
 
-                  <div className="text-5xl md:text-6xl font-bold text-[#3A76C0]/10 leading-none">
+                  <div className="text-5xl md:text-6xl font-bold text-[#4F46E5]/10 leading-none">
                     0{idx + 1}
                   </div>
                 </div>
@@ -344,7 +344,7 @@ export default function AboutUs(): JSX.Element {
       </section>
 
       <section className="py-24 bg-[var(--bg)] relative overflow-hidden flex items-center justify-center border-t border-[var(--fg)]/5">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#3A76C0]/5 pointer-events-none"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#4F46E5]/5 pointer-events-none"></div>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-500/10 rounded-full blur-[120px] pointer-events-none"></div>
 
         <motion.div
@@ -362,7 +362,7 @@ export default function AboutUs(): JSX.Element {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             Our{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#3A76C0] to-[#60A5FA]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4F46E5] to-[#2563EB]">
               Future View
             </span>
           </motion.h2>

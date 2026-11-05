@@ -42,9 +42,9 @@ export default function PostApproval() {
           className="text-center mb-16 lg:mb-24"
         >
           <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">
-            Post Approval <span className="text-[#3A76C0]">Capabilities</span>
+            Post Approval <span className="text-[#4F46E5]">Capabilities</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] mx-auto mt-6 rounded-full" />
+          <div className="w-20 h-1 bg-gradient-to-r from-[#4F46E5] to-[#2563EB] mx-auto mt-6 rounded-full" />
           <p className="mt-8 text-lg md:text-xl text-[var(--fg)]/60 max-w-2xl mx-auto leading-relaxed font-semibold opacity-80">
             After full authorization, Asset Owners unlock a powerful suite of
             management and growth tools.
@@ -64,7 +64,7 @@ export default function PostApproval() {
                   transition={{ delay: index * 0.1, duration: 0.5 }}
                   className="group flex items-start gap-6 p-6 rounded-[1.5rem] hover:bg-[var(--card)] border border-transparent hover:border-[var(--fg)]/10 transition-all duration-300"
                 >
-                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-[#3A76C0]/10 flex items-center justify-center text-[#3A76C0] group-hover:bg-[#3A76C0] group-hover:text-white transition-all duration-500">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-[#4F46E5]/10 flex items-center justify-center text-[#4F46E5] group-hover:bg-[#4F46E5] group-hover:text-white transition-all duration-500">
                     <Icon size={24} />
                   </div>
                   <p className="text-lg md:text-xl font-medium text-[var(--fg)]/80 group-hover:text-[var(--fg)] transition-colors py-1">

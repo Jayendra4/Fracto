@@ -236,7 +236,7 @@ export default function SecondaryClubDetail() {
           <p className="text-[var(--fg)]/60 mb-4">Club not found.</p>
           <button
             onClick={() => navigate(-1)}
-            className="px-5 py-2 rounded-lg bg-[#3A76C0] text-white font-medium hover:opacity-90 transition"
+            className="px-5 py-2 rounded-lg bg-[#4F46E5] text-white font-medium hover:opacity-90 transition"
           >
             Back
           </button>
@@ -475,7 +475,7 @@ export default function SecondaryClubDetail() {
                       href={getDocUrl(doc.url ?? doc.documentUrl)}
                       target="_blank"
                       rel="noreferrer"
-                      className="text-[#3A76C0] text-sm font-medium hover:underline"
+                      className="text-[#4F46E5] text-sm font-medium hover:underline"
                     >
                       View
                     </a>
@@ -742,7 +742,7 @@ export default function SecondaryClubDetail() {
                     type="checkbox"
                     checked={ndaChecked}
                     onChange={(e) => setNdaChecked(e.target.checked)}
-                    className="mt-0.5 accent-[#3A76C0]"
+                    className="mt-0.5 accent-[#4F46E5]"
                   />
                   <span className="text-[var(--fg)]/70 text-sm">
                     I accept the Confidentiality / NDA Terms and the Investment
@@ -821,7 +821,7 @@ export default function SecondaryClubDetail() {
                       type="checkbox"
                       checked={termsChecked}
                       onChange={(e) => setTermsChecked(e.target.checked)}
-                      className="mt-0.5 accent-[#3A76C0]"
+                      className="mt-0.5 accent-[#4F46E5]"
                     />
                     <span className="text-[var(--fg)]/70 text-sm">
                       I confirm the information provided is accurate and consent

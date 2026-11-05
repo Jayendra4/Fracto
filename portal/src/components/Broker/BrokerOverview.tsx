@@ -44,9 +44,9 @@ export default function BrokerOverview() {
             variants={fadeUp}
             className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight"
           >
-            Channel Partner <span className="text-[#3A76C0]">Overview</span>
+            Channel Partner <span className="text-[#4F46E5]">Overview</span>
           </motion.h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] mx-auto mt-6 rounded-full shadow-lg shadow-blue-500/40" />
+          <div className="w-20 h-1 bg-gradient-to-r from-[#4F46E5] to-[#2563EB] mx-auto mt-6 rounded-full shadow-lg shadow-blue-500/40" />
           <motion.p
             variants={fadeUp}
             className="mt-8 max-w-2xl mx-auto text-lg md:text-xl text-white/70 leading-relaxed font-semibold opacity-80"
@@ -108,11 +108,11 @@ export default function BrokerOverview() {
                 variants={fadeUp}
                 className="group flex flex-col md:flex-row gap-6 p-8 rounded-[2rem] hover:bg-white/5 border border-transparent hover:border-white/10 transition-all duration-500"
               >
-                <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-gradient-to-br from-[#3A76C0] to-[#60A5FA] flex items-center justify-center text-white text-2xl font-bold shadow-lg transform group-hover:rotate-6 transition-transform">
+                <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-gradient-to-br from-[#4F46E5] to-[#2563EB] flex items-center justify-center text-white text-2xl font-bold shadow-lg transform group-hover:rotate-6 transition-transform">
                   {item.icon}
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-[#3A76C0] transition-colors">
+                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-[#4F46E5] transition-colors">
                     {item.title}
                   </h3>
                   <p className="text-lg text-white/60 leading-relaxed group-hover:text-white/80 transition-colors">

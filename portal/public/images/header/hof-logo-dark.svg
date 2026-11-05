@@ -9,8 +9,8 @@
 <text x="58" y="34" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="28" font-weight="800" letter-spacing="2.5" fill="#EFEFEF">FRACTO</text>
 <defs>
 <linearGradient id="paint0_linear_36_1412" x1="0" y1="0" x2="40.5913" y2="75.3169" gradientUnits="userSpaceOnUse">
-<stop stop-color="#132436"/>
-<stop offset="1" stop-color="#37689C"/>
+<stop stop-color="#4F46E5"/>
+<stop offset="1" stop-color="#2563EB"/>
 </linearGradient>
 </defs>
 </svg>

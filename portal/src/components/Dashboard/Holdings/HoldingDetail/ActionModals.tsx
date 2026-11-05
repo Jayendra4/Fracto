@@ -35,7 +35,7 @@ function StepIndicator({
                 i < current
                   ? 'bg-green text-white'
                   : i === current
-                    ? 'bg-gradient-to-br from-[#3A76C0] to-[#60A5FA] text-white shadow-lg shadow-blue-500/30'
+                    ? 'bg-gradient-to-br from-[#4F46E5] to-[#2563EB] text-white shadow-lg shadow-blue-500/30'
                     : 'bg-[var(--fg)]/10 text-[var(--fg)]/30'
               }`}
             >
@@ -165,7 +165,7 @@ function ActionButton({
     'w-full py-3 sm:py-3 rounded-xl font-semibold text-sm transition-all duration-300 flex items-center justify-center gap-2 relative overflow-hidden group/btn min-h-[48px]';
   const styles = {
     primary:
-      'bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 disabled:opacity-40 disabled:cursor-not-allowed',
+      'bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 disabled:opacity-40 disabled:cursor-not-allowed',
     outline:
       'border border-gray-300 dark:border-white/15 text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-white/5',
     danger:
@@ -188,7 +188,7 @@ function ActionButton({
 
 /* ─── shared input class ──────────────────────────────────────── */
 const inputCls =
-  'w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl border border-[var(--fg)]/10 bg-[var(--inner-card)] text-[var(--fg)] text-sm focus:outline-none focus:ring-2 focus:ring-[#3A76C0]/40 font-semibold';
+  'w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl border border-[var(--fg)]/10 bg-[var(--inner-card)] text-[var(--fg)] text-sm focus:outline-none focus:ring-2 focus:ring-[#4F46E5]/40 font-semibold';
 
 /* ─── 1. Sell Share (Ask to Sell) ─────────────────────────────── */
 
@@ -410,7 +410,7 @@ export function BuyShareModal({
     <ModalShell
       title="Place Bid (Buy Units)"
       icon={<MdShoppingCart size={18} className="text-[#60A5FA]" />}
-      iconColor="bg-[#3A76C0]/10"
+      iconColor="bg-[#4F46E5]/10"
       onClose={onClose}
     >
       {!done ? (
@@ -536,7 +536,7 @@ export function BuyShareModal({
                 exit={{ opacity: 0, x: -20 }}
                 className="space-y-3 sm:space-y-4"
               >
-                <div className="bg-[#3A76C0]/5 border border-[#3A76C0]/20 rounded-xl p-4 text-sm text-center space-y-1">
+                <div className="bg-[#4F46E5]/5 border border-[#4F46E5]/20 rounded-xl p-4 text-sm text-center space-y-1">
                   <p className="text-[var(--fg)]/50">Placing bid for</p>
                   <p className="text-xl sm:text-2xl font-bold text-[var(--fg)]">
                     {qty} Units @ ₹ {bid.toLocaleString()}
@@ -921,7 +921,7 @@ function SuccessScreen({
       </div>
       <button
         onClick={onClose}
-        className="mt-2 px-8 py-3 rounded-xl bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white text-sm font-semibold shadow-lg min-h-[48px]"
+        className="mt-2 px-8 py-3 rounded-xl bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white text-sm font-semibold shadow-lg min-h-[48px]"
       >
         Done
       </button>

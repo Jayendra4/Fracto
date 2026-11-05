@@ -113,7 +113,7 @@ export default function ReferredAssets() {
                 }}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                   statusFilter === f
-                    ? 'bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white shadow-md'
+                    ? 'bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white shadow-md'
                     : 'text-gray-500 dark:text-gray-400 hover:text-[#0B2545] dark:text-white'
                 }`}
               >
@@ -235,7 +235,7 @@ export default function ReferredAssets() {
                                 `/dashboard/rwa/referred-assets/${item.assetId}`
                               )
                             }
-                            className="group inline-flex gap-1.5 items-center text-[#3A76C0] font-semibold hover:text-[#60A5FA] transition-all"
+                            className="group inline-flex gap-1.5 items-center text-[#4F46E5] font-semibold hover:text-[#60A5FA] transition-all"
                           >
                             Details
                             <MdKeyboardArrowRight

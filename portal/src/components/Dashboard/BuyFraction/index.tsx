@@ -399,7 +399,7 @@ export default function BuyFraction() {
           </p>
           <Button2
             onClick={() => navigate(-1)}
-            className="bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white font-semibold px-6 py-2.5 rounded-xl shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40"
+            className="bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white font-semibold px-6 py-2.5 rounded-xl shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40"
           >
             Back to Dashboard
           </Button2>
@@ -833,7 +833,7 @@ export default function BuyFraction() {
               onClick={handleBuy}
               className={`relative overflow-hidden font-semibold font-20 w-full group/btn
                 transition-all duration-300 ease-in-out
-                ${buying || isSoldOut || !hasUnits ? 'bg-gray-300 dark:bg-white/20 opacity-50 cursor-not-allowed pointer-events-none' : 'bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40'}
+                ${buying || isSoldOut || !hasUnits ? 'bg-gray-300 dark:bg-white/20 opacity-50 cursor-not-allowed pointer-events-none' : 'bg-gradient-to-r from-[#4F46E5] to-[#2563EB] shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40'}
                 px-5 py-4 rounded-xl text-white
             `}
             >
@@ -1063,7 +1063,7 @@ function RecommendedCard({ asset }: { asset: Asset }) {
             e.stopPropagation();
             navigate(`/property-details/${asset.id}`);
           }}
-          className="w-full text-white font-semibold rounded-xl bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 transition-all duration-300 cursor-pointer overflow-hidden relative group/btn py-3 flex items-center justify-center gap-2"
+          className="w-full text-white font-semibold rounded-xl bg-gradient-to-r from-[#4F46E5] to-[#2563EB] shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 transition-all duration-300 cursor-pointer overflow-hidden relative group/btn py-3 flex items-center justify-center gap-2"
         >
           <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover/btn:translate-x-[100%] transition-transform duration-700 ease-in-out" />
           <span className="relative z-10 flex items-center gap-2">
@@ -1205,7 +1205,7 @@ function ConfirmInvestModal({
           <button
             onClick={onConfirm}
             disabled={buying}
-            className="flex-1 relative overflow-hidden py-3.5 rounded-xl bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white font-semibold shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 transition-all disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+            className="flex-1 relative overflow-hidden py-3.5 rounded-xl bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white font-semibold shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 transition-all disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
           >
             {buying ? (
               <span className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />

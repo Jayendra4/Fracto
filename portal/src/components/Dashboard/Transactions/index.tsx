@@ -164,7 +164,7 @@ export default function Transactions() {
         <button
           onClick={handleDownloadPDF}
           className={`w-[120px] h-11 rounded-xl font-semibold text-sm transition-all duration-300 flex items-center justify-center gap-2 overflow-hidden relative group/btn 
-               bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 cursor-pointer
+               bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 cursor-pointer
           }`}
         >
           {/* <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover/btn:translate-x-[100%] transition-transform duration-700 ease-in-out" /> */}

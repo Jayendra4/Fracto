@@ -340,7 +340,7 @@ export default function HoldingDetail() {
                     Verified
                   </span>
                 )}
-                <span className="px-2.5 py-1 rounded-full border border-[#3A76C0]/30 bg-[#3A76C0]/10 text-[#60A5FA] text-xs font-semibold shrink-0">
+                <span className="px-2.5 py-1 rounded-full border border-[#4F46E5]/30 bg-[#4F46E5]/10 text-[#60A5FA] text-xs font-semibold shrink-0">
                   {holding.status}
                 </span>
               </div>
@@ -390,7 +390,7 @@ export default function HoldingDetail() {
         text-[10px] sm:text-sm font-medium text-center leading-tight 
         transition-all duration-300 ${
           activeTab === key
-            ? 'bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white shadow-md'
+            ? 'bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white shadow-md'
             : 'text-gray-500 dark:text-gray-400 hover:text-[#0B2545] dark:text-white hover:dark:text-[#ffffff]/70'
         }`}
                   >
@@ -559,7 +559,7 @@ export default function HoldingDetail() {
                             onClick={() => setChartRange(r)}
                             className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all duration-200 ${
                               chartRange === r
-                                ? 'bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white shadow'
+                                ? 'bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white shadow'
                                 : 'text-gray-500 dark:text-gray-400 hover:text-[#0B2545] dark:text-white hover:dark:text-[#ffffff]/70'
                             }`}
                           >
@@ -652,12 +652,12 @@ export default function HoldingDetail() {
                               >
                                 <stop
                                   offset="5%"
-                                  stopColor="#3A76C0"
+                                  stopColor="#4F46E5"
                                   stopOpacity={0.25}
                                 />
                                 <stop
                                   offset="95%"
-                                  stopColor="#3A76C0"
+                                  stopColor="#4F46E5"
                                   stopOpacity={0}
                                 />
                               </linearGradient>
@@ -706,7 +706,7 @@ export default function HoldingDetail() {
                             <Area
                               type="monotone"
                               dataKey="price"
-                              stroke="#3A76C0"
+                              stroke="#4F46E5"
                               strokeWidth={2.5}
                               fill="url(#priceGrad)"
                               dot={false}
@@ -976,7 +976,7 @@ export default function HoldingDetail() {
                                   ? t === 'Ask'
                                     ? 'bg-orange-500 text-white shadow'
                                     : t === 'Bid'
-                                      ? 'bg-[#3A76C0] text-white shadow'
+                                      ? 'bg-[#4F46E5] text-white shadow'
                                       : 'bg-gray-100 dark:bg-white/10 text-[#0B2545] dark:text-white shadow'
                                   : 'text-gray-400 dark:text-gray-500 hover:text-[#0B2545] dark:text-white'
                               }`}
@@ -1044,7 +1044,7 @@ export default function HoldingDetail() {
                                 </div>
                                 <div className="text-center">
                                   <span
-                                    className={`px-2.5 py-1 rounded-full text-[10px] font-semibold border ${listing.type === 'Ask' ? 'bg-orange-500/10 text-orange-400 border-orange-500/20' : 'bg-[#3A76C0]/10 text-[#60A5FA] border-[#3A76C0]/20'}`}
+                                    className={`px-2.5 py-1 rounded-full text-[10px] font-semibold border ${listing.type === 'Ask' ? 'bg-orange-500/10 text-orange-400 border-orange-500/20' : 'bg-[#4F46E5]/10 text-[#60A5FA] border-[#4F46E5]/20'}`}
                                   >
                                     {listing.type}
                                   </span>
@@ -1142,7 +1142,7 @@ export default function HoldingDetail() {
                                   ? t === 'Ask'
                                     ? 'bg-orange-500 text-white shadow'
                                     : t === 'Bid'
-                                      ? 'bg-[#3A76C0] text-white shadow'
+                                      ? 'bg-[#4F46E5] text-white shadow'
                                       : 'bg-red-500 text-white shadow'
                                   : 'text-gray-400 dark:text-gray-500 hover:text-[#0B2545] dark:text-white'
                               }`}
@@ -1163,7 +1163,7 @@ export default function HoldingDetail() {
                               onChange={(e) =>
                                 setAssetListingsStatus(e.target.value)
                               }
-                              className="px-3 py-2 rounded-xl border border-[#E3E7EE] dark:border-white/10 bg-[#F4F6F9] dark:bg-[#0B0B0B] text-[#0B2545] dark:text-white text-xs focus:outline-none focus:ring-2 focus:ring-[#3A76C0]/30 cursor-pointer"
+                              className="px-3 py-2 rounded-xl border border-[#E3E7EE] dark:border-white/10 bg-[#F4F6F9] dark:bg-[#0B0B0B] text-[#0B2545] dark:text-white text-xs focus:outline-none focus:ring-2 focus:ring-[#4F46E5]/30 cursor-pointer"
                             >
                               <option value="">All Status</option>
                               <option value="Active">Active</option>
@@ -1178,7 +1178,7 @@ export default function HoldingDetail() {
                                   setAssetListingsSearch(e.target.value)
                                 }
                                 placeholder="Search..."
-                                className="pl-8 pr-4 py-2 rounded-xl border border-[#E3E7EE] dark:border-white/10 bg-[#F4F6F9] dark:bg-[#0B0B0B] text-[#0B2545] dark:text-white text-xs focus:outline-none focus:ring-2 focus:ring-[#3A76C0]/30 w-36"
+                                className="pl-8 pr-4 py-2 rounded-xl border border-[#E3E7EE] dark:border-white/10 bg-[#F4F6F9] dark:bg-[#0B0B0B] text-[#0B2545] dark:text-white text-xs focus:outline-none focus:ring-2 focus:ring-[#4F46E5]/30 w-36"
                               />
                               <svg
                                 className="absolute left-2.5 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500"
@@ -1312,7 +1312,7 @@ export default function HoldingDetail() {
                                           item.status === 'Fulfilled'
                                             ? 'bg-gray-50 dark:bg-white/5 text-gray-400 dark:text-gray-500 border border-[#E3E7EE] dark:border-white/10'
                                             : assetListingsType === 'Ask'
-                                              ? 'bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white shadow hover:shadow-blue-500/30'
+                                              ? 'bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white shadow hover:shadow-blue-500/30'
                                               : 'bg-orange-500/10 text-orange-400 border border-orange-500/20 hover:bg-orange-500/20'
                                         }`}
                                       >
@@ -1620,7 +1620,7 @@ export default function HoldingDetail() {
                                   x2="100%"
                                   y2="0%"
                                 >
-                                  <stop offset="0%" stopColor="#3A76C0" />
+                                  <stop offset="0%" stopColor="#4F46E5" />
                                   <stop offset="100%" stopColor="#60A5FA" />
                                 </linearGradient>
                               </defs>
@@ -1654,7 +1654,7 @@ export default function HoldingDetail() {
                 {/* Buy Share */}
                 <button
                   onClick={() => setOpenModal('buy')}
-                  className="w-full py-3 rounded-xl font-semibold text-sm bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 transition-all duration-300 flex items-center justify-center gap-2 relative overflow-hidden group"
+                  className="w-full py-3 rounded-xl font-semibold text-sm bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 transition-all duration-300 flex items-center justify-center gap-2 relative overflow-hidden group"
                 >
                   <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
                   <MdShoppingCart size={16} />
@@ -1812,7 +1812,7 @@ export default function HoldingDetail() {
               </p>
               <button
                 onClick={() => navigate(`/property-details/${holding.id}`)}
-                className="w-full cursor-pointer py-3 rounded-xl font-semibold text-sm bg-linear-to-r from-[#3A76C0] to-[#60A5FA] text-white shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 transition-all duration-300"
+                className="w-full cursor-pointer py-3 rounded-xl font-semibold text-sm bg-linear-to-r from-[#4F46E5] to-[#2563EB] text-white shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 transition-all duration-300"
               >
                 View Property Details →
               </button>

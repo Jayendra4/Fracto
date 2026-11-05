@@ -57,7 +57,7 @@ export default function Vendors() {
           <div className="w-auto">
             <button
               onClick={() => setIsModalOpen(true)}
-              className="bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] shadow-md hover:shadow-lg hover:brightness-110 text-white px-6 py-2 rounded-lg font-medium text-sm transition-all duration-300 whitespace-nowrap"
+              className="bg-gradient-to-r from-[#4F46E5] to-[#2563EB] shadow-md hover:shadow-lg hover:brightness-110 text-white px-6 py-2 rounded-lg font-medium text-sm transition-all duration-300 whitespace-nowrap"
             >
               Add a Suggestion
             </button>
@@ -76,7 +76,7 @@ export default function Vendors() {
             <div className="mt-4">
               <button
                 onClick={() => setIsModalOpen(true)}
-                className="bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] shadow-md hover:shadow-lg hover:brightness-110 text-white px-6 py-2 rounded-lg font-medium text-sm transition-all duration-300"
+                className="bg-gradient-to-r from-[#4F46E5] to-[#2563EB] shadow-md hover:shadow-lg hover:brightness-110 text-white px-6 py-2 rounded-lg font-medium text-sm transition-all duration-300"
               >
                 Add a Suggestion
               </button>

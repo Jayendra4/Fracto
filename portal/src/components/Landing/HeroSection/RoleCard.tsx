@@ -27,13 +27,13 @@ export function RoleCard({
       transition={{ duration: 0.6, delay: delay }}
       className="group relative h-full"
     >
-      <div className="h-full bg-white rounded-[1.5rem] p-6 lg:p-8 flex flex-col border border-black/5 shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_20px_50px_rgba(58,118,192,0.15)] transition-all duration-500 hover:-translate-y-1.5 overflow-hidden">
-        <div className="absolute top-6 right-6 w-10 h-10 rounded-2xl bg-[#3A76C0]/5 flex items-center justify-center group-hover:bg-[#3A76C0]/10 transition-colors">
-          <div className="w-2 h-2 rounded-full bg-[#3A76C0] animate-pulse" />
+      <div className="h-full bg-white rounded-[1.5rem] p-6 lg:p-8 flex flex-col border border-black/5 shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_20px_50px_rgba(79, 70, 229,0.15)] transition-all duration-500 hover:-translate-y-1.5 overflow-hidden">
+        <div className="absolute top-6 right-6 w-10 h-10 rounded-2xl bg-[#4F46E5]/5 flex items-center justify-center group-hover:bg-[#4F46E5]/10 transition-colors">
+          <div className="w-2 h-2 rounded-full bg-[#4F46E5] animate-pulse" />
         </div>
 
         <div className="flex-1">
-          <h3 className="text-xl lg:text-xl font-bold text-[#0A192F] mb-3 text-left group-hover:text-[#3A76C0] transition-colors leading-tight drop-shadow-sm">
+          <h3 className="text-xl lg:text-xl font-bold text-[#0A192F] mb-3 text-left group-hover:text-[#4F46E5] transition-colors leading-tight drop-shadow-sm">
             {title}
           </h3>
 
@@ -55,7 +55,7 @@ export function RoleCard({
                       : 'investor'
                 }`,
               }}
-              className="px-5 py-2 bg-[#0A192F] text-white rounded-lg font-bold text-sm hover:bg-[#3A76C0] transition-all active:scale-95 shadow-xl shadow-black/10 text-center whitespace-nowrap"
+              className="px-5 py-2 bg-[#0A192F] text-white rounded-lg font-bold text-sm hover:bg-[#4F46E5] transition-all active:scale-95 shadow-xl shadow-black/10 text-center whitespace-nowrap"
             >
               Sign In
             </Link>
@@ -63,7 +63,7 @@ export function RoleCard({
 
           <Link
             to={url}
-            className="inline-flex items-center justify-center gap-2 text-[#3A76C0] font-bold text-sm border-2 border-[#3A76C0]/20 bg-[#3A76C0]/5 px-5 py-2 rounded-lg hover:bg-[#3A76C0] hover:text-white hover:border-[#3A76C0] transition-all group/link whitespace-nowrap"
+            className="inline-flex items-center justify-center gap-2 text-[#4F46E5] font-bold text-sm border-2 border-[#4F46E5]/20 bg-[#4F46E5]/5 px-5 py-2 rounded-lg hover:bg-[#4F46E5] hover:text-white hover:border-[#4F46E5] transition-all group/link whitespace-nowrap"
           >
             Know More
             <HiArrowLongRight

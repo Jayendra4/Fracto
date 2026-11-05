@@ -33,7 +33,7 @@ export default function KycDocuments({ isDocumentUploaded, documents }: Props) {
         </p>
         <button
           onClick={() => navigate('/dashboard/kyc')}
-          className="flex items-center justify-center gap-2 px-5 py-2.5 font-12 font-semibold rounded-lg text-white bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] hover:shadow-md hover:brightness-110 active:scale-[0.98] transition-all duration-300"
+          className="flex items-center justify-center gap-2 px-5 py-2.5 font-12 font-semibold rounded-lg text-white bg-gradient-to-r from-[#4F46E5] to-[#2563EB] hover:shadow-md hover:brightness-110 active:scale-[0.98] transition-all duration-300"
         >
           Complete KYC
           <FiArrowRight size={16} />

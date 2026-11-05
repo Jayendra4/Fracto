@@ -24,7 +24,7 @@ export default function Strengthening() {
             real estate opportunities.
           </p>
 
-          <button className="inline-flex items-center justify-center gap-3 px-8 py-3.5 mt-4 lg:mt-2 rounded-xl bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white font-18 font-semibold transition-all duration-300 hover:brightness-110 active:scale-95 shadow-lg cursor-pointer">
+          <button className="inline-flex items-center justify-center gap-3 px-8 py-3.5 mt-4 lg:mt-2 rounded-xl bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white font-18 font-semibold transition-all duration-300 hover:brightness-110 active:scale-95 shadow-lg cursor-pointer">
             Collaborate With Us
           </button>
         </div>

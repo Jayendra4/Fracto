@@ -85,7 +85,7 @@ export default function StepperForm({
               animate={{
                 width: `${(Object.keys(completedSteps).filter((k) => completedSteps[Number(k)]).length / steps.length) * 100}%`,
               }}
-              className="h-full bg-gradient-to-r from-[#1F4FE0] to-[#60A5FA]"
+              className="h-full bg-gradient-to-r from-[#1F4FE0] to-[#2563EB]"
             />
           </div>
           <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-none">

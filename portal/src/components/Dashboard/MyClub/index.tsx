@@ -62,8 +62,8 @@ function SummaryCard({
       variants={itemVariants}
       className="bg-white dark:bg-[#132436] border border-[#E3E7EE] dark:border-white/10 rounded-xl p-5 flex items-center gap-4"
     >
-      <div className="p-2.5 rounded-xl bg-[#3A76C0]/10 shrink-0">
-        <span className="text-[#3A76C0]">{icon}</span>
+      <div className="p-2.5 rounded-xl bg-[#4F46E5]/10 shrink-0">
+        <span className="text-[#4F46E5]">{icon}</span>
       </div>
       <div className="min-w-0">
         <p className="text-xs text-gray-400 dark:text-gray-500 font-medium uppercase tracking-wider mb-1">
@@ -145,7 +145,7 @@ export default function MyClub() {
 
             <Link
               to="/primary-club"
-              className="w-full sm:w-auto text-center px-5 py-2 rounded-lg bg-[#3A76C0] text-white font-medium hover:opacity-90 transition inline-flex items-center justify-center gap-2"
+              className="w-full sm:w-auto text-center px-5 py-2 rounded-lg bg-[#4F46E5] text-white font-medium hover:opacity-90 transition inline-flex items-center justify-center gap-2"
             >
               Discover More Clubs
               <FiArrowRight />
@@ -234,7 +234,7 @@ export default function MyClub() {
                             onClick={() =>
                               navigate(`/primary-club-details/${club.id}`)
                             }
-                            className="px-3 py-1.5 rounded-lg text-xs font-medium bg-[#3A76C0]/10 text-[#3A76C0] hover:bg-[#3A76C0]/20 transition-colors"
+                            className="px-3 py-1.5 rounded-lg text-xs font-medium bg-[#4F46E5]/10 text-[#4F46E5] hover:bg-[#4F46E5]/20 transition-colors"
                           >
                             View
                           </button>
@@ -267,7 +267,7 @@ export default function MyClub() {
                       onClick={() => setPendingClubsPage(pageNum)}
                       className={`px-3 py-1 rounded-md font-12 border ${
                         pendingClubsPage === pageNum
-                          ? 'bg-[#3A76C0] text-white border-[#3A76C0]'
+                          ? 'bg-[#4F46E5] text-white border-[#4F46E5]'
                           : 'border-[#E3E7EE] dark:border-white/10 text-[#0B2545] dark:text-white'
                       }`}
                     >
@@ -356,7 +356,7 @@ export default function MyClub() {
                                   `/dashboard/my-club/${club.assetId}?clubId=${club.id}`
                                 )
                               }
-                              className="px-3 py-1.5 rounded-lg text-xs font-medium border border-[#3A76C0] text-[#3A76C0] hover:bg-[#3A76C0]/10 transition-colors"
+                              className="px-3 py-1.5 rounded-lg text-xs font-medium border border-[#4F46E5] text-[#4F46E5] hover:bg-[#4F46E5]/10 transition-colors"
                             >
                               Review &amp; Vote
                             </button>
@@ -393,7 +393,7 @@ export default function MyClub() {
                                   `/dashboard/my-club/${club.assetId}?clubId=${club.id}`
                                 )
                               }
-                              className="px-3 py-1.5 rounded-lg text-xs font-medium bg-[#3A76C0]/10 text-[#3A76C0] hover:bg-[#3A76C0]/20 transition-colors"
+                              className="px-3 py-1.5 rounded-lg text-xs font-medium bg-[#4F46E5]/10 text-[#4F46E5] hover:bg-[#4F46E5]/20 transition-colors"
                             >
                               View
                             </button>
@@ -425,7 +425,7 @@ export default function MyClub() {
                         onClick={() => setSecondaryClubsPage(pageNum)}
                         className={`px-3 py-1 rounded-md font-12 border ${
                           secondaryClubsPage === pageNum
-                            ? 'bg-[#3A76C0] text-white border-[#3A76C0]'
+                            ? 'bg-[#4F46E5] text-white border-[#4F46E5]'
                             : 'border-[#E3E7EE] dark:border-white/10 text-[#0B2545] dark:text-white'
                         }`}
                       >

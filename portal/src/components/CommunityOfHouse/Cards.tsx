@@ -144,7 +144,7 @@ const GroupCard: React.FC<GroupCardProps> = ({
                 onClick={() => {
                   navigate(ROUTES.JOIN_GROUP.replace(':id', String(id)));
                 }}
-                className="font-16 font-semibold bg-gradient-to-r cursor-pointer w-full py-2.5 rounded-xl from-[#3A76C0] to-[#60A5FA] text-white transition-all duration-300 hover:shadow-lg hover:brightness-110 shadow-md"
+                className="font-16 font-semibold bg-gradient-to-r cursor-pointer w-full py-2.5 rounded-xl from-[#4F46E5] to-[#2563EB] text-white transition-all duration-300 hover:shadow-lg hover:brightness-110 shadow-md"
               >
                 <span className="flex items-center justify-center w-full">
                   View Details
@@ -163,7 +163,7 @@ const GroupCard: React.FC<GroupCardProps> = ({
                     });
                   }
                 }}
-                className="font-16 font-semibold bg-gradient-to-r cursor-pointer w-full py-2.5 rounded-xl from-[#3A76C0] to-[#60A5FA] text-white transition-all duration-300 hover:shadow-lg hover:brightness-110 shadow-md disabled:opacity-60"
+                className="font-16 font-semibold bg-gradient-to-r cursor-pointer w-full py-2.5 rounded-xl from-[#4F46E5] to-[#2563EB] text-white transition-all duration-300 hover:shadow-lg hover:brightness-110 shadow-md disabled:opacity-60"
               >
                 <span className="flex items-center justify-center w-full">
                   {isJoining ? 'Joining...' : 'Join primary club'}

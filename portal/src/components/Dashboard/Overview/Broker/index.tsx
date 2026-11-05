@@ -117,13 +117,13 @@ export default function BrokerOverview() {
               <div className="flex justify-start bg-[var(--inner-card)] rounded-full p-1 border border-dark-grey/20 shadow-sm w-full md:w-auto">
                 <button
                   onClick={() => setView('broker')}
-                  className={`flex-1 md:flex-none px-6 py-1.5 rounded-full text-sm font-semibold transition-all duration-300 ${view === 'broker' ? 'bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] shadow-md text-white' : 'text-[var(--fg)] hover:bg-[var(--card)]'}`}
+                  className={`flex-1 md:flex-none px-6 py-1.5 rounded-full text-sm font-semibold transition-all duration-300 ${view === 'broker' ? 'bg-gradient-to-r from-[#4F46E5] to-[#2563EB] shadow-md text-white' : 'text-[var(--fg)] hover:bg-[var(--card)]'}`}
                 >
                   Channel Partner view
                 </button>
                 <button
                   onClick={() => setView('purchased')}
-                  className={`flex-1 md:flex-none px-6 py-1.5 rounded-full text-sm font-semibold transition-all duration-300 ${view === 'purchased' ? 'bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] shadow-md text-white' : 'text-[var(--fg)] hover:bg-[var(--card)]'}`}
+                  className={`flex-1 md:flex-none px-6 py-1.5 rounded-full text-sm font-semibold transition-all duration-300 ${view === 'purchased' ? 'bg-gradient-to-r from-[#4F46E5] to-[#2563EB] shadow-md text-white' : 'text-[var(--fg)] hover:bg-[var(--card)]'}`}
                 >
                   Investor view
                 </button>

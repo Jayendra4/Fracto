@@ -151,7 +151,7 @@ export default function RwaTab() {
               >
                 Broker Referred Assets
                 {brokerReferredCount > 0 && (
-                  <span className="bg-[#3A76C0] text-white text-[10px] font-semibold px-2 py-0.5 rounded-full shadow-lg shadow-blue-500/30">
+                  <span className="bg-[#4F46E5] text-white text-[10px] font-semibold px-2 py-0.5 rounded-full shadow-lg shadow-blue-500/30">
                     {brokerReferredCount}
                   </span>
                 )}
@@ -172,19 +172,19 @@ export default function RwaTab() {
               Onboarded Assets
               {isBroker
                 ? brokerReferredCount > 0 && (
-                    <span className="bg-[#3A76C0] text-white text-[10px] font-semibold px-2 py-0.5 rounded-full shadow-lg shadow-blue-500/30">
+                    <span className="bg-[#4F46E5] text-white text-[10px] font-semibold px-2 py-0.5 rounded-full shadow-lg shadow-blue-500/30">
                       {brokerReferredCount}
                     </span>
                   )
                 : hasAssets && (
-                    <span className="bg-[#3A76C0] text-white text-[10px] font-semibold px-2 py-0.5 rounded-full shadow-lg shadow-blue-500/30">
+                    <span className="bg-[#4F46E5] text-white text-[10px] font-semibold px-2 py-0.5 rounded-full shadow-lg shadow-blue-500/30">
                       {rwaFormCount}
                     </span>
                   )}
             </Link>
             <Link
               to={`/dashboard/rwa/rwa-form/${assetId}`}
-              className="flex-1 md:flex-none bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] shadow-xl shadow-blue-500/25 hover:shadow-blue-500/40 hover:-translate-y-0.5 text-white cursor-pointer flex items-center justify-center gap-2 font-semibold px-8 py-3.5 rounded-xl transition-all duration-300 group"
+              className="flex-1 md:flex-none bg-gradient-to-r from-[#4F46E5] to-[#2563EB] shadow-xl shadow-blue-500/25 hover:shadow-blue-500/40 hover:-translate-y-0.5 text-white cursor-pointer flex items-center justify-center gap-2 font-semibold px-8 py-3.5 rounded-xl transition-all duration-300 group"
             >
               {hasAssets ? (
                 <>
@@ -273,7 +273,7 @@ export default function RwaTab() {
             </div>
           </div>
 
-          <button className="relative z-10 px-8 py-4 bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white font-semibold rounded-2xl shadow-xl shadow-blue-500/20 hover:shadow-blue-500/40 hover:-translate-y-1 transition-all duration-300 flex items-center gap-2 group/btn">
+          <button className="relative z-10 px-8 py-4 bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white font-semibold rounded-2xl shadow-xl shadow-blue-500/20 hover:shadow-blue-500/40 hover:-translate-y-1 transition-all duration-300 flex items-center gap-2 group/btn">
             <span>Contact Support</span>
             <BsArrowRightShort className="text-2xl group-hover/btn:translate-x-1 transition-transform" />
           </button>

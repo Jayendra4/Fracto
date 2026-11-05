@@ -159,7 +159,7 @@ export default function Referrals() {
                     className={`flex-1 md:flex-none px-4 md:px-6 py-1.5 rounded-full text-xs md:text-sm font-medium transition-all duration-300 whitespace-nowrap cursor-pointer
                       ${
                         activeTab === 'asset'
-                          ? 'bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] shadow-md text-white'
+                          ? 'bg-gradient-to-r from-[#4F46E5] to-[#2563EB] shadow-md text-white'
                           : 'text-gray-500 dark:text-gray-400 hover:text-[#0B2545] dark:hover:text-white hover:bg-white dark:hover:bg-white/5'
                       }`}
                   >
@@ -173,7 +173,7 @@ export default function Referrals() {
                     className={`flex-1 md:flex-none px-4 md:px-6 py-1.5 rounded-full text-xs md:text-sm font-medium transition-all duration-300 whitespace-nowrap cursor-pointer
                       ${
                         activeTab === 'investor'
-                          ? 'bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] shadow-md text-white'
+                          ? 'bg-gradient-to-r from-[#4F46E5] to-[#2563EB] shadow-md text-white'
                           : 'text-gray-500 dark:text-gray-400 hover:text-[#0B2545] dark:hover:text-white hover:bg-white dark:hover:bg-white/5'
                       }`}
                   >
@@ -386,8 +386,8 @@ function ShareMenu({
         onClick={() => setShareOpen((p) => !p)}
         className={
           variant === 'button'
-            ? 'flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white text-sm font-semibold shadow-md hover:opacity-90 transition cursor-pointer whitespace-nowrap'
-            : 'flex items-center gap-1.5 text-[#3A76C0] dark:text-[#73B7FF] text-sm hover:underline cursor-pointer'
+            ? 'flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white text-sm font-semibold shadow-md hover:opacity-90 transition cursor-pointer whitespace-nowrap'
+            : 'flex items-center gap-1.5 text-[#4F46E5] dark:text-[#73B7FF] text-sm hover:underline cursor-pointer'
         }
         title="Share referral link"
       >
@@ -508,7 +508,7 @@ function ReferralCard({
           )}
           <button
             onClick={() => setOpenDetails(true)}
-            className="text-[#3A76C0] dark:text-[#73B7FF] text-sm hover:underline cursor-pointer"
+            className="text-[#4F46E5] dark:text-[#73B7FF] text-sm hover:underline cursor-pointer"
           >
             View Details
           </button>
@@ -526,7 +526,7 @@ function ReferralCard({
           )}
           <button
             onClick={onToggle}
-            className="text-[#3A76C0] dark:text-[#73B7FF] text-sm hover:underline cursor-pointer"
+            className="text-[#4F46E5] dark:text-[#73B7FF] text-sm hover:underline cursor-pointer"
           >
             {isOpen ? 'Hide Activity' : 'Show Activity'}
           </button>

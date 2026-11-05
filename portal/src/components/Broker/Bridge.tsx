@@ -5,7 +5,7 @@ export default function Bridge() {
   return (
     <section className="relative w-full py-24 lg:py-32 font-work bg-[var(--bg)] px-4 lg:px-10 overflow-hidden">
       {/* Decorative Blur Backgrounds */}
-      <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[600px] h-[600px] bg-[#3A76C0]/5 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[600px] h-[600px] bg-[#4F46E5]/5 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[600px] h-[600px] bg-indigo-500/5 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="mx-auto max-w-[1400px] relative z-10 text-center">
@@ -15,7 +15,7 @@ export default function Bridge() {
           viewport={{ once: true }}
           className="text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tight text-[var(--fg)] leading-tight"
         >
-          The <span className="text-[#3A76C0]">Essential Link</span> in <br />
+          The <span className="text-[#4F46E5]">Essential Link</span> in <br />
           Modern Real Estate
         </motion.h2>
 
@@ -38,7 +38,7 @@ export default function Bridge() {
           transition={{ delay: 0.2 }}
           className="mt-10"
         >
-          <button className="group inline-flex items-center gap-3 rounded-xl bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] px-10 py-4 text-lg font-bold text-white shadow-xl shadow-blue-500/20 transition-all">
+          <button className="group inline-flex items-center gap-3 rounded-xl bg-gradient-to-r from-[#4F46E5] to-[#2563EB] px-10 py-4 text-lg font-bold text-white shadow-xl shadow-blue-500/20 transition-all">
             Join The Network
             <span className="transition-transform group-hover:translate-x-1.5">
               <HiArrowLongRight size={24} />

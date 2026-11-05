@@ -165,7 +165,7 @@ const Wallet = () => {
                     className={`w-full py-3 rounded-lg font-12 md:font-14 font-semibold text-center transition
                     ${
                       isUserKycCompleted
-                        ? 'bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white cursor-pointer shadow-md hover:shadow-lg hover:brightness-110'
+                        ? 'bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white cursor-pointer shadow-md hover:shadow-lg hover:brightness-110'
                         : 'bg-[#4F86C0]/90 text-white/40 cursor-not-allowed'
                     }
                   `}
@@ -200,7 +200,7 @@ const Wallet = () => {
                     className={`w-full py-3 rounded-lg font-12 md:font-14 font-semibold text-center transition
                     ${
                       isUserKycCompleted
-                        ? 'bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white cursor-pointer shadow-md hover:shadow-lg hover:brightness-110'
+                        ? 'bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white cursor-pointer shadow-md hover:shadow-lg hover:brightness-110'
                         : 'border border-[#2A5A8D]/40 text-[#6FA8FF]/80 cursor-not-allowed'
                     }
                   `}

@@ -416,11 +416,11 @@ const JoinGroup: React.FC = () => {
             <div className="z-10">
               <h2 className="font-serif text-xl md:text-3xl font-semibold flex items-center justify-center md:justify-start gap-2 text-[#0B2545] dark:text-white ">
                 {groupDetails?.title || '-'}
-                <span className="text-[#3A76C0] dark:text-[#73B7FF] text-xl md:text-2xl">
+                <span className="text-[#4F46E5] dark:text-[#73B7FF] text-xl md:text-2xl">
                   <HiBadgeCheck />
                 </span>
               </h2>
-              <span className="inline-block text-[#3A76C0] dark:text-[#73B7FF] px-2 py-0.5 rounded-full bg-[#3A76C0]/10 dark:bg-white/10 text-sm md:text-md max-w-2xl mt-1 leading-relaxed">
+              <span className="inline-block text-[#4F46E5] dark:text-[#73B7FF] px-2 py-0.5 rounded-full bg-[#4F46E5]/10 dark:bg-white/10 text-sm md:text-md max-w-2xl mt-1 leading-relaxed">
                 #{groupDetails?.category?.name || '-'}
               </span>
               <p className="text-gray-500 dark:text-gray-400 text-sm md:text-md max-w-2xl mt-1 leading-relaxed">
@@ -444,7 +444,7 @@ const JoinGroup: React.FC = () => {
 
                     navigate(`/dashboard/add-asset?groupId=${groupId}`);
                   }}
-                  className="mt-4 px-6 py-2.5 md:px-10 md:py-2.5 inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white font-16 font-semibold transition-all duration-300 hover:shadow-lg hover:brightness-110 shadow-md cursor-pointer"
+                  className="mt-4 px-6 py-2.5 md:px-10 md:py-2.5 inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white font-16 font-semibold transition-all duration-300 hover:shadow-lg hover:brightness-110 shadow-md cursor-pointer"
                 >
                   Share Your Asset
                 </button>
@@ -455,7 +455,7 @@ const JoinGroup: React.FC = () => {
                   type="button"
                   onClick={handleJoinClub}
                   disabled={isJoining}
-                  className={`mt-4 px-6 ${!isInvestor && 'ml-3'} py-2.5 inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white font-16 font-semibold transition-all duration-300 hover:shadow-lg hover:brightness-110 shadow-md cursor-pointer disabled:opacity-60`}
+                  className={`mt-4 px-6 ${!isInvestor && 'ml-3'} py-2.5 inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white font-16 font-semibold transition-all duration-300 hover:shadow-lg hover:brightness-110 shadow-md cursor-pointer disabled:opacity-60`}
                 >
                   {isJoining ? 'Joining...' : 'Join Club'}
                 </button>
@@ -673,7 +673,7 @@ const JoinGroup: React.FC = () => {
                                   `/dashboard/add-asset?id=${item?.asset?.id}&step=2`
                                 )
                               }
-                              className="inline-flex items-center justify-center py-2.5 mt-6 w-full rounded-xl bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white font-16 font-semibold transition-all duration-300 hover:shadow-lg hover:brightness-110 shadow-md cursor-pointer"
+                              className="inline-flex items-center justify-center py-2.5 mt-6 w-full rounded-xl bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white font-16 font-semibold transition-all duration-300 hover:shadow-lg hover:brightness-110 shadow-md cursor-pointer"
                             >
                               Add More Information
                             </button>
@@ -694,7 +694,7 @@ const JoinGroup: React.FC = () => {
                                   }
                                 )
                               }
-                              className="inline-flex items-center justify-center py-2.5 mt-6 w-full rounded-xl bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white font-16 font-semibold transition-all duration-300 hover:shadow-lg hover:brightness-110 shadow-md cursor-pointer"
+                              className="inline-flex items-center justify-center py-2.5 mt-6 w-full rounded-xl bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white font-16 font-semibold transition-all duration-300 hover:shadow-lg hover:brightness-110 shadow-md cursor-pointer"
                             >
                               Get More Details
                             </button>
@@ -846,7 +846,7 @@ const JoinGroup: React.FC = () => {
 
                         <span
                           title="Gallery"
-                          className="absolute cursor-pointer text-white bottom-3 left-3 text-xl bg-black/40 hover:bg-[#3A76C0] hover:scale-125 hover:shadow-lg hover:shadow-[#3A76C0]/50 p-1.5 rounded-full transition-all duration-300 active:scale-95"
+                          className="absolute cursor-pointer text-white bottom-3 left-3 text-xl bg-black/40 hover:bg-[#4F46E5] hover:scale-125 hover:shadow-lg hover:shadow-[#4F46E5]/50 p-1.5 rounded-full transition-all duration-300 active:scale-95"
                           onClick={() => openModal(0, documents)}
                         >
                           <IoImages />
@@ -867,7 +867,7 @@ const JoinGroup: React.FC = () => {
                           className={`text-white text-xl p-1.5 rounded-full transition-all duration-300 shrink-0 ${
                             item?.isSpvCreated
                               ? 'bg-black/20 opacity-40 cursor-not-allowed'
-                              : 'cursor-pointer bg-black/40 hover:bg-[#3A76C0] hover:scale-125 hover:shadow-lg hover:shadow-[#3A76C0]/50 active:scale-95'
+                              : 'cursor-pointer bg-black/40 hover:bg-[#4F46E5] hover:scale-125 hover:shadow-lg hover:shadow-[#4F46E5]/50 active:scale-95'
                           }`}
                           onClick={() => {
                             if (item?.isSpvCreated) return;
@@ -927,7 +927,7 @@ const JoinGroup: React.FC = () => {
                                 `/property-details/${item?.sharedAsset?.assetId}`
                               )
                             }
-                            className="group inline-flex items-center justify-center py-2 mt-6 w-full max-w-full rounded-lg bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white font-18 font-semibold transition-all duration-300 hover:brightness-110 active:scale-95 shadow-lg cursor-pointer"
+                            className="group inline-flex items-center justify-center py-2 mt-6 w-full max-w-full rounded-lg bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white font-18 font-semibold transition-all duration-300 hover:brightness-110 active:scale-95 shadow-lg cursor-pointer"
                           >
                             View Details
                           </button>
@@ -940,7 +940,7 @@ const JoinGroup: React.FC = () => {
                               );
                             }}
                             disabled={isPaying === item.sharedAsset.assetId}
-                            className="group inline-flex items-center justify-center py-2 mt-6 w-full max-w-full rounded-lg bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] text-white font-18 font-semibold transition-all duration-300 hover:brightness-110 active:scale-95 shadow-lg cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                            className="group inline-flex items-center justify-center py-2 mt-6 w-full max-w-full rounded-lg bg-gradient-to-r from-[#4F46E5] to-[#2563EB] text-white font-18 font-semibold transition-all duration-300 hover:brightness-110 active:scale-95 shadow-lg cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                           >
                             {isPaying === item.sharedAsset.assetId ? (
                               <span className="flex items-center justify-center gap-2">
@@ -958,7 +958,7 @@ const JoinGroup: React.FC = () => {
                             `/property-details/${item?.sharedAsset?.assetId}`
                           )
                         }
-                        className="inline-flex items-center justify-center mt-6 w-full max-w-full font-16 font-semibold bg-gradient-to-r cursor-pointer rounded-xl from-[#3A76C0] to-[#60A5FA] text-white py-2.5 transition-all duration-300 hover:shadow-lg hover:brightness-110 shadow-md"
+                        className="inline-flex items-center justify-center mt-6 w-full max-w-full font-16 font-semibold bg-gradient-to-r cursor-pointer rounded-xl from-[#4F46E5] to-[#2563EB] text-white py-2.5 transition-all duration-300 hover:shadow-lg hover:brightness-110 shadow-md"
                       >
                         View Details
                       </button>
@@ -1030,7 +1030,7 @@ const JoinGroup: React.FC = () => {
                       className={`w-full bg-gray-50 dark:bg-[#0A1A2F] p-3 pr-10 rounded-md text-[#0B2545] dark:text-white placeholder-gray-400 dark:placeholder-gray-500 outline-none border transition-all ${
                         leavePasswordError
                           ? 'border-red-500'
-                          : 'border-[#E3E7EE] dark:border-white/10 focus:border-[#3A76C0]'
+                          : 'border-[#E3E7EE] dark:border-white/10 focus:border-[#4F46E5]'
                       }`}
                     />
                     <button

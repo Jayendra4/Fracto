@@ -76,9 +76,9 @@ export default function AssetOwnerBenefits() {
             variants={fadeUp}
             className="text-4xl md:text-5xl font-bold text-[var(--fg)] tracking-tight"
           >
-            Benefits for <span className="text-[#3A76C0]">Asset Owners</span>
+            Benefits for <span className="text-[#4F46E5]">Asset Owners</span>
           </motion.h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-[#3A76C0] to-[#60A5FA] mx-auto mt-6 rounded-full" />
+          <div className="w-24 h-1 bg-gradient-to-r from-[#4F46E5] to-[#2563EB] mx-auto mt-6 rounded-full" />
           <motion.p
             variants={fadeUp}
             className="mt-8 text-xl md:text-2xl text-[var(--fg)]/70 max-w-3xl mx-auto leading-relaxed"
@@ -105,11 +105,11 @@ export default function AssetOwnerBenefits() {
                 />
 
                 <div className="relative z-10">
-                  <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#3A76C0]/10 text-[#3A76C0] group-hover:bg-[#3A76C0] group-hover:text-white transition-all duration-500 shadow-sm transform group-hover:scale-110 group-hover:-rotate-3">
+                  <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#4F46E5]/10 text-[#4F46E5] group-hover:bg-[#4F46E5] group-hover:text-white transition-all duration-500 shadow-sm transform group-hover:scale-110 group-hover:-rotate-3">
                     <Icon size={28} />
                   </div>
 
-                  <h3 className="mb-4 text-2xl font-bold tracking-tight text-[var(--fg)] group-hover:text-[#3A76C0] transition-colors duration-500">
+                  <h3 className="mb-4 text-2xl font-bold tracking-tight text-[var(--fg)] group-hover:text-[#4F46E5] transition-colors duration-500">
                     {benefit.title}
                   </h3>
 
