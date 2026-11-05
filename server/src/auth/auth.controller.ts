@@ -66,18 +66,11 @@ export class AuthController extends BaseController {
   }
 
   private getCookieOptions(options?: CookieOptions) {
-    const isProduction = this.utilsService.isProduction();
     return {
       expires: options?.expires,
-      domain:
-        options?.domain !== undefined ? options.domain : this.appConfig.domain,
+      domain: options?.domain,
       httpOnly: options?.httpOnly !== undefined ? options.httpOnly : true,
-      sameSite:
-        options?.sameSite !== undefined
-          ? options.sameSite
-          : isProduction
-            ? 'strict'
-            : 'none',
+      sameSite: (options?.sameSite !== undefined ? options.sameSite : 'none') as any,
       secure: options?.secure !== undefined ? options.secure : true,
     };
   }
